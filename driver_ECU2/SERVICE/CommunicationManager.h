@@ -1,0 +1,10 @@
+#ifndef  COMMUNICATIONMANAGER_H
+#define COMMUNICATIONMANAGER_H
+
+#define TEMPERATURE_SIMULATE 32
+#define ENGINESPEED_SIMULATE 2000
+
+#include "RTE.h"
+void ReceiveData_Runable();
+
+#endif

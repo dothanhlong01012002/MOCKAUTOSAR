@@ -1,0 +1,21 @@
+--cpu=Cortex-M4.fp.sp
+".\build_files\keiluvisoin_startup.o"
+".\build_files\counter.o"
+".\build_files\hook.o"
+"..\OSEK\OsekLib.lib"
+".\build_files\oscfg.o"
+".\build_files\schedule.o"
+".\build_files\enginespeedswc.o"
+".\build_files\temperaturesensorswc.o"
+".\build_files\iohwabcan.o"
+".\build_files\iohwabspeedsensor.o"
+".\build_files\iohwabtemperaturesensor.o"
+".\build_files\adc.o"
+".\build_files\can.o"
+".\build_files\rte.o"
+".\build_files\com.o"
+".\build_files\comm.o"
+".\build_files\pdur.o"
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\OsekIntro_Example6.map" -o .\build_files\OsekIntro_Example6.axf

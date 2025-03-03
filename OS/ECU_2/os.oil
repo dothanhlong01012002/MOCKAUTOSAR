@@ -1,0 +1,98 @@
+CPU CORTEX-M4 {
+   OS S_OSEK {
+      STATUS = EXTENDED ;
+      STARTUPHOOK = FALSE;
+      ERRORHOOK = FALSE;
+      STACKOVERFLOWHOOK = FALSE;
+      SHUTDOWNHOOK = FALSE;
+      PRETASKHOOK = FALSE;
+      POSTTASKHOOK = FALSE;
+      USEGETSERVICEID = FALSE;
+      USEPARAMETERACCESS = FALSE;
+      USERESSCHEDULER = FALSE;
+      SYSTEMTICKMS = 10 ; 
+   };
+   TASK WriteError_Task {
+	  PRIORITY = 55;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = TRUE; 
+      STACKSIZE = 50;
+	  EVENT = BE_Error; 
+	}
+   TASK GetError_Task {
+	  PRIORITY = 60;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = FALSE; 
+      STACKSIZE = 50;
+	}
+   TASK Actuator_Task {
+	  PRIORITY = 20;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = TRUE; 
+      STACKSIZE = 50;
+      EVENT = BE_ControlActuator; 
+	}
+   TASK Component_Task {
+      PRIORITY = 30;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = TRUE; 
+      STACKSIZE = 50;
+      EVENT = BE_Signal; 
+   };    
+   TASK Main_Task {
+      PRIORITY = 40;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = TRUE; 
+      STACKSIZE = 50;
+	  EVENT = BE_Receive;
+   };    
+   TASK ComReceive_Task {
+      PRIORITY = 50;
+      SCHEDULE = FULL;
+      ACTIVATION = 1;
+      AUTOSTART = FALSE; 
+      STACKSIZE = 50;
+   };         
+   ALARM Alrm_Periodic {
+      COUNTER = MainCounter;
+      ACTION = ACTIVATETASK  {
+         TASK = ComReceive_Task;
+      };
+      AUTOSTART = TRUE {
+         ALARMTIME = 200; 
+         CYCLETIME = 200; 
+      };
+   }
+    ALARM Alrm_Periodic2 {
+      COUNTER = MainCounter;
+      ACTION = ACTIVATETASK  {
+         TASK = GetError_Task;
+      };
+      AUTOSTART = TRUE {
+         ALARMTIME = 500; 
+         CYCLETIME = 500; 
+      };
+   }
+   COUNTER MainCounter {
+      MINCYCLE = 1;
+      MAXALLOWEDVALUE = 0xFFFFFFFF;
+      TICKSPERBASE = 1;
+	};
+   EVENT BE_Receive{
+      MASK = AUTO ; 
+   }
+   EVENT BE_Signal{
+      MASK = AUTO ; 
+   }
+   EVENT BE_ControlActuator{
+      MASK = AUTO ; 
+   }
+   EVENT BE_Error{
+      MASK = AUTO ; 
+   }
+};

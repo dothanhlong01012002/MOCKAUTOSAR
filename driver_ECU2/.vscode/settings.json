@@ -1,0 +1,11 @@
+{
+    "files.associations": {
+        "rte.h": "c",
+        "diagnosticmanager.h": "c",
+        "iohwabcompressor.h": "c",
+        "coolingcontrolswc.h": "c",
+        "nvmmanager.h": "c",
+        "iohwabfan.h": "c",
+        "pwm.h": "c"
+    }
+}

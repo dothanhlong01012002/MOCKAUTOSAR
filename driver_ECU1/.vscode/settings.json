@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "iohwabtemperaturesensor.h": "c",
+        "adc.h": "c",
+        "std_types.h": "c",
+        "enginespeedswc.h": "c"
+    }
+}
