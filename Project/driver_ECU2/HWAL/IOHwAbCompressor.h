@@ -6,6 +6,6 @@
 
 #define PWM_CHANNEL1 1
 
-FUNC(void,AUTOMATIC) AdjustCompressor_Runable(VAR(void,AUTOMATIC));
+FUNC(void,AUTOMATIC) AdjustCompressorControl(VAR(void,AUTOMATIC));
 
 #endif

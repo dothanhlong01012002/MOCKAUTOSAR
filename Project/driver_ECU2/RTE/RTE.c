@@ -18,8 +18,8 @@ FUNC(void,AUTOMATIC) Rte_EV_Component(VAR(void,AUTOMATIC)){
     CompressorControl_Runable();
 }
 FUNC(void,AUTOMATIC) Rte_EV_Actuator(VAR(void,AUTOMATIC)){
-    AdjustFan_Runable();
-    AdjustCompressor_Runable();
+    AdjustFanControl();
+    AdjustCompressorControl();
 }
 FUNC(void,AUTOMATIC) Rte_EV_GetError(VAR(void,AUTOMATIC)){
     GetNVM_Runnable();

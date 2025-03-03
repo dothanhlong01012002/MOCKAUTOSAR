@@ -6,6 +6,6 @@
 
 #define PWM_CHANNEL0 0
 
-FUNC(void,AUTOMATIC) AdjustFan_Runable(VAR(void,AUTOMATIC));
+FUNC(void,AUTOMATIC) AdjustFanControl(VAR(void,AUTOMATIC));
 
 #endif
