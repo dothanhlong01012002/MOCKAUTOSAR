@@ -140,6 +140,7 @@
     "compiler.h": "c",
     "temperaturesensorswc.h": "c",
     "std_types.h": "c",
-    "adc.h": "c"
+    "adc.h": "c",
+    "fls.h": "c"
   }
 }

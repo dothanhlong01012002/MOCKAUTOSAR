@@ -1,5 +1,18 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : ComM.h                                                       */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
+
 #ifndef  COMM_H
 #define COMM_H
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
 
 #include <stdint.h>
 #include "PduR.h"
@@ -15,6 +28,26 @@ typedef uint8_t ComM_ModeType;
 #define COMM_FULL_COMMUNICATION                         0x02    /*Configured channel shall have both transmission and reception capability. */
 #define COMM_FULL_COMMUNICATION_WITH_WAKEUP_REQUEST     0x03    /*Configured channel shall have both transmission and reception towards the lower layer (e.g. Ethernet hardware compliant to OA TC10). This is only for internal use within the ComM channel statemachine.*/
 
+/*----------------------------------------------------------------------------*/
+/* function prototype declarations                                            */
+/*----------------------------------------------------------------------------*/
+
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : ComM_RequestComMode                                          */  
+/* Param       : User - Handle for the user requesting the communication mode */  
+/*               ComMode - Desired communication mode                         */  
+/* Return      : Std_ReturnType                                               */  
+/*               - E_OK     : Request for communication mode successful       */  
+/*               - E_NOT_OK : Request for communication mode failed           */  
+/* Contents    : Handles the request to set the communication mode for the    */  
+/*               specified user.                                              */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        : Function currently returns a successful status without       */  
+/*               implementing actual mode change logic.                       */  
+/******************************************************************************/  
 FUNC(Std_ReturnType,AUTOMATIC) ComM_RequestComMode(VAR(ComM_UserHandleType,AUTOMATIC) User,VAR(ComM_ModeType,AUTOMATIC) ComMode);
 
-#endif
+#endif /* COMM_H */
+/* End of ComM.h */

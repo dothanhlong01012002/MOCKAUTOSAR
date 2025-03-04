@@ -1,6 +1,5 @@
 #include "RTE.h"
 
-/*********************************************************EVENT*********************************************/
 FUNC(void,AUTOMATIC) Rte_EV_ReadSensor(VAR(void,AUTOMATIC)){
     ReadPulse_Runable();
     ReadVoltage_Runable();
@@ -13,7 +12,6 @@ FUNC(void,AUTOMATIC) Rte_EV_DataHandle(VAR(void,AUTOMATIC)){
     Com_SendSignal(0x100,&frameData);
 }
 
-/********************************************************* Speed**************************************/
 
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_Pulse_EngineSpeedValue(P2VAR(uint16,AUTOMATIC,AUTOMATIC) temp){
     if (temp != NULL) {
@@ -42,7 +40,6 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_Speed_SpeedValue(P2VAR(uint16,AUTOMAT
 }
 
 
-/********************************************************* Temp**************************************/
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_Voltage_TemperatureValue(VAR(uint16,AUTOMATIC) temp){
     TemperatureValue = temp;
     return E_OK;
