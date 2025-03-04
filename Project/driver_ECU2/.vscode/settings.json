@@ -6,6 +6,8 @@
         "coolingcontrolswc.h": "c",
         "nvmmanager.h": "c",
         "iohwabfan.h": "c",
-        "pwm.h": "c"
+        "pwm.h": "c",
+        "communicationmanager.h": "c",
+        "hwabmem.h": "c"
     }
 }

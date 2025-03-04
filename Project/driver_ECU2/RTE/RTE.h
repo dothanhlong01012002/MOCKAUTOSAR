@@ -11,6 +11,20 @@
 #include "DiagnosticManager.h"
 #include "NVMManager.h"
 
+#define MAX_DATA_PARAMETER  10
+#define MAX_ERROR_CODES     5
+#define NV_WRITE_DATA       0
+#define NV_READ_DATA        1
+#define NV_WRITE_ERROR      2
+#define NV_READ_ERROR       3
+
+typedef struct {
+    uint8 parameterData[MAX_DATA_PARAMETER];    
+    uint8 errorCodes[MAX_ERROR_CODES];  
+    uint8 numErrorCodes;         
+} NvM_DataBuffer;
+
+extern VAR(NvM_DataBuffer,AUTOMATIC) Data;
 extern VAR(uint16,AUTOMATIC) ExpectedTemp;
 extern VAR(uint16,AUTOMATIC) TemperatureValue;
 extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
@@ -27,33 +41,21 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_FanData_FanValue(P2VAR(uint16,AUTOMAT
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_CompressorData_CompressorValue(VAR(uint16,AUTOMATIC) CompressorV);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_CompressorData_CompressorValue(P2VAR(uint16,AUTOMATIC,AUTOMATIC) CompressorV);
 
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_PP_AdjustFan_ControlFan(P2VAR(uint16,AUTOMATIC,AUTOMATIC) FanR);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_RP_AdjustFan_ControlFan(VAR(uint16,AUTOMATIC) FanR);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_AdjustFan_ControlFan(VAR(uint16,AUTOMATIC) FanR);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_AdjustCompressor_ControlCompressor(VAR(uint16,AUTOMATIC) CompressorR);
 
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_PP_AdjustCompressor_ControlCompressor(P2VAR(uint16,AUTOMATIC,AUTOMATIC) CompressorR);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_RP_AdjustCompressor_ControlCompressor(VAR(uint16,AUTOMATIC) CompressorR);
-
-FUNC(Std_ReturnType,AUTOMATIC) Rte_PP_ERROR_ReportDiagnosticResult(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_ReportDiagnosticResult(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
-
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_PP_NVData_WriteError(VAR(uint32,AUTOMATIC) ErrorCodeV);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVData_GetError(P2VAR(uint32,AUTOMATIC,AUTOMATIC) ErrorCodeV);
-
-FUNC(Std_ReturnType,AUTOMATIC) Rte_PP_SaveNVData_NVM(VAR(uint32,AUTOMATIC) ErrorCodeV);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_SaveNVData_NVM(VAR(uint32,AUTOMATIC) ErrorCodeV);
-
-FUNC(Std_ReturnType,AUTOMATIC) Rte_PP_GetNVData_NVM(P2VAR(uint32,AUTOMATIC,AUTOMATIC) ErrorCodeV);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_GetNVData_NVM(P2VAR(uint32,AUTOMATIC,AUTOMATIC) ErrorCodeV);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
 
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_PARAM_ExpectedTemperature(P2VAR(uint16,AUTOMATIC,AUTOMATIC) ExTemp);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_PARAM_ExpectedTemperature(VAR(uint16,AUTOMATIC) ExTemp);
 
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8,AUTOMATIC) requestID);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8,AUTOMATIC) requestID);
 
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC));
 FUNC(void,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC));
 FUNC(void,AUTOMATIC) Rte_EV_Component(VAR(void,AUTOMATIC));
-FUNC(void,AUTOMATIC) Rte_EV_Actuator(VAR(void,AUTOMATIC));
 FUNC(void,AUTOMATIC) Rte_EV_GetError(VAR(void,AUTOMATIC));
-FUNC(void,AUTOMATIC) Rte_EV_WriteError(VAR(void,AUTOMATIC));
 
 #endif
