@@ -11,7 +11,7 @@ FUNC(Std_ReturnType,AUTOMATIC) Com_SendSignal(VAR(Com_SignalIdType,AUTOMATIC) Si
 
     VAR(PduIdType,AUTOMATIC) PduId = PDU_ID;
 
-    // Tạo PDU chứa dữ liệu cần gửi
+    // Create the PDU containing the data to send
     VAR(PduInfoType,AUTOMATIC) PduInfo;
     PduInfo.SduDataPtr = (P2VAR(uint8,AUTOMATIC,AUTOMATIC))SignalDataPtr;
     PduInfo.SduLength = 2;

@@ -679,24 +679,24 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        14          0          0          0          0        562   adc.o
-         4          0          0          0          0        875   can.o
-        32          0          0          0          0       1076   com.o
-       108          0          0          0          4        747   counter.o
-        36          0          0          0          0        562   enginespeedswc.o
-        18          0          0          0          0        865   hook.o
-        32          0          0          0          0       1071   iohwabcan.o
-        16          0          0          0          0        770   iohwabspeedsensor.o
-        16          0          0          0          0        786   iohwabtemperaturesensor.o
-       252         10        620          0        512       5436   keiluvisoin_startup.o
-         0          0         24        120        469       2998   oscfg.o
-         4          0          0          0          0        915   pdur.o
-       232          0          0          0          8       2091   rte.o
-        54          0          0          0          0       1072   schedule.o
-        32          0          0          0          0        580   temperaturesensorswc.o
+        14          0          0          0          0        615   adc.o
+         4          0          0          0          0        928   can.o
+        32          0          0          0          0       1129   com.o
+       108          0          0          0          4        800   counter.o
+        36          0          0          0          0        615   enginespeedswc.o
+        18          0          0          0          0        918   hook.o
+        32          0          0          0          0       1124   iohwabcan.o
+        16          0          0          0          0        823   iohwabspeedsensor.o
+        16          0          0          0          0        839   iohwabtemperaturesensor.o
+       252         10        620          0        512       5492   keiluvisoin_startup.o
+         0          0         24        120        469       3051   oscfg.o
+         4          0          0          0          0        968   pdur.o
+       232          0          0          0          8       2144   rte.o
+        54          0          0          0          0       1125   schedule.o
+        32          0          0          0          0        633   temperaturesensorswc.o
 
     ----------------------------------------------------------------------
-       856         10        682        120       1000      20406   Object Totals
+       856         10        682        120       1000      21204   Object Totals
          0          0         32          0          0          0   (incl. Generated)
          6          0          6          0          7          0   (incl. Padding)
 
@@ -745,8 +745,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5742        252        682        144       1000      57184   Grand Totals
-      5742        252        682        144       1000      57184   ELF Image Totals
+      5742        252        682        144       1000      57982   Grand Totals
+      5742        252        682        144       1000      57982   ELF Image Totals
       5742        252        682        144          0          0   ROM Totals
 
 ==============================================================================
