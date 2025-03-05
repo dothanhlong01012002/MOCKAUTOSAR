@@ -14,7 +14,7 @@ void SystemInit(void)
 }
 int main(void)
 {
-	ErrorFlag =true;
+	Rte_Call_RP_WdgM_Init(&wdgConfig);
   StartOS();
   while(1); /* Should not be executed */
   return 0;
@@ -29,7 +29,6 @@ TASK(Component_Task){
    }
 }
 
-
 TASK(GetError_Task){
 	Rte_EV_GetError();
 	TerminateTask();
@@ -40,17 +39,21 @@ TASK(Main_Task)
    while(true)
    {
       WaitEvent(BE_Receive);
-			Rte_EV_Main();
-			SetEvent(Component_Task, BE_Signal);
+			if(Rte_EV_Main()!=E_NOT_OK){
+				SetEvent(Component_Task, BE_Signal);
+			}else {
+				ErrorFlag = false;
+				Rte_Call_RP_WdgM_PerformReset();
+			}
       ClearEvent(BE_Receive); 
    }
 }
 
 TASK(ComReceive_Task)
 {		
-		Rte_EV_ComReceive();
 		if(ErrorFlag ==true)
 		{
+			Rte_EV_ComReceive();
 			SetEvent(Main_Task, BE_Receive); 
 		}
     TerminateTask(); 

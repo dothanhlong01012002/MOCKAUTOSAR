@@ -533,6 +533,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\HWAL\HwAbMem.h</FilePath>
             </File>
+            <File>
+              <FileName>WdgIf.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\HWAL\WdgIf.c</FilePath>
+            </File>
+            <File>
+              <FileName>WdgIf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\HWAL\WdgIf.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -557,6 +567,16 @@
               <FileName>Fls.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\MCAL\Fls.h</FilePath>
+            </File>
+            <File>
+              <FileName>Wdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\MCAL\Wdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>Wdg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\MCAL\Wdg.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -607,6 +627,16 @@
               <FileName>NVMManager.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\SERVICE\NVMManager.h</FilePath>
+            </File>
+            <File>
+              <FileName>WdgManager.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\WdgManager.c</FilePath>
+            </File>
+            <File>
+              <FileName>WdgManager.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\WdgManager.h</FilePath>
             </File>
           </Files>
         </Group>

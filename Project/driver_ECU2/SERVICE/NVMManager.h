@@ -3,7 +3,7 @@
 #define MEMORY_MANAGER_H
 
 #include "Std_Types.h"
-#include "IOHwMemIf.h"
+#include "HwAbMem.h"
 
 #define NVM_DTC_ERROR_BLOCK_ID  0x2000
 #define ERROR_CODE_SIZE         sizeof(uint32)

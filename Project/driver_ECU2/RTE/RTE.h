@@ -10,6 +10,7 @@
 #include "CommunicationManager.h"
 #include "DiagnosticManager.h"
 #include "NVMManager.h"
+#include "WdgManager.h"
 
 #define MAX_DATA_PARAMETER  10
 #define MAX_ERROR_CODES     5
@@ -54,8 +55,15 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8,A
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8,AUTOMATIC) requestID);
 
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC));
-FUNC(void,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC));
+FUNC(Std_ReturnType,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC));
 FUNC(void,AUTOMATIC) Rte_EV_Component(VAR(void,AUTOMATIC));
 FUNC(void,AUTOMATIC) Rte_EV_GetError(VAR(void,AUTOMATIC));
+
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_Init(VAR(const WdgM_ConfigType*, AUTOMATIC) ConfigPtr);
+FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_DeInit(void);
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode);
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_GetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode);
+FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_PerformReset(void);
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID,VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID);
 
 #endif

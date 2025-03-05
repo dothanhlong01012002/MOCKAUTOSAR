@@ -12,8 +12,8 @@ VAR(NvM_DataBuffer,AUTOMATIC) Data;
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
     ReceiveData_Runable();
 }
-FUNC(void,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC)){
-    CoolingControl_Runable();
+FUNC(Std_ReturnType,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC)){
+    return CoolingControl_Runable();
 }
 FUNC(void,AUTOMATIC) Rte_EV_Component(VAR(void,AUTOMATIC)){
     FanControl_Runable();
@@ -103,3 +103,31 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(uint32,AUTOMATIC) 
     return E_OK;
 }
 
+
+//WDG////////////////////////
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_Init(VAR(const WdgM_ConfigType*, AUTOMATIC) ConfigPtr){
+    if (ConfigPtr != NULL) {
+        WdgM_Init(ConfigPtr);
+    }
+    return E_OK;
+}
+
+FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_DeInit(void){
+    WdgM_DeInit();
+}
+
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode){
+    return WdgM_SetMode(Mode);
+}
+
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_GetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode){
+    return WdgM_GetMode(&Mode);
+}
+
+FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_PerformReset(void){
+    WdgM_PerformReset(); 
+}
+
+FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID,VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID){
+    return WdgM_CheckpointReached(SEID, CheckpointID);
+}

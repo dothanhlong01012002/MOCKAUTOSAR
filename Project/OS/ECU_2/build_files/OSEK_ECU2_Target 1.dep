@@ -1,13 +1,13 @@
 Dependencies for Project 'OSEK_ECU2', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6140000::V6.14::ARMCLANG
 F (..\OSEK\startup\keilUvisoin_startup.s)(0x67C570CC)(--target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -masm=auto -c-gdwarf-3 -Wa,armasm,--pd,"__MICROLIB SETA 1" -Wa,armasm,--pd,"__EVAL SETA 1"-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-Wa,armasm,--pd,"__UVISION_VERSION SETA 531" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"TM4C123GH6PM SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./build_files/keiluvisoin_startup.o)
-F (..\OSEK\counter.c)(0x67C570CC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/counter.o -MD)
-I (..\OSEK\counter.h)(0x67C570CC)
+F (..\OSEK\counter.c)(0x67C7B595)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/counter.o -MD)
+I (..\OSEK\counter.h)(0x67C7B585)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 I (..\ECU_2\OsCfg.h)(0x67C6A856)
 I (..\OSEK\OsTypes.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
-F (..\OSEK\counter.h)(0x67C570CC)()
+F (..\OSEK\counter.h)(0x67C7B585)()
 F (..\OSEK\hook.c)(0x67C570CC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/hook.o -MD)
 I (..\OSEK\OsTypes.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
@@ -21,14 +21,14 @@ I (..\OSEK\OsTypes.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (.\OsCfg.h)(0x67C6A856)()
-F (.\schedule.c)(0x67C6A878)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/schedule.o -MD)
+F (.\schedule.c)(0x67C80215)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/schedule.o -MD)
 I (..\OSEK\os.h)(0x67C570CC)
 I (..\ECU_2\OsCfg.h)(0x67C6A856)
 I (..\OSEK\OsTypes.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h)(0x5ED619F4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
@@ -36,18 +36,21 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
 F (..\..\driver_ECU2\ASW\CompressorControlSWC.c)(0x67C678C1)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/compressorcontrolswc.o -MD)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
@@ -55,25 +58,29 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)()
-F (..\..\driver_ECU2\ASW\CoolingControlSWC.c)(0x67C699DC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/coolingcontrolswc.o -MD)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
+F (..\..\driver_ECU2\ASW\CoolingControlSWC.c)(0x67C7AC75)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/coolingcontrolswc.o -MD)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
 I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
@@ -81,30 +88,38 @@ I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
-F (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)()
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)()
 F (..\..\driver_ECU2\ASW\FanControlSWC.c)(0x67C6782A)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/fancontrolswc.o -MD)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
 I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)()
 F (..\..\driver_ECU2\ASW\NVBlockSWC.c)(0x67C6901D)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/nvblockswc.o -MD)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
@@ -116,9 +131,13 @@ I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)()
 F (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)()
 F (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)()
@@ -130,17 +149,21 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)()
 F (..\..\driver_ECU2\HWAL\IOHwAbFan.c)(0x67C674C9)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/iohwabfan.o -MD)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
@@ -149,17 +172,21 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)()
 F (..\..\driver_ECU2\HWAL\HwAbMem.c)(0x67C69AE8)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/hwabmem.o -MD)
 I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
@@ -167,6 +194,13 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 F (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)()
+F (..\..\driver_ECU2\HWAL\WdgIf.c)(0x67C80063)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/wdgif.o -MD)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)()
 F (..\..\driver_ECU2\MCAL\Pwm.c)(0x67C570CC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/pwm.o -MD)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
@@ -180,9 +214,15 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
 F (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)()
-F (..\..\driver_ECU2\RTE\RTE.c)(0x67C69D96)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/rte.o -MD)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+F (..\..\driver_ECU2\MCAL\Wdg.c)(0x67C7B9D1)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/wdg.o -MD)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)()
+F (..\..\driver_ECU2\RTE\RTE.c)(0x67C7F5F5)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/rte.o -MD)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
@@ -190,19 +230,23 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
-F (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)()
-F (..\..\driver_ECU2\SERVICE\CommunicationManager.c)(0x67C570CC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/communicationmanager.o -MD)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)()
+F (..\..\driver_ECU2\SERVICE\CommunicationManager.c)(0x67C7F648)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/communicationmanager.o -MD)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
@@ -210,38 +254,54 @@ I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)()
 F (..\..\driver_ECU2\SERVICE\DiagnosticManager.c)(0x67C667CA)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/diagnosticmanager.o -MD)
 I (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)
 I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
-I (..\..\driver_ECU2\RTE\RTE.h)(0x67C69D8B)
-I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C570CC)
+I (..\..\driver_ECU2\RTE\RTE.h)(0x67C7F624)
+I (..\..\driver_ECU2\ASW\CoolingControlSWC.h)(0x67C7AC0F)
 I (..\..\driver_ECU2\common\Compiler.h)(0x67C570CC)
 I (..\..\driver_ECU2\common\Compiler_Cfg.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\FanControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\ASW\NVBlockSWC.h)(0x67C6901C)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (..\..\driver_ECU2\ASW\CompressorControlSWC.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbCompressor.h)(0x67C674C4)
 I (..\..\driver_ECU2\MCAL\Pwm.h)(0x67C570CC)
 I (..\..\driver_ECU2\HWAL\IOHwAbFan.h)(0x67C674CC)
 I (..\..\driver_ECU2\SERVICE\CommunicationManager.h)(0x67C570CC)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
 F (..\..\driver_ECU2\SERVICE\DiagnosticManager.h)(0x67C667CF)()
 F (..\..\driver_ECU2\SERVICE\NVMManager.c)(0x67C6A166)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/nvmmanager.o -MD)
-I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)
+I (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)
 I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
-I (..\..\driver_ECU2\HWAL\IOHwMemIf.h)(0x67C69F07)
+I (..\..\driver_ECU2\HWAL\HwAbMem.h)(0x67C69A56)
 I (..\..\driver_ECU2\MCAL\Fls.h)(0x67C6A036)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x5ED619F4)
-F (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C6A18C)()
+F (..\..\driver_ECU2\SERVICE\NVMManager.h)(0x67C7F352)()
+F (..\..\driver_ECU2\SERVICE\WdgManager.c)(0x67C7F572)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-3 -O1 -fno-function-sections -I ../ECU_2 -I ../OSEK -I ../../driver_ECU2/ASW -I ../../driver_ECU2/common -I ../../driver_ECU2/HWAL -I ../../driver_ECU2/MCAL -I ../../driver_ECU2/RTE -I ../../driver_ECU2/SERVICE-I./RTE/_Target_1-IC:/Users/ADMIN/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include-IC:/Users/ADMIN/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="531" -D_RTE_ -DTM4C123GH6PM -D_RTE_-o ./build_files/wdgmanager.o -MD)
+I (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)
+I (..\..\driver_ECU2\HWAL\WdgIf.h)(0x67C7BEA2)
+I (..\..\driver_ECU2\common\Std_Types.h)(0x67C570CC)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x5ED619F4)
+I (..\..\driver_ECU2\MCAL\Wdg.h)(0x67C7B9EF)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x5ED619F4)
+F (..\..\driver_ECU2\SERVICE\WdgManager.h)(0x67C7CE36)()

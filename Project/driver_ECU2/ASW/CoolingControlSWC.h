@@ -6,6 +6,6 @@
 #include "Compiler.h"
 #include "DiagnosticManager.h"
 
-FUNC(void,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC));
+FUNC(Std_ReturnType,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC));
 
 #endif
