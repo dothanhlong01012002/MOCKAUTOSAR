@@ -7,12 +7,12 @@
 #include "CompressorControlSWC.h"
 #include "IOHwAbCompressor.h"
 #include "IOHwAbFan.h"
-#include "CommunicationManager.h"
+#include "Com.h"
 #include "DiagnosticManager.h"
 #include "NVMManager.h"
 
-extern VAR(uint16,AUTOMATIC) ExpectedTemp;
-extern VAR(uint16,AUTOMATIC) TemperatureValue;
+extern VAR(uint8,AUTOMATIC) ExpectedTemp;
+extern VAR(uint8,AUTOMATIC) TemperatureValue;
 extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
 extern VAR(uint16,AUTOMATIC) FanRatio;
 extern VAR(uint16,AUTOMATIC) CompressorRatio;
