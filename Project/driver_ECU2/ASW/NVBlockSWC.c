@@ -1,12 +1,16 @@
 #include "NVBlockSWC.h"
 
-FUNC(void,AUTOMATIC) SaveNVM_Runnable(VAR(void,AUTOMATIC)){
-    VAR(uint32,AUTOMATIC) errorCode;
-    Rte_Call_RP_SaveNVData_NVM(errorCode);
-}
+FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID){
+    if(requestID == 0){
+        return NvM_WriteBlock(1,Data.parameterData);
+    }else if(requestID == 1){
+        return NvM_ReadBlock(1,Data.parameterData);
+    }else if(requestID == 2){
+        return NvM_WriteBlock(2,Data.errorCodes);
+    }else if(requestID == 3){
+        return NvM_ReadBlock(2,Data.errorCodes);
+    }
 
-FUNC(void,AUTOMATIC) GetNVM_Runnable(VAR(void,AUTOMATIC)){
-    VAR(uint32,AUTOMATIC) errorCode;
-    Rte_Call_RP_GetNVData_NVM(&errorCode);
+    return E_NOT_OK;
 }
 

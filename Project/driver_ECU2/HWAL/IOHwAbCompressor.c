@@ -1,7 +1,6 @@
 #include "IOHwAbCompressor.h"
 
-FUNC(void,AUTOMATIC) AdjustCompressorControl(VAR(void,AUTOMATIC)){
-    VAR(uint16,AUTOMATIC) compressorRatio;
-    Rte_RP_AdjustCompressor_ControlCompressor(compressorRatio);
-    Pwm_SetDutyCycle(PWM_CHANNEL1,compressorRatio);
+FUNC(Std_ReturnType,AUTOMATIC) AdjustCompressorControl(VAR(uint16,AUTOMATIC) compressorR){
+    Pwm_SetDutyCycle(PWM_CHANNEL1,compressorR);
+    return E_OK;
 }

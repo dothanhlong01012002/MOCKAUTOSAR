@@ -6,6 +6,6 @@
 
 #define PWM_CHANNEL0 0
 
-FUNC(void,AUTOMATIC) AdjustFanControl(VAR(void,AUTOMATIC));
+FUNC(Std_ReturnType,AUTOMATIC) AdjustFanControl(VAR(uint16,AUTOMATIC) fanR);
 
 #endif

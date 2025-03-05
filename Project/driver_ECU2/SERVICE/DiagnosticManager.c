@@ -1,5 +1,5 @@
 #include "DiagnosticManager.h"
-
+int eventCount = 0;
 DiagnosticEvent diagnosticEvents[MAX_DIAGNOSTIC_EVENTS] = {{0, EVENT_STATUS_RESOLVED}};  // Khởi tạo mảng sự kiện lỗi
 
 void ReportDiagnosticEvent(uint32 eventID, uint8 status)
@@ -8,6 +8,7 @@ void ReportDiagnosticEvent(uint32 eventID, uint8 status)
         diagnosticEvents[eventCount].eventID = eventID;
         diagnosticEvents[eventCount].status = status;
         eventCount++;  
+        Data.numErrorCodes++;
     }
     else {
         
@@ -16,7 +17,8 @@ void ReportDiagnosticEvent(uint32 eventID, uint8 status)
 
 uint8 GetDiagnosticEventStatus(uint32 eventID)
 {
-    for (int i = 0; i < eventCount; i++) {
+		int i = 0;
+    for ( ;i < eventCount; i++) {
         if (diagnosticEvents[i].eventID == eventID) {
             return diagnosticEvents[i].status;
         }
@@ -27,7 +29,8 @@ uint8 GetDiagnosticEventStatus(uint32 eventID)
 
 void SetEventStatus(uint32 eventID, uint8 status)
 {
-    for (int i = 0; i < eventCount; i++) {
+		int i = 0;
+    for (; i < eventCount; i++) {
         if (diagnosticEvents[i].eventID == eventID) {
             diagnosticEvents[i].status = status;
             return;

@@ -5,6 +5,9 @@
 
 Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, uint32 Length);
 Std_ReturnType Fls_Read(uint32 TargetAddress, uint8* DestinationPtr, uint32 Length);
-void writeErrorCodeToLog(int errorCode, const char *errorDescription);
-int readErrorCodesFromLog();
+
+// void writeErrorCodeToLog(int errorCode, const char *errorDescription);
+// int readErrorCodesFromLog();
+
+
 #endif

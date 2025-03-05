@@ -6,7 +6,6 @@
 #include "Compiler.h"
 #include "NVMManager.h"
 
-FUNC(void,AUTOMATIC) SaveNVM_Runnable(VAR(void,AUTOMATIC));
-FUNC(void,AUTOMATIC) GetNVM_Runnable(VAR(void,AUTOMATIC));
+FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID);
 
 #endif
