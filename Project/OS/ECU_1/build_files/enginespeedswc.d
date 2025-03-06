@@ -8,4 +8,6 @@
   ..\..\driver_ECU1\SERVICE\ComM.h ..\..\driver_ECU1\SERVICE\PduR.h \
   ..\..\driver_ECU1\HWAL\IOHwAbCan.h ..\..\driver_ECU1\MCAL\Can.h \
   ..\..\driver_ECU1\SERVICE\Com.h \
-  ..\..\driver_ECU1\ASW\TemperatureSensorSWC.h
+  ..\..\driver_ECU1\ASW\TemperatureSensorSWC.h \
+  ..\..\driver_ECU1\RTE\Rte_AppComTX.h \
+  ..\..\driver_ECU1\RTE\Rte_AppReadSensor.h

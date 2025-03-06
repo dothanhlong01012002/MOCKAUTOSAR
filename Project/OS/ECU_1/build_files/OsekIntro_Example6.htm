@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build_files\OsekIntro_Example6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build_files\OsekIntro_Example6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Mar  6 09:26:21 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Mar  6 14:12:13 2025
 <BR><P>
 <H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1261,7 +1261,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ReadSensor_Task
 </UL>
 
-<P><STRONG><a name="[83]"></a>Rte_EV_DataHandle</STRONG> (Thumb, 58 bytes, Stack size 16 bytes, rte.o(.text))
+<P><STRONG><a name="[83]"></a>Rte_EV_DataHandle</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, rte.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = Rte_EV_DataHandle &rArr; Com_SendSignal &rArr; PduR_ComTransmit &rArr; CanIf_Transmit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_SendSignal
@@ -1271,33 +1271,33 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_DataHandle_Task
 </UL>
 
-<P><STRONG><a name="[89]"></a>Rte_Read_RP_Pulse_EngineSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text))
+<P><STRONG><a name="[8a]"></a>Rte_Write_PP_Speed_SpeedValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte_appcomtx.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadSpeed_Runable
 </UL>
 
-<P><STRONG><a name="[90]"></a>Rte_Write_PP_Pulse_EngineSpeedValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text))
+<P><STRONG><a name="[ff]"></a>Rte_Read_RP_Speed_SpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte_appcomtx.o(.text), UNUSED)
+
+<P><STRONG><a name="[8d]"></a>Rte_Write_PP_Temperature_TempValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte_appcomtx.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadTemperature_Runable
+</UL>
+
+<P><STRONG><a name="[100]"></a>Rte_Read_RP_Temperature_TempValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte_appcomtx.o(.text), UNUSED)
+
+<P><STRONG><a name="[89]"></a>Rte_Read_RP_Pulse_EngineSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte_appreadsensor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadSpeed_Runable
+</UL>
+
+<P><STRONG><a name="[90]"></a>Rte_Write_PP_Pulse_EngineSpeedValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte_appreadsensor.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadPulse_Runable
 </UL>
 
-<P><STRONG><a name="[8a]"></a>Rte_Write_PP_Speed_SpeedValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadSpeed_Runable
-</UL>
-
-<P><STRONG><a name="[ff]"></a>Rte_Read_RP_Speed_SpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
-
-<P><STRONG><a name="[92]"></a>Rte_Write_PP_Voltage_TemperatureValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text))
+<P><STRONG><a name="[92]"></a>Rte_Write_PP_Voltage_TemperatureValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte_appreadsensor.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadVoltage_Runable
 </UL>
 
-<P><STRONG><a name="[8c]"></a>Rte_Read_RP_Voltage_TemperatureValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text))
+<P><STRONG><a name="[8c]"></a>Rte_Read_RP_Voltage_TemperatureValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte_appreadsensor.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadTemperature_Runable
 </UL>
-
-<P><STRONG><a name="[8d]"></a>Rte_Write_PP_Temperature_TempValue</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadTemperature_Runable
-</UL>
-
-<P><STRONG><a name="[100]"></a>Rte_Read_RP_Temperature_TempValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[96]"></a>Com_SendSignal</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, com.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = Com_SendSignal &rArr; PduR_ComTransmit &rArr; CanIf_Transmit

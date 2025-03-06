@@ -16,5 +16,5 @@ typedef struct
     P2VAR(uint8,AUTOMATIC,AUTOMATIC) sdu;
 } Can_PduType;
 
-
+FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC));
 #endif /* CAN_H */

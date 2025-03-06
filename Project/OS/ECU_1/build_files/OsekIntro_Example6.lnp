@@ -13,6 +13,8 @@
 ".\build_files\adc.o"
 ".\build_files\can.o"
 ".\build_files\rte.o"
+".\build_files\rte_appcomtx.o"
+".\build_files\rte_appreadsensor.o"
 ".\build_files\comm.o"
 ".\build_files\com.o"
 ".\build_files\pdur.o"
