@@ -614,6 +614,36 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\RTE\RTE.h</FilePath>
             </File>
+            <File>
+              <FileName>Rte_AppCoolingControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_AppCoolingControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppCoolingControl.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_AppCoolingControl.h</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppNVBlock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_AppNVBlock.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppNVBlock.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_AppNVBlock.h</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_Diagnosis.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_Diagnosis.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_Diagnosis.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\Rte_Diagnosis.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

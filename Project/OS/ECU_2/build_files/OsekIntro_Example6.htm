@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build_files\OsekIntro_Example6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build_files\OsekIntro_Example6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Mar  6 14:39:32 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Mar  6 15:33:46 2025
 <BR><P>
 <H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -12,11 +12,11 @@ SystemTimerHandler &rArr; SystemAlarmsProcessor &rArr; OsAlrm_AlarmActionExecute
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[dd]">OsPort_JumpToApp</a>
+ <LI><a href="#[e3]">OsPort_JumpToApp</a>
  <LI><a href="#[8]">OsPort_PendSVHandler</a>
- <LI><a href="#[ce]">OsPort_PushUpperContext</a>
- <LI><a href="#[f4]">OsPort_PopUpperContext</a>
- <LI><a href="#[f5]">OsPort_ReturnWithAutopop</a>
+ <LI><a href="#[d4]">OsPort_PushUpperContext</a>
+ <LI><a href="#[fa]">OsPort_PopUpperContext</a>
+ <LI><a href="#[fb]">OsPort_ReturnWithAutopop</a>
 </UL>
 </UL>
 <P>
@@ -280,25 +280,25 @@ Global Symbols
 <P><STRONG><a name="[78]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(.text)
 </UL>
-<P><STRONG><a name="[117]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[11d]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[81]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[116]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[11c]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[118]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[11e]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[119]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[11f]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[11a]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[120]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[11b]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[121]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[11c]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[122]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[0]"></a>Reset_Handler</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, keiluvisoin_startup.o(.text))
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
@@ -1119,51 +1119,51 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
 </UL>
-<P><STRONG><a name="[dc]"></a>SysTick_Init</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, counter.o(.text))
+<P><STRONG><a name="[e2]"></a>SysTick_Init</STRONG> (Thumb, 78 bytes, Stack size 0 bytes, counter.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[d0]"></a>OsCnt_IncrSystemCounter</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, counter.o(.text))
+<P><STRONG><a name="[d6]"></a>OsCnt_IncrSystemCounter</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, counter.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 </UL>
 
-<P><STRONG><a name="[bb]"></a>OsCnt_GetSystemCounter</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, counter.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
+<P><STRONG><a name="[c1]"></a>OsCnt_GetSystemCounter</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, counter.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 </UL>
 
-<P><STRONG><a name="[c9]"></a>ErrorHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<P><STRONG><a name="[cf]"></a>ErrorHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[d9]"></a>StartupHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
+<P><STRONG><a name="[df]"></a>StartupHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[10c]"></a>PreTaskHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<P><STRONG><a name="[112]"></a>PreTaskHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
 </UL>
 
-<P><STRONG><a name="[10a]"></a>PostTaskHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<P><STRONG><a name="[110]"></a>PostTaskHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
 </UL>
 
-<P><STRONG><a name="[e5]"></a>StackOverFlowHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
+<P><STRONG><a name="[eb]"></a>StackOverFlowHook</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, hook.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
@@ -1212,7 +1212,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 </UL>
 <P><STRONG><a name="[7d]"></a>OsTask_ComReceive_Task</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, schedule.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTask_ComReceive_Task &rArr; Rte_EV_ComReceive &rArr; Com_ReceiveSignal
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OsTask_ComReceive_Task &rArr; Rte_EV_ComReceive &rArr; Handle_Can_Interrupt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
@@ -1257,7 +1257,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
 <LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_WriteBlock
 </UL>
-<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVHandle_SeverHandle
+<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVHandle_SeverHandle
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVData_CallServerFunction
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_GetError
 </UL>
@@ -1299,18 +1299,34 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
+<BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
 
 <P><STRONG><a name="[a7]"></a>WdgIf_SetTriggerCondition</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, wdgif.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetTriggerCondition
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
+
+<P><STRONG><a name="[a9]"></a>WdgIf_Init</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, wdgif.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_Init
+</UL>
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
+</UL>
+
+<P><STRONG><a name="[123]"></a>CanIf_ReadRxPduData</STRONG> (Thumb, 42 bytes, Stack size 0 bytes, iohwabcan.o(.text), UNUSED)
+
+<P><STRONG><a name="[ab]"></a>CanIf_RxIndication</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, iohwabcan.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PduR_LoIfRxIndication
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Handle_Can_Interrupt
+</UL>
+
+<P><STRONG><a name="[124]"></a>CanIf_ReadRxNotifStatus</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, iohwabcan.o(.text), UNUSED)
 
 <P><STRONG><a name="[9f]"></a>Pwm_SetDutyCycle</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, pwm.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdjustFanControl
@@ -1325,18 +1341,31 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemIf_Read
 </UL>
 
-<P><STRONG><a name="[a6]"></a>Wdg_SetMode</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, wdg.o(.text))
+<P><STRONG><a name="[a6]"></a>Wdg_SetMode</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, wdg.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
 
-<P><STRONG><a name="[a8]"></a>Wdg_SetTriggerCondition</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, wdg.o(.text))
+<P><STRONG><a name="[a8]"></a>Wdg_SetTriggerCondition</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, wdg.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 </UL>
 
-<P><STRONG><a name="[8d]"></a>Rte_EV_ComReceive</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_EV_ComReceive &rArr; Com_ReceiveSignal
+<P><STRONG><a name="[aa]"></a>Wdg_Init</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, wdg.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_Init
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
+
+<P><STRONG><a name="[ad]"></a>Handle_Can_Interrupt</STRONG> (Thumb, 42 bytes, Stack size 24 bytes, can.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Handle_Can_Interrupt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CanIf_RxIndication
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
+</UL>
+
+<P><STRONG><a name="[8d]"></a>Rte_EV_ComReceive</STRONG> (Thumb, 54 bytes, Stack size 16 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Rte_EV_ComReceive &rArr; Handle_Can_Interrupt
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Handle_Can_Interrupt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
 </UL>
@@ -1366,7 +1395,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_GetError_Task
 </UL>
 
-<P><STRONG><a name="[11d]"></a>Rte_Write_PP_ComData_TempSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[125]"></a>Rte_Write_PP_ComData_TempSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[92]"></a>Rte_Read_RP_ComData_TempSpeedValue</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, rte.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
@@ -1392,7 +1421,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[11e]"></a>Rte_Write_PP_PARAM_ExpectedTemperature</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[126]"></a>Rte_Write_PP_PARAM_ExpectedTemperature</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[9a]"></a>Rte_Call_RP_AdjustFan_ControlFan</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
@@ -1418,55 +1447,55 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[aa]"></a>Rte_Call_RP_NVHandle_SeverHandle</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[af]"></a>Rte_Call_RP_NVHandle_SeverHandle</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
 </UL>
 
 <P><STRONG><a name="[94]"></a>Rte_Call_RP_ERROR_ReportDiagnosticResult</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, rte.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rte_Call_RP_ERROR_ReportDiagnosticResult
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEventStatus
+<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Dem_SetEventStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[11f]"></a>Rte_Call_RP_ERROR_SetEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[127]"></a>Rte_Call_RP_ERROR_SetEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[83]"></a>Rte_Call_RP_WdgM_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_WdgM_Init &rArr; WdgM_Init &rArr; WdgIf_SetMode
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_Call_RP_WdgM_Init &rArr; WdgM_Init &rArr; WdgIf_SetMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>Rte_Call_RP_WdgM_DeInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
+<P><STRONG><a name="[b2]"></a>Rte_Call_RP_WdgM_DeInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
 </UL>
 
-<P><STRONG><a name="[af]"></a>Rte_Call_RP_WdgM_SetMode</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
+<P><STRONG><a name="[b4]"></a>Rte_Call_RP_WdgM_SetMode</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
 </UL>
 
-<P><STRONG><a name="[b1]"></a>Rte_Call_RP_WdgM_GetMode</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, rte.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_GetMode
+<P><STRONG><a name="[b6]"></a>Rte_Call_RP_WdgM_GetMode</STRONG> (Thumb, 20 bytes, Stack size 16 bytes, rte.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_GetMode
 </UL>
 
-<P><STRONG><a name="[8a]"></a>Rte_Call_RP_WdgM_PerformReset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
-</UL>
-<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
+<P><STRONG><a name="[8a]"></a>Rte_Call_RP_WdgM_PerformReset</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 </UL>
 
-<P><STRONG><a name="[b4]"></a>Rte_Call_RP_WdgM_CheckpointReached</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_CheckpointReached
+<P><STRONG><a name="[b8]"></a>Rte_Call_RP_WdgM_CheckpointReached</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_CheckpointReached
 </UL>
 
-<P><STRONG><a name="[120]"></a>ReportDiagnosticEvent</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, diagnosticmanager.o(.text), UNUSED)
+<P><STRONG><a name="[128]"></a>ReportDiagnosticEvent</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, diagnosticmanager.o(.text), UNUSED)
 
-<P><STRONG><a name="[121]"></a>GetDiagnosticEventStatus</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, diagnosticmanager.o(.text), UNUSED)
+<P><STRONG><a name="[129]"></a>GetDiagnosticEventStatus</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, diagnosticmanager.o(.text), UNUSED)
 
-<P><STRONG><a name="[ab]"></a>SetEventStatus</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, diagnosticmanager.o(.text))
+<P><STRONG><a name="[12a]"></a>SetEventStatus</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, diagnosticmanager.o(.text), UNUSED)
+
+<P><STRONG><a name="[b0]"></a>Dem_SetEventStatus</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, diagnosticmanager.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_ERROR_ReportDiagnosticResult
 </UL>
 
@@ -1486,107 +1515,114 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
 </UL>
 
-<P><STRONG><a name="[ac]"></a>WdgM_Init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, wdgmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = WdgM_Init &rArr; WdgIf_SetMode
+<P><STRONG><a name="[b1]"></a>WdgM_Init</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, wdgmanager.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = WdgM_Init &rArr; WdgIf_SetMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_Init
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_Init
 </UL>
 
-<P><STRONG><a name="[b3]"></a>WdgM_PerformReset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, wdgmanager.o(.text))
+<P><STRONG><a name="[ba]"></a>WdgM_PerformReset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_PerformReset
-</UL>
 
-<P><STRONG><a name="[ae]"></a>WdgM_DeInit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, wdgmanager.o(.text), UNUSED)
+<P><STRONG><a name="[b3]"></a>WdgM_DeInit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, wdgmanager.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_DeInit
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_DeInit
 </UL>
 
-<P><STRONG><a name="[b0]"></a>WdgM_SetMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
+<P><STRONG><a name="[b5]"></a>WdgM_SetMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_SetMode
+<BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_SetMode
 </UL>
 
-<P><STRONG><a name="[b2]"></a>WdgM_GetMode</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_GetMode
+<P><STRONG><a name="[b7]"></a>WdgM_GetMode</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_GetMode
 </UL>
 
-<P><STRONG><a name="[b5]"></a>WdgM_CheckpointReached</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_CheckpointReached
+<P><STRONG><a name="[b9]"></a>WdgM_CheckpointReached</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_CheckpointReached
 </UL>
 
-<P><STRONG><a name="[a9]"></a>Com_ReceiveSignal</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, com.o(.text))
+<P><STRONG><a name="[ae]"></a>Com_ReceiveSignal</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, com.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Com_ReceiveSignal
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
 </UL>
 
-<P><STRONG><a name="[122]"></a>Com_RxIndication</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, com.o(.text), UNUSED)
-
-<P><STRONG><a name="[123]"></a>DeclareAlarm</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
-
-<P><STRONG><a name="[b7]"></a>GetAlarmBase</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
+<P><STRONG><a name="[bc]"></a>Com_RxIndication</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, com.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PduR_LoIfRxIndication
 </UL>
 
-<P><STRONG><a name="[b9]"></a>GetAlarm</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetFirePoint
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<P><STRONG><a name="[ac]"></a>PduR_LoIfRxIndication</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, pdur.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_RxIndication
+</UL>
+<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CanIf_RxIndication
 </UL>
 
-<P><STRONG><a name="[bd]"></a>SetAbsAlarm</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
+<P><STRONG><a name="[12b]"></a>DeclareAlarm</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
+
+<P><STRONG><a name="[bd]"></a>GetAlarmBase</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
 </UL>
 
-<P><STRONG><a name="[c1]"></a>SetRelAlarm</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<P><STRONG><a name="[bf]"></a>GetAlarm</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetFirePoint
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
 </UL>
 
-<P><STRONG><a name="[c2]"></a>CancelAlarm</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_DisableAlarm
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
+<P><STRONG><a name="[c3]"></a>SetAbsAlarm</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
+</UL>
+
+<P><STRONG><a name="[c7]"></a>SetRelAlarm</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+</UL>
+
+<P><STRONG><a name="[c8]"></a>CancelAlarm</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_DisableAlarm
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
 </UL>
 
 <P><STRONG><a name="[9]"></a>SystemTimerHandler</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72 + Unknown Stack Size
 <LI>Call Chain = SystemTimerHandler &rArr; SystemAlarmsProcessor &rArr; OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PushUpperContext
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_IncrSystemCounter
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PushUpperContext
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_IncrSystemCounter
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
 </UL>
 <P><STRONG><a name="[8c]"></a>SetEvent</STRONG> (Thumb, 34 bytes, Stack size 16 bytes, event.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SetEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetTskID
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetTskID
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
@@ -1595,24 +1631,24 @@ Global Symbols
 <P><STRONG><a name="[87]"></a>ClearEvent</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, event.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = ClearEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Component_Task
 </UL>
 
-<P><STRONG><a name="[d5]"></a>GetEvent</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, event.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<P><STRONG><a name="[db]"></a>GetEvent</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, event.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
 </UL>
 
 <P><STRONG><a name="[85]"></a>WaitEvent</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, event.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = WaitEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Component_Task
@@ -1622,72 +1658,72 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40 + Unknown Stack Size
 <LI>Call Chain = StartOS &rArr; OsTcb_JumpToNextTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
-<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
-<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_CoreInit
-<LI><a href="#[d9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartupHook
-<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
+<BR>[Calls]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
+<LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_CoreInit
+<LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartupHook
+<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[de]"></a>ActivateTask</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrSetTskID
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<P><STRONG><a name="[e4]"></a>ActivateTask</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrSetTskID
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 
 <P><STRONG><a name="[89]"></a>TerminateTask</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, task.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = TerminateTask
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
 <LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_GetError_Task
 </UL>
 
-<P><STRONG><a name="[e0]"></a>ChainTask</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[df]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrSetTskID
-<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<P><STRONG><a name="[e6]"></a>ChainTask</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrSetTskID
+<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 
-<P><STRONG><a name="[e1]"></a>Schedule</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<P><STRONG><a name="[e7]"></a>Schedule</STRONG> (Thumb, 22 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 
-<P><STRONG><a name="[e2]"></a>GetTaskID</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<P><STRONG><a name="[e8]"></a>GetTaskID</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 
-<P><STRONG><a name="[e3]"></a>GetTaskState</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<P><STRONG><a name="[e9]"></a>GetTaskState</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
 </UL>
 
 <P><STRONG><a name="[6]"></a>SVC_Dispatcher</STRONG> (Thumb, 160 bytes, Stack size 16 bytes, task.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48 + Unknown Stack Size
 <LI>Call Chain = SVC_Dispatcher &rArr; OsTcb_WaitEventProcessor &rArr; OsTcb_CheckEventTrigger
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ThreadStackOverFlow
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetSVCNumber
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetPSP
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PushUpperContext
-<LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackOverFlowHook
+<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ThreadStackOverFlow
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetSVCNumber
+<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetPSP
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
+<LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PushUpperContext
+<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StackOverFlowHook
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
 </UL>
@@ -1695,9 +1731,9 @@ Global Symbols
 <BR>[Address Reference Count : 2]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 <LI> tcbprocessor.o(.text)
 </UL>
-<P><STRONG><a name="[dd]"></a>OsPort_JumpToApp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetCurrentTCBRef
-<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetThreadMode
+<P><STRONG><a name="[e3]"></a>OsPort_JumpToApp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetCurrentTCBRef
+<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetThreadMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
@@ -1706,670 +1742,670 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 32 + Unknown Stack Size
 <LI>Call Chain = OsPort_PendSVHandler &rArr; OsTcb_JumpToNextTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
-<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_ReturnWithAutopop
-<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PopUpperContext
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<BR>[Calls]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_ReturnWithAutopop
+<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PopUpperContext
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
 </UL>
-<P><STRONG><a name="[ce]"></a>OsPort_PushUpperContext</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
+<P><STRONG><a name="[d4]"></a>OsPort_PushUpperContext</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[f4]"></a>OsPort_PopUpperContext</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
+<P><STRONG><a name="[fa]"></a>OsPort_PopUpperContext</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
 </UL>
 
-<P><STRONG><a name="[f5]"></a>OsPort_ReturnWithAutopop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
+<P><STRONG><a name="[fb]"></a>OsPort_ReturnWithAutopop</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, port.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
 </UL>
 
-<P><STRONG><a name="[c8]"></a>OsErrMgr_SetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<P><STRONG><a name="[ce]"></a>OsErrMgr_SetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[124]"></a>OsErrMgr_GetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[12c]"></a>OsErrMgr_GetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
-<P><STRONG><a name="[106]"></a>OsErrMgr_StoreTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<P><STRONG><a name="[10c]"></a>OsErrMgr_StoreTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
 </UL>
 
-<P><STRONG><a name="[125]"></a>OsErrMgr_GetTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[12d]"></a>OsErrMgr_GetTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
-<P><STRONG><a name="[112]"></a>OsErrMgr_StoreEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<P><STRONG><a name="[118]"></a>OsErrMgr_StoreEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
 </UL>
 
-<P><STRONG><a name="[126]"></a>OsErrMgr_GetEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[12e]"></a>OsErrMgr_GetEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
-<P><STRONG><a name="[fa]"></a>OsErrMgr_StoreResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<P><STRONG><a name="[100]"></a>OsErrMgr_StoreResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
 </UL>
 
-<P><STRONG><a name="[127]"></a>OsErrMgr_GetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[12f]"></a>OsErrMgr_GetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
-<P><STRONG><a name="[115]"></a>OsErrMgr_SetOverFlowContext</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, errmgr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ThreadStackOverFlow
+<P><STRONG><a name="[11b]"></a>OsErrMgr_SetOverFlowContext</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, errmgr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ThreadStackOverFlow
 </UL>
 
-<P><STRONG><a name="[128]"></a>OsErrMgr_GetOverFlowContext</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[130]"></a>OsErrMgr_GetOverFlowContext</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
-<P><STRONG><a name="[ef]"></a>OsRes_GetResourceProcessor</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, rcbprocessor.o(.text))
+<P><STRONG><a name="[f5]"></a>OsRes_GetResourceProcessor</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, rcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsRes_GetResourceProcessor &rArr; OsTcb_GetTaskPriorityEx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_ResMgrGetResID
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskPri
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetResOccupied
-<LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriorityEx
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreResID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_ResMgrGetResID
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskPri
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetResOccupied
+<LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriorityEx
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreResID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[f0]"></a>OsRcb_ReleaseResourceProcessor</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, rcbprocessor.o(.text))
+<P><STRONG><a name="[f6]"></a>OsRcb_ReleaseResourceProcessor</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, rcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsRcb_ReleaseResourceProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_ResMgrGetResID
-<LI><a href="#[f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskPri
-<LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetResOccupied
-<LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreResID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_ResMgrGetResID
+<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskPri
+<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetResOccupied
+<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreResID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[fb]"></a>SVCCnxt_SetErrCode</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<P><STRONG><a name="[101]"></a>SVCCnxt_SetErrCode</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ScheduleProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
 </UL>
 
-<P><STRONG><a name="[d4]"></a>SVCCnxt_GetErrCode</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
+<P><STRONG><a name="[da]"></a>SVCCnxt_GetErrCode</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
-<P><STRONG><a name="[df]"></a>SVCCnxt_TskMgrSetTskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
+<P><STRONG><a name="[e5]"></a>SVCCnxt_TskMgrSetTskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
 </UL>
 
-<P><STRONG><a name="[100]"></a>SVCCnxt_TskMgrGetTskID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<P><STRONG><a name="[106]"></a>SVCCnxt_TskMgrGetTskID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
 </UL>
 
-<P><STRONG><a name="[d2]"></a>SVCCnxt_EventMgrSetTskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
+<P><STRONG><a name="[d8]"></a>SVCCnxt_EventMgrSetTskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 </UL>
 
-<P><STRONG><a name="[10e]"></a>SVCCnxt_EventMgrGetTskID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<P><STRONG><a name="[114]"></a>SVCCnxt_EventMgrGetTskID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
 </UL>
 
-<P><STRONG><a name="[d3]"></a>SVCCnxt_EventMgrSetEventMsk</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
+<P><STRONG><a name="[d9]"></a>SVCCnxt_EventMgrSetEventMsk</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
-<P><STRONG><a name="[10f]"></a>SVCCnxt_EventMgrGetEventMsk</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<P><STRONG><a name="[115]"></a>SVCCnxt_EventMgrGetEventMsk</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
 </UL>
 
-<P><STRONG><a name="[129]"></a>SVCCnxt_ResMgrSetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
+<P><STRONG><a name="[131]"></a>SVCCnxt_ResMgrSetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
 
-<P><STRONG><a name="[f6]"></a>SVCCnxt_ResMgrGetResID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<P><STRONG><a name="[fc]"></a>SVCCnxt_ResMgrGetResID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
 </UL>
 
-<P><STRONG><a name="[d8]"></a>OsTcb_TasksInit</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[de]"></a>OsTcb_TasksInit</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_TasksInit &rArr; OsTcb_StackCanarInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_IdleTaskInit
-<LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_StackCanarInit
-<LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_StackPointersInit
-<LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetInitialStack
+<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_IdleTaskInit
+<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_StackCanarInit
+<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_StackPointersInit
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetInitialStack
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[102]"></a>OsTcb_GetTaskState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<P><STRONG><a name="[108]"></a>OsTcb_GetTaskState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
 </UL>
 
-<P><STRONG><a name="[d1]"></a>OsTcb_GetTaskIDProcessor</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
-<LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
-<LI><a href="#[e2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTaskID
-<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
-<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
+<P><STRONG><a name="[d7]"></a>OsTcb_GetTaskIDProcessor</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
+<LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTaskID
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
+<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
+<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
-<P><STRONG><a name="[ea]"></a>OsTcb_ActivateTaskTCBProcesor</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f0]"></a>OsTcb_ActivateTaskTCBProcesor</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_ActivateTaskTCBProcesor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[109]"></a>OsTcb_GetResOccupied</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<P><STRONG><a name="[10f]"></a>OsTcb_GetResOccupied</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
 </UL>
 
-<P><STRONG><a name="[eb]"></a>OsTcb_ChainTaskTCBProcessor</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f1]"></a>OsTcb_ChainTaskTCBProcessor</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_ChainTaskTCBProcessor &rArr; OsTcb_ResetTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
-<LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
+<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[da]"></a>OsTcb_SetScheduleReq</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<P><STRONG><a name="[e0]"></a>OsTcb_SetScheduleReq</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
 <LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[e8]"></a>OsTcb_TerminateTaskTCBProcessor</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[ee]"></a>OsTcb_TerminateTaskTCBProcessor</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_TerminateTaskTCBProcessor &rArr; OsTcb_ResetTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[db]"></a>OsTcb_JumpToNextTCB</STRONG> (Thumb, 254 bytes, Stack size 32 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[e1]"></a>OsTcb_JumpToNextTCB</STRONG> (Thumb, 254 bytes, Stack size 32 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_JumpToNextTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetCurrentTCBRef
-<LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriority
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PreTaskHook
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetCurrentTCBRef
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriority
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PreTaskHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
 </UL>
 
-<P><STRONG><a name="[ec]"></a>OsTcb_SetEventProcessor</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f2]"></a>OsTcb_SetEventProcessor</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_SetEventProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskEvent
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
-<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetTskID
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskEvent
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetTskID
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[ee]"></a>OsTcb_ClearEventProcessor</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f4]"></a>OsTcb_ClearEventProcessor</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_ClearEventProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[d6]"></a>OsTcb_GetEventProcessor</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, tcbprocessor.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<P><STRONG><a name="[dc]"></a>OsTcb_GetEventProcessor</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, tcbprocessor.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetEvent
+<BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetEvent
 </UL>
 
-<P><STRONG><a name="[ed]"></a>OsTcb_WaitEventProcessor</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f3]"></a>OsTcb_WaitEventProcessor</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_WaitEventProcessor &rArr; OsTcb_CheckEventTrigger
 </UL>
-<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
-<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
-<LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
+<LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[c6]"></a>OsTcb_GetTaskStateProcessor</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[cc]"></a>OsTcb_GetTaskStateProcessor</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_GetTaskStateProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTaskState
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<BR>[Called By]<UL><LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTaskState
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[ca]"></a>OsTcb_TaskAlrmExpiredProcessor</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[d0]"></a>OsTcb_TaskAlrmExpiredProcessor</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_TaskAlrmExpiredProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[c7]"></a>OsTcb_EventAlrmExpiredProcessor</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[cd]"></a>OsTcb_EventAlrmExpiredProcessor</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskEvent
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskEvent
+<LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
+<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
-</UL>
-
-<P><STRONG><a name="[f8]"></a>OsTcb_SetTaskPri</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[f7]"></a>OsTcb_GetTaskPriorityEx</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[fe]"></a>OsTcb_SetTaskPri</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+</UL>
+
+<P><STRONG><a name="[fd]"></a>OsTcb_GetTaskPriorityEx</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_GetTaskPriorityEx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriority
+<BR>[Calls]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriority
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-</UL>
-
-<P><STRONG><a name="[f9]"></a>OsTcb_SetResOccupied</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
-<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
+<BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
 </UL>
 
-<P><STRONG><a name="[f2]"></a>OsTcb_GetCurrentTCBRef</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
+<P><STRONG><a name="[ff]"></a>OsTcb_SetResOccupied</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
+<LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
 </UL>
 
-<P><STRONG><a name="[113]"></a>OsTcb_GetTcbSP</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
+<P><STRONG><a name="[f8]"></a>OsTcb_GetCurrentTCBRef</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
 </UL>
 
-<P><STRONG><a name="[cf]"></a>OsTcb_UpdateTCBSP</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[119]"></a>OsTcb_GetTcbSP</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
+</UL>
+
+<P><STRONG><a name="[d5]"></a>OsTcb_UpdateTCBSP</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_UpdateTCBSP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetPSP
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_GetPSP
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[f3]"></a>OsTcb_UpdatePSP</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[f9]"></a>OsTcb_UpdatePSP</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_UpdatePSP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetPSP
-<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTcbSP
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<BR>[Calls]<UL><LI><a href="#[11a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetPSP
+<LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTcbSP
+<LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
 </UL>
 
-<P><STRONG><a name="[cb]"></a>OsTcb_SilenceHook</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<P><STRONG><a name="[d1]"></a>OsTcb_SilenceHook</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[e9]"></a>OsTcb_ScheduleProcessor</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[ef]"></a>OsTcb_ScheduleProcessor</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_ScheduleProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[e4]"></a>OsTcb_ThreadStackOverFlow</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[ea]"></a>OsTcb_ThreadStackOverFlow</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_ThreadStackOverFlow
 </UL>
-<BR>[Calls]<UL><LI><a href="#[115]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetOverFlowContext
+<BR>[Calls]<UL><LI><a href="#[11b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetOverFlowContext
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[108]"></a>OsPort_SetInitialStack</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, portable.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_IdleTaskInit
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
+<P><STRONG><a name="[10e]"></a>OsPort_SetInitialStack</STRONG> (Thumb, 90 bytes, Stack size 0 bytes, portable.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_IdleTaskInit
+<LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
 </UL>
 
-<P><STRONG><a name="[e7]"></a>OsPort_GetSVCNumber</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
+<P><STRONG><a name="[ed]"></a>OsPort_GetSVCNumber</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[e6]"></a>OsPort_GetPSP</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, portable.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
+<P><STRONG><a name="[ec]"></a>OsPort_GetPSP</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, portable.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
-<P><STRONG><a name="[114]"></a>OsPort_SetPSP</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, portable.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
+<P><STRONG><a name="[11a]"></a>OsPort_SetPSP</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, portable.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdatePSP
 </UL>
 
-<P><STRONG><a name="[f1]"></a>OsPort_SetThreadMode</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
+<P><STRONG><a name="[f7]"></a>OsPort_SetThreadMode</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_JumpToApp
 </UL>
 
-<P><STRONG><a name="[d7]"></a>OsPort_CoreInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
+<P><STRONG><a name="[dd]"></a>OsPort_CoreInit</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, portable.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[b6]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
+<P><STRONG><a name="[bb]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
 </UL>
 
-<P><STRONG><a name="[12a]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[132]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[12b]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[133]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
 <P><STRONG><a name="[82]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[11c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[12c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[134]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[12d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[135]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[12e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[136]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[12f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[137]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[c0]"></a>OsAlrm_AssignAlarmEntry</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
+<P><STRONG><a name="[c6]"></a>OsAlrm_AssignAlarmEntry</STRONG> (Thumb, 38 bytes, Stack size 12 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
 </UL>
 
-<P><STRONG><a name="[bf]"></a>OsAlrm_ValidateStartValue</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
+<P><STRONG><a name="[c5]"></a>OsAlrm_ValidateStartValue</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
 </UL>
 
-<P><STRONG><a name="[be]"></a>OsAlrm_ValidateCycle</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
+<P><STRONG><a name="[c4]"></a>OsAlrm_ValidateCycle</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
 </UL>
 
-<P><STRONG><a name="[c4]"></a>OsAlrm_AlarmActionExecute</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, alarm.o(.text))
+<P><STRONG><a name="[ca]"></a>OsAlrm_AlarmActionExecute</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskAlrmExpiredProcessor
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetAlrmTaskID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskAlrmExpiredProcessor
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetAlrmTaskID
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
 </UL>
 
-<P><STRONG><a name="[cc]"></a>OsAlrm_AlarmFireProcessor</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, alarm.o(.text))
+<P><STRONG><a name="[d2]"></a>OsAlrm_AlarmFireProcessor</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsAlrm_AlarmFireProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_DisableAlarm
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetFirePoint
+<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_DisableAlarm
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetFirePoint
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
+<BR>[Called By]<UL><LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
 </UL>
 
-<P><STRONG><a name="[cd]"></a>SystemAlarmsProcessor</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text))
+<P><STRONG><a name="[d3]"></a>SystemAlarmsProcessor</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SystemAlarmsProcessor &rArr; OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
-<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 <BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 </UL>
 
-<P><STRONG><a name="[b8]"></a>OsAlrm_ValidateID</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarmBase
+<P><STRONG><a name="[be]"></a>OsAlrm_ValidateID</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarmBase
 </UL>
 
-<P><STRONG><a name="[bc]"></a>OsAlrm_GetFirePoint</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, alarm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
+<P><STRONG><a name="[c2]"></a>OsAlrm_GetFirePoint</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, alarm.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
 </UL>
 
-<P><STRONG><a name="[ba]"></a>OsAlrm_AlarmIsEnabled</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
+<P><STRONG><a name="[c0]"></a>OsAlrm_AlarmIsEnabled</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetRelAlarm
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetAbsAlarm
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetAlarm
+<LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
 </UL>
 
-<P><STRONG><a name="[c3]"></a>OsAlrm_DisableAlarm</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
+<P><STRONG><a name="[c9]"></a>OsAlrm_DisableAlarm</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CancelAlarm
+<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
 </UL>
 
-<P><STRONG><a name="[c5]"></a>OsAlrm_GetAlrmTaskID</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
+<P><STRONG><a name="[cb]"></a>OsAlrm_GetAlrmTaskID</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, alarm.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[fe]"></a>OsTcb_SetInitialStack</STRONG> (Thumb, 252 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
+<P><STRONG><a name="[104]"></a>OsTcb_SetInitialStack</STRONG> (Thumb, 252 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
 </UL>
 
-<P><STRONG><a name="[fc]"></a>OsTcb_StackPointersInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[102]"></a>OsTcb_StackPointersInit</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_StackPointersInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
 </UL>
 
-<P><STRONG><a name="[103]"></a>OsTcb_SetTaskState</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskAlrmExpiredProcessor
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
+<P><STRONG><a name="[109]"></a>OsTcb_SetTaskState</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskAlrmExpiredProcessor
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
 </UL>
 
-<P><STRONG><a name="[105]"></a>OsTcb_ResetTaskEvent</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<P><STRONG><a name="[10b]"></a>OsTcb_ResetTaskEvent</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
 </UL>
 
-<P><STRONG><a name="[107]"></a>OsTcb_ResetTCB</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[10d]"></a>OsTcb_ResetTCB</STRONG> (Thumb, 66 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_ResetTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetInitialStack
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetInitialStack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<BR>[Called By]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TerminateTaskTCBProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
 </UL>
 
-<P><STRONG><a name="[111]"></a>OsTcb_CheckEventTrigger</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[117]"></a>OsTcb_CheckEventTrigger</STRONG> (Thumb, 42 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_CheckEventTrigger
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
+<BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
 </UL>
 
-<P><STRONG><a name="[110]"></a>OsTcb_SetTaskEvent</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[116]"></a>OsTcb_SetTaskEvent</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_SetTaskEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
+<BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
 </UL>
 
-<P><STRONG><a name="[ff]"></a>OsTcb_StackCanarInit</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[105]"></a>OsTcb_StackCanarInit</STRONG> (Thumb, 114 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_StackCanarInit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
 </UL>
 
-<P><STRONG><a name="[fd]"></a>OsTcb_IdleTaskInit</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
+<P><STRONG><a name="[103]"></a>OsTcb_IdleTaskInit</STRONG> (Thumb, 144 bytes, Stack size 8 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = OsTcb_IdleTaskInit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetInitialStack
+<BR>[Calls]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetInitialStack
 </UL>
-<BR>[Called By]<UL><LI><a href="#[d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
-</UL>
-
-<P><STRONG><a name="[10b]"></a>OsTcb_GetTaskPriority</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[f7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriorityEx
-<LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TasksInit
 </UL>
 
-<P><STRONG><a name="[104]"></a>OsTcb_TaskModelIsBasic</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
-<LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<P><STRONG><a name="[111]"></a>OsTcb_GetTaskPriority</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriorityEx
+<LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
 </UL>
 
-<P><STRONG><a name="[101]"></a>OsTcb_TaskIDValid</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
-<LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
-<LI><a href="#[ea]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
-<LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+<P><STRONG><a name="[10a]"></a>OsTcb_TaskModelIsBasic</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
+<LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
 </UL>
 
-<P><STRONG><a name="[10d]"></a>OsTcb_SetCurrentTCBRef</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[db]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
+<P><STRONG><a name="[107]"></a>OsTcb_TaskIDValid</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
+<LI><a href="#[f1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ChainTaskTCBProcessor
+<LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ActivateTaskTCBProcesor
+<LI><a href="#[dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetEventProcessor
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
+</UL>
+
+<P><STRONG><a name="[113]"></a>OsTcb_SetCurrentTCBRef</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, tcbprocessor.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_JumpToNextTCB
 </UL>
 <P>
 <H3>

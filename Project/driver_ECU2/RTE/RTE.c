@@ -14,6 +14,8 @@ VAR(NvM_DataBuffer,AUTOMATIC) Data;
 
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
     P2VAR(uint8,AUTOMATIC,AUTOMATIC) DataPtr;
+    uint8 DataBuffer[3];  // Cấp phát bộ nhớ cho 3 byte dữ liệu
+    DataPtr = DataBuffer; // Gán con trỏ đến vùng bộ nhớ đã cấp phát
     Handle_Can_Interrupt();
     Com_ReceiveSignal(TEMP_SPEED_SIGNAL_ID,DataPtr);
     TemperatureValue = DataPtr[0];
@@ -133,7 +135,7 @@ FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_GetMode(VAR(WdgIf_ModeType, AUT
 
 FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_PerformReset(void){
     //WdgM_PerformReset(); 
-    SystickCounter =0;
+    SystickCounter = 0;
 }
 
 FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID,VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID){
