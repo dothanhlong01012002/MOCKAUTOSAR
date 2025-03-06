@@ -19,7 +19,7 @@ F (.\schedule.c)(0x67C9077A)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=corte
 I (..\OSEK\os.h)(0x67B82167)
 I (..\ECU_1\OsCfg.h)(0x67C569DF)
 I (..\OSEK\OsTypes.h)(0x67B82167)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
@@ -33,9 +33,11 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\ASW\EngineSpeedSWC.c)(0x67C54C54)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/enginespeedswc.o -MMD)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
@@ -48,10 +50,12 @@ I (..\..\driver_ECU1\HWAL\IOHwAbCan.h)(0x67C906F2)
 I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)()
 F (..\..\driver_ECU1\ASW\TemperatureSensorSWC.c)(0x67C54C54)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/temperaturesensorswc.o -MMD)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
@@ -64,6 +68,8 @@ I (..\..\driver_ECU1\HWAL\IOHwAbCan.h)(0x67C906F2)
 I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)()
 F (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)()
 F (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)()
@@ -74,7 +80,7 @@ I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
@@ -83,6 +89,8 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)()
 F (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.c)(0x67C54C54)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/iohwabtemperaturesensor.o -MMD)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
@@ -90,7 +98,7 @@ I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
@@ -99,6 +107,8 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)()
 F (..\..\driver_ECU1\HWAL\IOHwAbCan.c)(0x67C906EC)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/iohwabcan.o -MMD)
 I (..\..\driver_ECU1\HWAL\IOHwAbCan.h)(0x67C906F2)
@@ -108,13 +118,15 @@ I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\HWAL\IOHwAbCan.h)(0x67C906F2)()
 F (..\..\driver_ECU1\MCAL\Adc.c)(0x67C54C54)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/adc.o -MMD)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
@@ -128,8 +140,8 @@ I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
 F (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)()
-F (..\..\driver_ECU1\RTE\RTE.c)(0x67C90708)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/rte.o -MMD)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+F (..\..\driver_ECU1\RTE\RTE.c)(0x67C94A56)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/rte.o -MMD)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
@@ -143,7 +155,21 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
-F (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)()
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
+F (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)()
+F (..\..\driver_ECU1\RTE\Rte_AppComTX.c)(0x67C94A41)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/rte_appcomtx.o -MMD)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
+I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
+I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
+F (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)()
+F (..\..\driver_ECU1\RTE\Rte_AppReadSensor.c)(0x67C94A4B)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/rte_appreadsensor.o -MMD)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
+I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
+I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
+I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
+F (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)()
 F (..\..\driver_ECU1\SERVICE\ComM.c)(0x67C55426)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/comm.o -MMD)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
@@ -153,14 +179,16 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)()
-F (..\..\driver_ECU1\SERVICE\Com.c)(0x67C90715)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/com.o -MMD)
+F (..\..\driver_ECU1\SERVICE\Com.c)(0x67C90CC9)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/com.o -MMD)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
 I (..\..\driver_ECU1\common\Std_Types.h)(0x67C54C54)
@@ -168,13 +196,15 @@ I (..\..\driver_ECU1\HWAL\IOHwAbCan.h)(0x67C906F2)
 I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)()
 F (..\..\driver_ECU1\SERVICE\PduR.c)(0x67C90728)(-xc -std=c90 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -D__MICROLIB -gdwarf-4 -O1 -fno-function-sections -I ../ECU_1 -I ../OSEK -I ../../driver_ECU1/ASW -I ../../driver_ECU1/common -I ../../driver_ECU1/HWAL -I ../../driver_ECU1/MCAL -I ../../driver_ECU1/RTE -I ../../driver_ECU1/SERVICE-I./RTE/_Target_1-IC:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123-D__UVISION_VERSION="541" -DTM4C123GH6PM -D_RTE_-o ./build_files/pdur.o -MMD)
 I (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)
@@ -184,11 +214,13 @@ I (..\..\driver_ECU1\MCAL\Can.h)(0x67C9005D)
 I (..\..\driver_ECU1\common\Compiler.h)(0x67C54C54)
 I (..\..\driver_ECU1\common\Compiler_Cfg.h)(0x67C54C54)
 I (..\..\driver_ECU1\SERVICE\Com.h)(0x67C9071B)
-I (..\..\driver_ECU1\RTE\RTE.h)(0x67C9070C)
+I (..\..\driver_ECU1\RTE\RTE.h)(0x67C94A92)
 I (..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.h)(0x67C906F6)
 I (..\..\driver_ECU1\MCAL\Adc.h)(0x67C66E16)
 I (..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h)(0x67C906FB)
 I (..\..\driver_ECU1\SERVICE\ComM.h)(0x67C90720)
 I (..\..\driver_ECU1\ASW\EngineSpeedSWC.h)(0x67C906BC)
 I (..\..\driver_ECU1\ASW\TemperatureSensorSWC.h)(0x67C906C1)
+I (..\..\driver_ECU1\RTE\Rte_AppComTX.h)(0x67C949CA)
+I (..\..\driver_ECU1\RTE\Rte_AppReadSensor.h)(0x67C949A1)
 F (..\..\driver_ECU1\SERVICE\PduR.h)(0x67C9072D)()

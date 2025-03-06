@@ -1,4 +1,5 @@
 #include "RTE.h"
+#include "Can.h"
 
 #define TEMP_SPEED_SIGNAL_ID    10
 
@@ -13,6 +14,7 @@ VAR(NvM_DataBuffer,AUTOMATIC) Data;
 
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
     P2VAR(uint8,AUTOMATIC,AUTOMATIC) DataPtr;
+    Handle_Can_Interrupt();
     Com_ReceiveSignal(TEMP_SPEED_SIGNAL_ID,DataPtr);
     TemperatureValue = DataPtr[0];
     EngineSpeedValue = ((uint16)DataPtr[1] << 8) + DataPtr[2];

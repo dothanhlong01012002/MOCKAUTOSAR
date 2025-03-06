@@ -554,6 +554,26 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU1\RTE\RTE.h</FilePath>
             </File>
+            <File>
+              <FileName>Rte_AppComTX.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU1\RTE\Rte_AppComTX.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppComTX.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU1\RTE\Rte_AppComTX.h</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppReadSensor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU1\RTE\Rte_AppReadSensor.c</FilePath>
+            </File>
+            <File>
+              <FileName>Rte_AppReadSensor.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU1\RTE\Rte_AppReadSensor.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
