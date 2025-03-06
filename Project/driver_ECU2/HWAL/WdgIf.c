@@ -22,3 +22,7 @@ void WdgIf_SetTriggerCondition(uint8 DeviceIndex, uint16 Timeout) {
     // Gọi hàm của driver thực tế để thiết lập trigger condition
     Wdg_SetTriggerCondition(DeviceIndex, Timeout);
 }
+
+void WdgIf_Init(void){
+    Wdg_Init();
+}

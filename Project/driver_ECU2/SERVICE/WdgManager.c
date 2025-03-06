@@ -12,7 +12,7 @@ void WdgM_Init(const WdgM_ConfigType* ConfigPtr) {
     if (ConfigPtr == NULL) {
         return;  // Không thực hiện gì nếu cấu hình không hợp lệ
     }
-
+    WdgIf_Init();
     // Lưu cấu hình hiện tại
     currentConfig = (WdgM_ConfigType*)ConfigPtr;
 

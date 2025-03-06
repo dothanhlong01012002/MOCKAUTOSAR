@@ -9,6 +9,6 @@ Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex, WdgIf_ModeType WdgMode);
 
 /* Function to set the trigger condition (timeout for watchdog) */
 void WdgIf_SetTriggerCondition(uint8 DeviceIndex, uint16 Timeout);
-
+void WdgIf_Init(void);
 
 #endif /* WDGIF_H */

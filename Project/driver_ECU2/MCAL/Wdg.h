@@ -22,5 +22,6 @@ typedef enum {
 } WdgIf_ModeType;
 void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode);
 void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout);
-
+void Wdg_Init(void);
+void WDT0_Handler(void);
 #endif /* WDGIF_H */
