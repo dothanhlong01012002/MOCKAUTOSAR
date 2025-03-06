@@ -3,11 +3,11 @@
 <title>Static Call Graph - [.\build_files\OsekIntro_Example6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build_files\OsekIntro_Example6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Mar  5 14:49:44 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Mar  6 09:27:25 2025
 <BR><P>
 <H3>Maximum Stack Usage =         72 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-OsTask_Main_Task &rArr; Rte_EV_Main &rArr; CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+SystemTimerHandler &rArr; SystemAlarmsProcessor &rArr; OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 <P>
 <H3>
 Functions with no stack information
@@ -1180,20 +1180,20 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
 <P><STRONG><a name="[7b]"></a>OsTask_Component_Task</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, schedule.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40 + In Cycle
+<BR><BR>[Stack]<UL><LI>Max Depth = 32 + In Cycle
 <LI>Call Chain = OsTask_Component_Task &rArr;  OsTask_Component_Task (Cycle)
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
 <LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Component
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Component_Task
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Component_Task
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 </UL>
-<P><STRONG><a name="[7a]"></a>OsTask_GetError_Task</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, schedule.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OsTask_GetError_Task &rArr; Rte_EV_GetError &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<P><STRONG><a name="[7a]"></a>OsTask_GetError_Task</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, schedule.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTask_GetError_Task &rArr; TerminateTask
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_GetError
@@ -1201,63 +1201,64 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 </UL>
 <P><STRONG><a name="[7c]"></a>OsTask_Main_Task</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, schedule.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = OsTask_Main_Task &rArr; Rte_EV_Main &rArr; CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = OsTask_Main_Task &rArr; Rte_EV_Main &rArr; CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
+<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Main
 <LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_PerformReset
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 </UL>
-<P><STRONG><a name="[7d]"></a>OsTask_ComReceive_Task</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, schedule.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTask_ComReceive_Task &rArr; TerminateTask
+<P><STRONG><a name="[7d]"></a>OsTask_ComReceive_Task</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, schedule.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTask_ComReceive_Task &rArr; Rte_EV_ComReceive &rArr; Com_ReceiveSignal
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> oscfg.o(.data.OsCfg_TCBs)
 </UL>
 <P><STRONG><a name="[8e]"></a>CompressorControl_Runable</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, compressorcontrolswc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = CompressorControl_Runable &rArr; Rte_Call_RP_AdjustCompressor_ControlCompressor &rArr; AdjustCompressorControl
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CompressorControl_Runable &rArr; Rte_Call_RP_AdjustCompressor_ControlCompressor &rArr; AdjustCompressorControl
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_CompressorData_CompressorValue
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_AdjustCompressor_ControlCompressor
+<BR>[Calls]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_AdjustCompressor_ControlCompressor
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_CompressorData_CompressorValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Component
 </UL>
 
-<P><STRONG><a name="[91]"></a>CoolingControl_Runable</STRONG> (Thumb, 144 bytes, Stack size 24 bytes, coolingcontrolswc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<P><STRONG><a name="[91]"></a>CoolingControl_Runable</STRONG> (Thumb, 138 bytes, Stack size 16 bytes, coolingcontrolswc.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Write_PP_FanData_FanValue
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Write_PP_CompressorData_CompressorValue
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_PARAM_ExpectedTemperature
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_ComData_TempSpeedValue
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVData_CallServerFunction
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_ERROR_ReportDiagnosticResult
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_PARAM_ExpectedTemperature
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_ComData_TempSpeedValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Main
 </UL>
 
 <P><STRONG><a name="[98]"></a>FanControl_Runable</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, fancontrolswc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = FanControl_Runable &rArr; Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = FanControl_Runable &rArr; Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_FanData_FanValue
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_AdjustFan_ControlFan
+<BR>[Calls]<UL><LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_AdjustFan_ControlFan
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Read_RP_FanData_FanValue
 </UL>
 <BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Component
 </UL>
 
-<P><STRONG><a name="[9b]"></a>HandleNVM_Runable</STRONG> (Thumb, 90 bytes, Stack size 8 bytes, nvblockswc.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<P><STRONG><a name="[9b]"></a>HandleNVM_Runable</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, nvblockswc.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_WriteBlock
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_WriteBlock
 </UL>
 <BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVHandle_SeverHandle
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVData_CallServerFunction
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_GetError
 </UL>
 
@@ -1299,18 +1300,16 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
 
-<P><STRONG><a name="[a7]"></a>WdgIf_SetTriggerCondition</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, wdgif.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WdgIf_SetTriggerCondition
-</UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetTriggerCondition
+<P><STRONG><a name="[a7]"></a>WdgIf_SetTriggerCondition</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, wdgif.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetTriggerCondition
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 <LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
 
 <P><STRONG><a name="[9f]"></a>Pwm_SetDutyCycle</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, pwm.o(.text))
@@ -1334,24 +1333,24 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 </UL>
 
-<P><STRONG><a name="[8d]"></a>Rte_EV_ComReceive</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_EV_ComReceive &rArr; ReceiveData_Runable
+<P><STRONG><a name="[8d]"></a>Rte_EV_ComReceive</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_EV_ComReceive &rArr; Com_ReceiveSignal
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveData_Runable
+<BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
 </UL>
 
-<P><STRONG><a name="[8b]"></a>Rte_EV_Main</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = Rte_EV_Main &rArr; CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<P><STRONG><a name="[8b]"></a>Rte_EV_Main</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Rte_EV_Main &rArr; CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 </UL>
 
-<P><STRONG><a name="[86]"></a>Rte_EV_Component</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Rte_EV_Component &rArr; FanControl_Runable &rArr; Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
+<P><STRONG><a name="[86]"></a>Rte_EV_Component</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_EV_Component &rArr; FanControl_Runable &rArr; Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanControl_Runable
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CompressorControl_Runable
@@ -1359,17 +1358,15 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Component_Task
 </UL>
 
-<P><STRONG><a name="[88]"></a>Rte_EV_GetError</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_EV_GetError &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<P><STRONG><a name="[88]"></a>Rte_EV_GetError</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_EV_GetError &rArr; HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_GetError_Task
 </UL>
 
-<P><STRONG><a name="[b6]"></a>Rte_Write_PP_ComData_TempSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReceiveData_Runable
-</UL>
+<P><STRONG><a name="[11d]"></a>Rte_Write_PP_ComData_TempSpeedValue</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[92]"></a>Rte_Read_RP_ComData_TempSpeedValue</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, rte.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
@@ -1395,18 +1392,18 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[11d]"></a>Rte_Write_PP_PARAM_ExpectedTemperature</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[11e]"></a>Rte_Write_PP_PARAM_ExpectedTemperature</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
-<P><STRONG><a name="[9a]"></a>Rte_Call_RP_AdjustFan_ControlFan</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
+<P><STRONG><a name="[9a]"></a>Rte_Call_RP_AdjustFan_ControlFan</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rte_Call_RP_AdjustFan_ControlFan &rArr; AdjustFanControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdjustFanControl
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FanControl_Runable
 </UL>
 
-<P><STRONG><a name="[90]"></a>Rte_Call_RP_AdjustCompressor_ControlCompressor</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_Call_RP_AdjustCompressor_ControlCompressor &rArr; AdjustCompressorControl
+<P><STRONG><a name="[90]"></a>Rte_Call_RP_AdjustCompressor_ControlCompressor</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rte_Call_RP_AdjustCompressor_ControlCompressor &rArr; AdjustCompressorControl
 </UL>
 <BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AdjustCompressorControl
 </UL>
@@ -1414,44 +1411,40 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[95]"></a>Rte_Call_RP_NVData_CallServerFunction</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_NVData_CallServerFunction &rArr; HandleNVM_Runable &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVHandle_SeverHandle
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[aa]"></a>Rte_Call_RP_NVHandle_SeverHandle</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; NvM_WriteBlock &rArr; MemIf_Write
-</UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
-</UL>
-<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVData_CallServerFunction
+<P><STRONG><a name="[aa]"></a>Rte_Call_RP_NVHandle_SeverHandle</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HandleNVM_Runable
 </UL>
 
 <P><STRONG><a name="[94]"></a>Rte_Call_RP_ERROR_ReportDiagnosticResult</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = Rte_Call_RP_ERROR_ReportDiagnosticResult &rArr; SetEventStatus
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Rte_Call_RP_ERROR_ReportDiagnosticResult
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEventStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CoolingControl_Runable
 </UL>
 
-<P><STRONG><a name="[11e]"></a>Rte_Call_RP_ERROR_SetEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[11f]"></a>Rte_Call_RP_ERROR_SetEvent</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 
 <P><STRONG><a name="[83]"></a>Rte_Call_RP_WdgM_Init</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_Call_RP_WdgM_Init &rArr; WdgM_Init &rArr; WdgM_PerformReset &rArr; WdgIf_SetTriggerCondition
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_WdgM_Init &rArr; WdgM_Init &rArr; WdgIf_SetMode
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[ad]"></a>Rte_Call_RP_WdgM_DeInit</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[ad]"></a>Rte_Call_RP_WdgM_DeInit</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
 </UL>
 
-<P><STRONG><a name="[af]"></a>Rte_Call_RP_WdgM_SetMode</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[af]"></a>Rte_Call_RP_WdgM_SetMode</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_SetMode
 </UL>
 
@@ -1459,34 +1452,22 @@ Global Symbols
 <BR><BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_GetMode
 </UL>
 
-<P><STRONG><a name="[8a]"></a>Rte_Call_RP_WdgM_PerformReset</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_WdgM_PerformReset &rArr; WdgM_PerformReset &rArr; WdgIf_SetTriggerCondition
-</UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
+<P><STRONG><a name="[8a]"></a>Rte_Call_RP_WdgM_PerformReset</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 </UL>
 
-<P><STRONG><a name="[b4]"></a>Rte_Call_RP_WdgM_CheckpointReached</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rte.o(.text), UNUSED)
+<P><STRONG><a name="[b4]"></a>Rte_Call_RP_WdgM_CheckpointReached</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, rte.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_CheckpointReached
 </UL>
 
-<P><STRONG><a name="[a9]"></a>ReceiveData_Runable</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, communicationmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ReceiveData_Runable
-</UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Write_PP_ComData_TempSpeedValue
-</UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
-</UL>
+<P><STRONG><a name="[120]"></a>ReportDiagnosticEvent</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, diagnosticmanager.o(.text), UNUSED)
 
-<P><STRONG><a name="[11f]"></a>ReportDiagnosticEvent</STRONG> (Thumb, 60 bytes, Stack size 8 bytes, diagnosticmanager.o(.text), UNUSED)
+<P><STRONG><a name="[121]"></a>GetDiagnosticEventStatus</STRONG> (Thumb, 48 bytes, Stack size 0 bytes, diagnosticmanager.o(.text), UNUSED)
 
-<P><STRONG><a name="[120]"></a>GetDiagnosticEventStatus</STRONG> (Thumb, 54 bytes, Stack size 0 bytes, diagnosticmanager.o(.text), UNUSED)
-
-<P><STRONG><a name="[ab]"></a>SetEventStatus</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, diagnosticmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SetEventStatus
-</UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_ERROR_ReportDiagnosticResult
+<P><STRONG><a name="[ab]"></a>SetEventStatus</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, diagnosticmanager.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_ERROR_ReportDiagnosticResult
 </UL>
 
 <P><STRONG><a name="[9c]"></a>NvM_WriteBlock</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, nvmmanager.o(.text))
@@ -1506,32 +1487,28 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[ac]"></a>WdgM_Init</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, wdgmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = WdgM_Init &rArr; WdgM_PerformReset &rArr; WdgIf_SetTriggerCondition
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = WdgM_Init &rArr; WdgIf_SetMode
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_PerformReset
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
+<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_Init
 </UL>
 
-<P><STRONG><a name="[b3]"></a>WdgM_PerformReset</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, wdgmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = WdgM_PerformReset &rArr; WdgIf_SetTriggerCondition
+<P><STRONG><a name="[b3]"></a>WdgM_PerformReset</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, wdgmanager.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
-</UL>
-<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_Init
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_PerformReset
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_PerformReset
 </UL>
 
-<P><STRONG><a name="[ae]"></a>WdgM_DeInit</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, wdgmanager.o(.text), UNUSED)
+<P><STRONG><a name="[ae]"></a>WdgM_DeInit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, wdgmanager.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetTriggerCondition
 <LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_DeInit
 </UL>
 
-<P><STRONG><a name="[b0]"></a>WdgM_SetMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, wdgmanager.o(.text), UNUSED)
+<P><STRONG><a name="[b0]"></a>WdgM_SetMode</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, wdgmanager.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_SetMode
 </UL>
 <BR>[Called By]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_SetMode
@@ -1545,7 +1522,17 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_WdgM_CheckpointReached
 </UL>
 
-<P><STRONG><a name="[121]"></a>DeclareAlarm</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
+<P><STRONG><a name="[a9]"></a>Com_ReceiveSignal</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, com.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Com_ReceiveSignal
+</UL>
+<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+</UL>
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_ComReceive
+</UL>
+
+<P><STRONG><a name="[122]"></a>Com_RxIndication</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, com.o(.text), UNUSED)
+
+<P><STRONG><a name="[123]"></a>DeclareAlarm</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, alarm.o(.text), UNUSED)
 
 <P><STRONG><a name="[b7]"></a>GetAlarmBase</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
@@ -1588,8 +1575,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PushUpperContext
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
-<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_IncrSystemCounter
 <LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_IncrSystemCounter
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> keiluvisoin_startup.o(RESET)
 </UL>
@@ -1601,8 +1588,8 @@ Global Symbols
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrSetEventMsk
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_Main_Task
 </UL>
 
 <P><STRONG><a name="[87]"></a>ClearEvent</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, event.o(.text))
@@ -1658,8 +1645,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_GetErrCode
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_GetError_Task
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
+<BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_ComReceive_Task
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTask_GetError_Task
 </UL>
 
 <P><STRONG><a name="[e0]"></a>ChainTask</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, task.o(.text), UNUSED)
@@ -1754,7 +1741,7 @@ Global Symbols
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 </UL>
 
-<P><STRONG><a name="[122]"></a>OsErrMgr_GetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[124]"></a>OsErrMgr_GetServiceID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
 <P><STRONG><a name="[106]"></a>OsErrMgr_StoreTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetEventProcessor
@@ -1764,7 +1751,7 @@ Global Symbols
 <LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
 </UL>
 
-<P><STRONG><a name="[123]"></a>OsErrMgr_GetTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[125]"></a>OsErrMgr_GetTaskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
 <P><STRONG><a name="[112]"></a>OsErrMgr_StoreEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_WaitEventProcessor
@@ -1772,20 +1759,20 @@ Global Symbols
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
 </UL>
 
-<P><STRONG><a name="[124]"></a>OsErrMgr_GetEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[126]"></a>OsErrMgr_GetEventID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
 <P><STRONG><a name="[fa]"></a>OsErrMgr_StoreResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRcb_ReleaseResourceProcessor
 </UL>
 
-<P><STRONG><a name="[125]"></a>OsErrMgr_GetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[127]"></a>OsErrMgr_GetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
 <P><STRONG><a name="[115]"></a>OsErrMgr_SetOverFlowContext</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, errmgr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ThreadStackOverFlow
 </UL>
 
-<P><STRONG><a name="[126]"></a>OsErrMgr_GetOverFlowContext</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
+<P><STRONG><a name="[128]"></a>OsErrMgr_GetOverFlowContext</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, errmgr.o(.text), UNUSED)
 
 <P><STRONG><a name="[ef]"></a>OsRes_GetResourceProcessor</STRONG> (Thumb, 136 bytes, Stack size 16 bytes, rcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsRes_GetResourceProcessor &rArr; OsTcb_GetTaskPriorityEx
@@ -1834,10 +1821,10 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Schedule
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
 <P><STRONG><a name="[df]"></a>SVCCnxt_TskMgrSetTskID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
@@ -1859,9 +1846,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[d3]"></a>SVCCnxt_EventMgrSetEventMsk</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
+<BR><BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
 <P><STRONG><a name="[10f]"></a>SVCCnxt_EventMgrGetEventMsk</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
@@ -1870,7 +1857,7 @@ Global Symbols
 <LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ClearEventProcessor
 </UL>
 
-<P><STRONG><a name="[127]"></a>SVCCnxt_ResMgrSetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
+<P><STRONG><a name="[129]"></a>SVCCnxt_ResMgrSetResID</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, svccontext.o(.text), UNUSED)
 
 <P><STRONG><a name="[f6]"></a>SVCCnxt_ResMgrGetResID</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, svccontext.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsRes_GetResourceProcessor
@@ -1913,26 +1900,26 @@ Global Symbols
 <LI><a href="#[e0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ChainTask
 <LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ActivateTask
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_UpdateTCBSP
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetEvent
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TerminateTask
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ClearEvent
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WaitEvent
 </UL>
 
 <P><STRONG><a name="[ea]"></a>OsTcb_ActivateTaskTCBProcesor</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_ActivateTaskTCBProcesor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
@@ -1946,13 +1933,7 @@ Global Symbols
 <P><STRONG><a name="[eb]"></a>OsTcb_ChainTaskTCBProcessor</STRONG> (Thumb, 178 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_ChainTaskTCBProcessor &rArr; OsTcb_ResetTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
@@ -1960,6 +1941,12 @@ Global Symbols
 <LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTaskEvent
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
 <LI><a href="#[100]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_TskMgrGetTskID
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
@@ -1973,14 +1960,14 @@ Global Symbols
 <P><STRONG><a name="[e8]"></a>OsTcb_TerminateTaskTCBProcessor</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = OsTcb_TerminateTaskTCBProcessor &rArr; OsTcb_ResetTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
-<LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_ResetTCB
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
@@ -1988,13 +1975,13 @@ Global Symbols
 <P><STRONG><a name="[db]"></a>OsTcb_JumpToNextTCB</STRONG> (Thumb, 254 bytes, Stack size 32 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_JumpToNextTCB
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PreTaskHook
-<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
 <LI><a href="#[10d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetCurrentTCBRef
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskPriority
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
+<LI><a href="#[10c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PreTaskHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 <LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
@@ -2003,13 +1990,7 @@ Global Symbols
 <P><STRONG><a name="[ec]"></a>OsTcb_SetEventProcessor</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_SetEventProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
-<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
-<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
 <LI><a href="#[110]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskEvent
@@ -2017,6 +1998,12 @@ Global Symbols
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetTskID
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
@@ -2024,24 +2011,24 @@ Global Symbols
 <P><STRONG><a name="[ee]"></a>OsTcb_ClearEventProcessor</STRONG> (Thumb, 128 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_ClearEventProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<BR>[Calls]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
 
 <P><STRONG><a name="[d6]"></a>OsTcb_GetEventProcessor</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, tcbprocessor.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<BR><BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
 <LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetEvent
 </UL>
@@ -2049,18 +2036,18 @@ Global Symbols
 <P><STRONG><a name="[ed]"></a>OsTcb_WaitEventProcessor</STRONG> (Thumb, 154 bytes, Stack size 24 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = OsTcb_WaitEventProcessor &rArr; OsTcb_CheckEventTrigger
 </UL>
-<BR>[Calls]<UL><LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
+<BR>[Calls]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
+<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
+<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
+<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
+<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
+<LI><a href="#[fb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_SetErrCode
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreEventID
 <LI><a href="#[da]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetScheduleReq
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PostTaskHook
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetResOccupied
-<LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskModelIsBasic
-<LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_CheckEventTrigger
-<LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SetTaskState
-<LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVCCnxt_EventMgrGetEventMsk
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SVC_Dispatcher
 </UL>
@@ -2068,11 +2055,11 @@ Global Symbols
 <P><STRONG><a name="[c6]"></a>OsTcb_GetTaskStateProcessor</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_GetTaskStateProcessor
 </UL>
-<BR>[Calls]<UL><LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
+<BR>[Calls]<UL><LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
+<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
+<LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_StoreTaskID
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
-<LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskState
-<LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskIDValid
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GetTaskState
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
@@ -2135,9 +2122,9 @@ Global Symbols
 <P><STRONG><a name="[f3]"></a>OsTcb_UpdatePSP</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, tcbprocessor.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = OsTcb_UpdatePSP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
-<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetPSP
+<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_SetPSP
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTcbSP
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskIDProcessor
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsPort_PendSVHandler
 </UL>
@@ -2192,19 +2179,27 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartOS
 </UL>
 
-<P><STRONG><a name="[82]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<P><STRONG><a name="[b6]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_ReceiveSignal
+</UL>
+
+<P><STRONG><a name="[12a]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[12b]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+
+<P><STRONG><a name="[82]"></a>__scatterload</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, init.o(.text))
 <BR><BR>[Calls]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[128]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[12c]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[129]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[12d]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
 
-<P><STRONG><a name="[12a]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+<P><STRONG><a name="[12e]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
 
-<P><STRONG><a name="[12b]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P><STRONG><a name="[12f]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
 <P>
 <H3>
 Local Symbols

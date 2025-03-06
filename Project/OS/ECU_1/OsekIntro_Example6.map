@@ -13,6 +13,7 @@ Section Cross References
     keiluvisoin_startup.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     counter.o(.text) refers to oscfg.o(.rodata.OsCfg_SYSTEM_TICK_IN_MS) for OsCfg_SYSTEM_TICK_IN_MS
     counter.o(.text) refers to counter.o(.bss.OsCnt_SystemCounter) for OsCnt_SystemCounter
+    counter.o(.text) refers to counter.o(.bss.SysTickCount) for SysTickCount
     counter.o(.ARM.exidx) refers to counter.o(.text) for [Anonymous Symbol]
     hook.o(.ARM.exidx) refers to hook.o(.text) for [Anonymous Symbol]
     oscfg.o(.data.OsCfg_TCBs) refers to schedule.o(.text) for OsTask_DataHandle_Task
@@ -26,14 +27,15 @@ Section Cross References
     enginespeedswc.o(.ARM.exidx) refers to enginespeedswc.o(.text) for [Anonymous Symbol]
     temperaturesensorswc.o(.text) refers to rte.o(.text) for Rte_Read_RP_Voltage_TemperatureValue
     temperaturesensorswc.o(.ARM.exidx) refers to temperaturesensorswc.o(.text) for [Anonymous Symbol]
-    iohwabcan.o(.text) refers to can.o(.text) for Can_Write
-    iohwabcan.o(.ARM.exidx) refers to iohwabcan.o(.text) for [Anonymous Symbol]
     iohwabspeedsensor.o(.text) refers to adc.o(.text) for Adc_ReadChannel
     iohwabspeedsensor.o(.text) refers to rte.o(.text) for Rte_Write_PP_Pulse_EngineSpeedValue
     iohwabspeedsensor.o(.ARM.exidx) refers to iohwabspeedsensor.o(.text) for [Anonymous Symbol]
     iohwabtemperaturesensor.o(.text) refers to adc.o(.text) for Adc_ReadChannel
     iohwabtemperaturesensor.o(.text) refers to rte.o(.text) for Rte_Write_PP_Voltage_TemperatureValue
     iohwabtemperaturesensor.o(.ARM.exidx) refers to iohwabtemperaturesensor.o(.text) for [Anonymous Symbol]
+    iohwabcan.o(.text) refers to can.o(.text) for Can_Write
+    iohwabcan.o(.text) refers to pdur.o(.text) for PduR_LoIfTxConfirmation
+    iohwabcan.o(.ARM.exidx) refers to iohwabcan.o(.text) for [Anonymous Symbol]
     adc.o(.ARM.exidx) refers to adc.o(.text) for [Anonymous Symbol]
     can.o(.ARM.exidx) refers to can.o(.text) for [Anonymous Symbol]
     rte.o(.text) refers to iohwabspeedsensor.o(.text) for ReadPulse_Runable
@@ -46,10 +48,11 @@ Section Cross References
     rte.o(.text) refers to rte.o(.bss.EngineSpeedValue) for EngineSpeedValue
     rte.o(.text) refers to rte.o(.bss.TemperatureValue) for TemperatureValue
     rte.o(.ARM.exidx) refers to rte.o(.text) for [Anonymous Symbol]
+    comm.o(.ARM.exidx) refers to comm.o(.text) for [Anonymous Symbol]
     com.o(.text) refers to pdur.o(.text) for PduR_ComTransmit
     com.o(.ARM.exidx) refers to com.o(.text) for [Anonymous Symbol]
-    comm.o(.ARM.exidx) refers to comm.o(.text) for [Anonymous Symbol]
     pdur.o(.text) refers to iohwabcan.o(.text) for CanIf_Transmit
+    pdur.o(.text) refers to com.o(.text) for Com_TxConfirmation
     pdur.o(.ARM.exidx) refers to pdur.o(.text) for [Anonymous Symbol]
     alarm.o(.text) refers to counter.o(.text) for OsCnt_GetSystemCounter
     alarm.o(.text) refers to tcbprocessor.o(.text) for OsTcb_GetTaskStateProcessor
@@ -136,18 +139,18 @@ Removing Unused input sections from the image.
     Removing schedule.o(.ARM.use_no_argv), (4 bytes).
     Removing enginespeedswc.o(.ARM.exidx), (8 bytes).
     Removing temperaturesensorswc.o(.ARM.exidx), (8 bytes).
-    Removing iohwabcan.o(.ARM.exidx), (8 bytes).
     Removing iohwabspeedsensor.o(.ARM.exidx), (8 bytes).
     Removing iohwabtemperaturesensor.o(.ARM.exidx), (8 bytes).
+    Removing iohwabcan.o(.ARM.exidx), (8 bytes).
     Removing adc.o(.ARM.exidx), (8 bytes).
     Removing can.o(.ARM.exidx), (8 bytes).
     Removing rte.o(.ARM.exidx), (80 bytes).
-    Removing com.o(.ARM.exidx), (8 bytes).
     Removing comm.o(.text), (4 bytes).
     Removing comm.o(.ARM.exidx), (8 bytes).
-    Removing pdur.o(.ARM.exidx), (8 bytes).
+    Removing com.o(.ARM.exidx), (16 bytes).
+    Removing pdur.o(.ARM.exidx), (16 bytes).
 
-22 unused section(s) (total 274 bytes) removed from the image.
+22 unused section(s) (total 290 bytes) removed from the image.
 
 ==============================================================================
 
@@ -212,55 +215,55 @@ Image Symbol Table
     $v0                                      0x00000280   Number         0  keiluvisoin_startup.o(.text)
     .text                                    0x00000280   Section      252  keiluvisoin_startup.o(.text)
     [Anonymous Symbol]                       0x0000037c   Section        0  counter.o(.text)
-    [Anonymous Symbol]                       0x000003e8   Section        0  hook.o(.text)
-    [Anonymous Symbol]                       0x000003fc   Section        0  schedule.o(.text)
-    [Anonymous Symbol]                       0x00000434   Section        0  enginespeedswc.o(.text)
-    [Anonymous Symbol]                       0x00000458   Section        0  temperaturesensorswc.o(.text)
-    [Anonymous Symbol]                       0x00000478   Section        0  iohwabcan.o(.text)
-    [Anonymous Symbol]                       0x00000498   Section        0  iohwabspeedsensor.o(.text)
-    [Anonymous Symbol]                       0x000004a8   Section        0  iohwabtemperaturesensor.o(.text)
-    [Anonymous Symbol]                       0x000004b8   Section        0  adc.o(.text)
-    [Anonymous Symbol]                       0x000004c8   Section        0  can.o(.text)
-    [Anonymous Symbol]                       0x000004cc   Section        0  rte.o(.text)
-    [Anonymous Symbol]                       0x000005b4   Section        0  com.o(.text)
-    [Anonymous Symbol]                       0x000005d4   Section        0  pdur.o(.text)
-    .text                                    0x000005d8   Section        0  alarm.o(.text)
-    OsAlrm_AssignAlarmEntry                  0x00000675   Thumb Code    38  alarm.o(.text)
-    OsAlrm_ValidateStartValue                0x0000069b   Thumb Code    44  alarm.o(.text)
-    OsAlrm_ValidateCycle                     0x000006c7   Thumb Code    46  alarm.o(.text)
-    OsAlrm_AlarmActionExecute                0x000007c7   Thumb Code   200  alarm.o(.text)
-    OsAlrm_AlarmFireProcessor                0x0000088f   Thumb Code    82  alarm.o(.text)
-    SystemAlarmsProcessor                    0x000008e1   Thumb Code    74  alarm.o(.text)
-    OsAlrm_ValidateID                        0x00000957   Thumb Code    16  alarm.o(.text)
-    OsAlrm_GetFirePoint                      0x00000967   Thumb Code    14  alarm.o(.text)
-    OsAlrm_AlarmIsEnabled                    0x00000975   Thumb Code    16  alarm.o(.text)
-    OsAlrm_DisableAlarm                      0x00000985   Thumb Code    16  alarm.o(.text)
-    OsAlrm_GetAlrmTaskID                     0x00000995   Thumb Code    16  alarm.o(.text)
-    .text                                    0x000009b8   Section        0  event.o(.text)
-    .text                                    0x00000a20   Section        0  task.o(.text)
-    .text                                    0x00000b8c   Section       90  port.o(.text)
-    .text                                    0x00000be8   Section        0  errmgr.o(.text)
-    .text                                    0x00000c44   Section        0  rcbprocessor.o(.text)
-    .text                                    0x00000d60   Section        0  svccontext.o(.text)
-    OsTcb_SetInitialStack                    0x00000db9   Thumb Code   252  tcbprocessor.o(.text)
-    .text                                    0x00000db8   Section        0  tcbprocessor.o(.text)
-    OsTcb_StackPointersInit                  0x00000eb5   Thumb Code   110  tcbprocessor.o(.text)
-    OsTcb_SetTaskState                       0x00000f53   Thumb Code    20  tcbprocessor.o(.text)
-    OsTcb_ResetTaskEvent                     0x00000f7d   Thumb Code    26  tcbprocessor.o(.text)
-    OsTcb_ResetTCB                           0x00001013   Thumb Code    66  tcbprocessor.o(.text)
-    OsTcb_CheckEventTrigger                  0x00001279   Thumb Code    42  tcbprocessor.o(.text)
-    OsTcb_SetTaskEvent                       0x000012a3   Thumb Code    30  tcbprocessor.o(.text)
-    OsTcb_StackCanarInit                     0x00001679   Thumb Code   114  tcbprocessor.o(.text)
-    OsTcb_IdleTaskInit                       0x000016eb   Thumb Code   144  tcbprocessor.o(.text)
-    OsTcb_GetTaskPriority                    0x0000177b   Thumb Code    16  tcbprocessor.o(.text)
-    OsTcb_TaskModelIsBasic                   0x0000178b   Thumb Code    24  tcbprocessor.o(.text)
-    OsTcb_TaskIDValid                        0x000017a3   Thumb Code    18  tcbprocessor.o(.text)
-    OsTcb_SetCurrentTCBRef                   0x000017b5   Thumb Code    16  tcbprocessor.o(.text)
-    .text                                    0x000017f4   Section        0  portable.o(.text)
-    .text                                    0x0000188c   Section       48  init.o(.text)
-    i.__scatterload_copy                     0x000018bc   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x000018ca   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x000018cc   Section       14  handlers.o(i.__scatterload_zeroinit)
+    [Anonymous Symbol]                       0x000003f8   Section        0  hook.o(.text)
+    [Anonymous Symbol]                       0x0000040c   Section        0  schedule.o(.text)
+    [Anonymous Symbol]                       0x00000444   Section        0  enginespeedswc.o(.text)
+    [Anonymous Symbol]                       0x00000468   Section        0  temperaturesensorswc.o(.text)
+    [Anonymous Symbol]                       0x00000488   Section        0  iohwabspeedsensor.o(.text)
+    [Anonymous Symbol]                       0x00000498   Section        0  iohwabtemperaturesensor.o(.text)
+    [Anonymous Symbol]                       0x000004a8   Section        0  iohwabcan.o(.text)
+    [Anonymous Symbol]                       0x000004e8   Section        0  adc.o(.text)
+    [Anonymous Symbol]                       0x000004f8   Section        0  can.o(.text)
+    [Anonymous Symbol]                       0x00000510   Section        0  rte.o(.text)
+    [Anonymous Symbol]                       0x000005fc   Section        0  com.o(.text)
+    [Anonymous Symbol]                       0x00000628   Section        0  pdur.o(.text)
+    .text                                    0x0000063c   Section        0  alarm.o(.text)
+    OsAlrm_AssignAlarmEntry                  0x000006d9   Thumb Code    38  alarm.o(.text)
+    OsAlrm_ValidateStartValue                0x000006ff   Thumb Code    44  alarm.o(.text)
+    OsAlrm_ValidateCycle                     0x0000072b   Thumb Code    46  alarm.o(.text)
+    OsAlrm_AlarmActionExecute                0x0000082b   Thumb Code   200  alarm.o(.text)
+    OsAlrm_AlarmFireProcessor                0x000008f3   Thumb Code    82  alarm.o(.text)
+    SystemAlarmsProcessor                    0x00000945   Thumb Code    74  alarm.o(.text)
+    OsAlrm_ValidateID                        0x000009bb   Thumb Code    16  alarm.o(.text)
+    OsAlrm_GetFirePoint                      0x000009cb   Thumb Code    14  alarm.o(.text)
+    OsAlrm_AlarmIsEnabled                    0x000009d9   Thumb Code    16  alarm.o(.text)
+    OsAlrm_DisableAlarm                      0x000009e9   Thumb Code    16  alarm.o(.text)
+    OsAlrm_GetAlrmTaskID                     0x000009f9   Thumb Code    16  alarm.o(.text)
+    .text                                    0x00000a1c   Section        0  event.o(.text)
+    .text                                    0x00000a84   Section        0  task.o(.text)
+    .text                                    0x00000bf0   Section       90  port.o(.text)
+    .text                                    0x00000c4c   Section        0  errmgr.o(.text)
+    .text                                    0x00000ca8   Section        0  rcbprocessor.o(.text)
+    .text                                    0x00000dc4   Section        0  svccontext.o(.text)
+    OsTcb_SetInitialStack                    0x00000e1d   Thumb Code   252  tcbprocessor.o(.text)
+    .text                                    0x00000e1c   Section        0  tcbprocessor.o(.text)
+    OsTcb_StackPointersInit                  0x00000f19   Thumb Code   110  tcbprocessor.o(.text)
+    OsTcb_SetTaskState                       0x00000fb7   Thumb Code    20  tcbprocessor.o(.text)
+    OsTcb_ResetTaskEvent                     0x00000fe1   Thumb Code    26  tcbprocessor.o(.text)
+    OsTcb_ResetTCB                           0x00001077   Thumb Code    66  tcbprocessor.o(.text)
+    OsTcb_CheckEventTrigger                  0x000012dd   Thumb Code    42  tcbprocessor.o(.text)
+    OsTcb_SetTaskEvent                       0x00001307   Thumb Code    30  tcbprocessor.o(.text)
+    OsTcb_StackCanarInit                     0x000016dd   Thumb Code   114  tcbprocessor.o(.text)
+    OsTcb_IdleTaskInit                       0x0000174f   Thumb Code   144  tcbprocessor.o(.text)
+    OsTcb_GetTaskPriority                    0x000017df   Thumb Code    16  tcbprocessor.o(.text)
+    OsTcb_TaskModelIsBasic                   0x000017ef   Thumb Code    24  tcbprocessor.o(.text)
+    OsTcb_TaskIDValid                        0x00001807   Thumb Code    18  tcbprocessor.o(.text)
+    OsTcb_SetCurrentTCBRef                   0x00001819   Thumb Code    16  tcbprocessor.o(.text)
+    .text                                    0x00001858   Section        0  portable.o(.text)
+    .text                                    0x000018f0   Section       48  init.o(.text)
+    i.__scatterload_copy                     0x00001920   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x0000192e   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00001930   Section       14  handlers.o(i.__scatterload_zeroinit)
     OsErrMgr_DetectedService                 0x20000000   Data           1  errmgr.o(.data)
     .data                                    0x20000000   Section       12  errmgr.o(.data)
     OsErrMgr_DetectedTaskID                  0x20000001   Data           1  errmgr.o(.data)
@@ -279,10 +282,12 @@ Image Symbol Table
     [Anonymous Symbol]                       0x20000264   Section        0  counter.o(.bss.OsCnt_SystemCounter)
     SpeedValue                               0x2000026e   Data           2  rte.o(.bss.SpeedValue)
     [Anonymous Symbol]                       0x2000026e   Section        0  rte.o(.bss.SpeedValue)
-    TempValue                                0x20000270   Data           2  rte.o(.bss.TempValue)
-    [Anonymous Symbol]                       0x20000270   Section        0  rte.o(.bss.TempValue)
-    TemperatureValue                         0x20000272   Data           2  rte.o(.bss.TemperatureValue)
-    [Anonymous Symbol]                       0x20000272   Section        0  rte.o(.bss.TemperatureValue)
+    SysTickCount                             0x20000270   Data           4  counter.o(.bss.SysTickCount)
+    [Anonymous Symbol]                       0x20000270   Section        0  counter.o(.bss.SysTickCount)
+    TempValue                                0x20000274   Data           2  rte.o(.bss.TempValue)
+    [Anonymous Symbol]                       0x20000274   Section        0  rte.o(.bss.TempValue)
+    TemperatureValue                         0x20000276   Data           2  rte.o(.bss.TemperatureValue)
+    [Anonymous Symbol]                       0x20000276   Section        0  rte.o(.bss.TemperatureValue)
     STACK                                    0x20000278   Section      512  keiluvisoin_startup.o(STACK)
 
     Global Symbols
@@ -426,135 +431,137 @@ Image Symbol Table
     PWM1_3_Handler                           0x0000036f   Thumb Code     2  keiluvisoin_startup.o(.text)
     PWM1_FAULT_Handler                       0x00000371   Thumb Code     2  keiluvisoin_startup.o(.text)
     SysTick_Init                             0x0000037d   Thumb Code    78  counter.o(.text)
-    OsCnt_IncrSystemCounter                  0x000003cd   Thumb Code    16  counter.o(.text)
-    OsCnt_GetSystemCounter                   0x000003dd   Thumb Code    12  counter.o(.text)
-    ErrorHook                                0x000003e9   Thumb Code     2  hook.o(.text)
-    StartupHook                              0x000003ed   Thumb Code     2  hook.o(.text)
-    PreTaskHook                              0x000003f1   Thumb Code     2  hook.o(.text)
-    PostTaskHook                             0x000003f5   Thumb Code     2  hook.o(.text)
-    StackOverFlowHook                        0x000003f9   Thumb Code     2  hook.o(.text)
-    SystemInit                               0x000003fd   Thumb Code     2  schedule.o(.text)
-    main                                     0x00000401   Thumb Code     6  schedule.o(.text)
-    OsTask_DataHandle_Task                   0x00000409   Thumb Code    18  schedule.o(.text)
-    OsTask_ReadSensor_Task                   0x0000041d   Thumb Code    22  schedule.o(.text)
-    ReadSpeed_Runable                        0x00000435   Thumb Code    36  enginespeedswc.o(.text)
-    ReadTemperature_Runable                  0x00000459   Thumb Code    32  temperaturesensorswc.o(.text)
-    CanIf_Transmit                           0x00000479   Thumb Code    32  iohwabcan.o(.text)
-    ReadPulse_Runable                        0x00000499   Thumb Code    16  iohwabspeedsensor.o(.text)
-    ReadVoltage_Runable                      0x000004a9   Thumb Code    16  iohwabtemperaturesensor.o(.text)
-    Adc_ReadChannel                          0x000004b9   Thumb Code    14  adc.o(.text)
-    Can_Write                                0x000004c9   Thumb Code     4  can.o(.text)
-    Rte_EV_ReadSensor                        0x000004cd   Thumb Code    14  rte.o(.text)
-    Rte_EV_DataHandle                        0x000004dd   Thumb Code    54  rte.o(.text)
-    Rte_Read_RP_Pulse_EngineSpeedValue       0x00000515   Thumb Code    24  rte.o(.text)
-    Rte_Write_PP_Pulse_EngineSpeedValue      0x0000052d   Thumb Code    16  rte.o(.text)
-    Rte_Write_PP_Speed_SpeedValue            0x0000053d   Thumb Code    16  rte.o(.text)
-    Rte_Read_RP_Speed_SpeedValue             0x0000054d   Thumb Code    24  rte.o(.text)
-    Rte_Write_PP_Voltage_TemperatureValue    0x00000565   Thumb Code    16  rte.o(.text)
-    Rte_Read_RP_Voltage_TemperatureValue     0x00000575   Thumb Code    24  rte.o(.text)
-    Rte_Write_PP_Temperature_TempValue       0x0000058d   Thumb Code    16  rte.o(.text)
-    Rte_Read_RP_Temperature_TempValue        0x0000059d   Thumb Code    24  rte.o(.text)
-    Com_SendSignal                           0x000005b5   Thumb Code    32  com.o(.text)
-    PduR_ComTransmit                         0x000005d5   Thumb Code     4  pdur.o(.text)
-    DeclareAlarm                             0x000005d9   Thumb Code     2  alarm.o(.text)
-    GetAlarmBase                             0x000005db   Thumb Code    74  alarm.o(.text)
-    GetAlarm                                 0x00000625   Thumb Code    80  alarm.o(.text)
-    SetAbsAlarm                              0x000006f5   Thumb Code    76  alarm.o(.text)
-    SetRelAlarm                              0x00000741   Thumb Code    94  alarm.o(.text)
-    CancelAlarm                              0x0000079f   Thumb Code    40  alarm.o(.text)
-    SystemTimerHandler                       0x0000092b   Thumb Code    44  alarm.o(.text)
-    SetEvent                                 0x000009b9   Thumb Code    34  event.o(.text)
-    ClearEvent                               0x000009db   Thumb Code    26  event.o(.text)
-    GetEvent                                 0x000009f5   Thumb Code    16  event.o(.text)
-    WaitEvent                                0x00000a05   Thumb Code    26  event.o(.text)
-    StartOS                                  0x00000a21   Thumb Code    48  task.o(.text)
-    ActivateTask                             0x00000a51   Thumb Code    30  task.o(.text)
-    TerminateTask                            0x00000a6f   Thumb Code    22  task.o(.text)
-    ChainTask                                0x00000a85   Thumb Code    30  task.o(.text)
-    Schedule                                 0x00000aa3   Thumb Code    22  task.o(.text)
-    GetTaskID                                0x00000ab9   Thumb Code    16  task.o(.text)
-    GetTaskState                             0x00000ac9   Thumb Code    16  task.o(.text)
-    SVC_Dispatcher                           0x00000ad9   Thumb Code   160  task.o(.text)
-    OsTask_IdleMechanism                     0x00000b79   Thumb Code     4  task.o(.text)
-    OsPort_JumpToApp                         0x00000b8d   Thumb Code     0  port.o(.text)
-    OsPort_PendSVHandler                     0x00000baf   Thumb Code     0  port.o(.text)
-    OsPort_PushUpperContext                  0x00000bc1   Thumb Code     0  port.o(.text)
-    OsPort_PopUpperContext                   0x00000bcf   Thumb Code     0  port.o(.text)
-    OsPort_ReturnWithAutopop                 0x00000bdd   Thumb Code     0  port.o(.text)
-    OsErrMgr_SetServiceID                    0x00000be9   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_GetServiceID                    0x00000bef   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_StoreTaskID                     0x00000bf5   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_GetTaskID                       0x00000bfb   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_StoreEventID                    0x00000c01   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_GetEventID                      0x00000c07   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_StoreResID                      0x00000c0d   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_GetResID                        0x00000c13   Thumb Code     6  errmgr.o(.text)
-    OsErrMgr_SetOverFlowContext              0x00000c19   Thumb Code     8  errmgr.o(.text)
-    OsErrMgr_GetOverFlowContext              0x00000c21   Thumb Code    14  errmgr.o(.text)
-    OsRes_GetResourceProcessor               0x00000c45   Thumb Code   136  rcbprocessor.o(.text)
-    OsRcb_ReleaseResourceProcessor           0x00000ccd   Thumb Code   128  rcbprocessor.o(.text)
-    SVCCnxt_SetErrCode                       0x00000d61   Thumb Code     6  svccontext.o(.text)
-    SVCCnxt_GetErrCode                       0x00000d67   Thumb Code     8  svccontext.o(.text)
-    SVCCnxt_TskMgrSetTskID                   0x00000d6f   Thumb Code     6  svccontext.o(.text)
-    SVCCnxt_TskMgrGetTskID                   0x00000d75   Thumb Code     8  svccontext.o(.text)
-    SVCCnxt_EventMgrSetTskID                 0x00000d7d   Thumb Code     6  svccontext.o(.text)
-    SVCCnxt_EventMgrGetTskID                 0x00000d83   Thumb Code     8  svccontext.o(.text)
-    SVCCnxt_EventMgrSetEventMsk              0x00000d8b   Thumb Code     6  svccontext.o(.text)
-    SVCCnxt_EventMgrGetEventMsk              0x00000d91   Thumb Code     8  svccontext.o(.text)
-    SVCCnxt_ResMgrSetResID                   0x00000d99   Thumb Code     6  svccontext.o(.text)
-    SVCCnxt_ResMgrGetResID                   0x00000d9f   Thumb Code     8  svccontext.o(.text)
-    OsTcb_TasksInit                          0x00000f23   Thumb Code    48  tcbprocessor.o(.text)
-    OsTcb_GetTaskState                       0x00000f67   Thumb Code    16  tcbprocessor.o(.text)
-    OsTcb_GetTaskIDProcessor                 0x00000f77   Thumb Code     6  tcbprocessor.o(.text)
-    OsTcb_ActivateTaskTCBProcesor            0x00000f97   Thumb Code   124  tcbprocessor.o(.text)
-    OsTcb_GetResOccupied                     0x00001055   Thumb Code    16  tcbprocessor.o(.text)
-    OsTcb_ChainTaskTCBProcessor              0x00001065   Thumb Code   178  tcbprocessor.o(.text)
-    OsTcb_SetScheduleReq                     0x00001117   Thumb Code    18  tcbprocessor.o(.text)
-    OsTcb_TerminateTaskTCBProcessor          0x00001129   Thumb Code    82  tcbprocessor.o(.text)
-    OsTcb_JumpToNextTCB                      0x0000117b   Thumb Code   254  tcbprocessor.o(.text)
-    OsTcb_SetEventProcessor                  0x000012c1   Thumb Code   152  tcbprocessor.o(.text)
-    OsTcb_ClearEventProcessor                0x00001359   Thumb Code   128  tcbprocessor.o(.text)
-    OsTcb_GetEventProcessor                  0x000013d9   Thumb Code    92  tcbprocessor.o(.text)
-    OsTcb_WaitEventProcessor                 0x00001435   Thumb Code   154  tcbprocessor.o(.text)
-    OsTcb_GetTaskStateProcessor              0x000014cf   Thumb Code    60  tcbprocessor.o(.text)
-    OsTcb_TaskAlrmExpiredProcessor           0x0000150b   Thumb Code    32  tcbprocessor.o(.text)
-    OsTcb_EventAlrmExpiredProcessor          0x0000152b   Thumb Code    32  tcbprocessor.o(.text)
-    OsTcb_SetTaskPri                         0x0000154b   Thumb Code    18  tcbprocessor.o(.text)
-    OsTcb_GetTaskPriorityEx                  0x0000155d   Thumb Code    12  tcbprocessor.o(.text)
-    OsTcb_SetResOccupied                     0x00001569   Thumb Code    14  tcbprocessor.o(.text)
-    OsTcb_GetCurrentTCBRef                   0x00001577   Thumb Code     8  tcbprocessor.o(.text)
-    OsTcb_GetTcbSP                           0x0000157f   Thumb Code    14  tcbprocessor.o(.text)
-    OsTcb_UpdateTCBSP                        0x0000158d   Thumb Code    36  tcbprocessor.o(.text)
-    OsTcb_UpdatePSP                          0x000015b1   Thumb Code    56  tcbprocessor.o(.text)
-    OsTcb_SilenceHook                        0x000015e9   Thumb Code     8  tcbprocessor.o(.text)
-    OsTcb_ScheduleProcessor                  0x000015f1   Thumb Code    92  tcbprocessor.o(.text)
-    OsTcb_ThreadStackOverFlow                0x0000164d   Thumb Code    44  tcbprocessor.o(.text)
-    OsPort_SetInitialStack                   0x000017f5   Thumb Code    90  portable.o(.text)
-    OsPort_GetSVCNumber                      0x0000184f   Thumb Code    14  portable.o(.text)
-    OsPort_GetPSP                            0x0000185d   Thumb Code     8  portable.o(.text)
-    OsPort_SetPSP                            0x00001865   Thumb Code     6  portable.o(.text)
-    OsPort_SetThreadMode                     0x0000186b   Thumb Code    14  portable.o(.text)
-    OsPort_CoreInit                          0x00001879   Thumb Code    14  portable.o(.text)
-    __scatterload                            0x0000188d   Thumb Code    38  init.o(.text)
-    __scatterload_rt2                        0x0000188d   Thumb Code     0  init.o(.text)
-    __scatterload_copy                       0x000018bd   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x000018cb   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x000018cd   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    OsCfg_ALL_STACK_SIZE                     0x000018da   Data           2  oscfg.o(.rodata.OsCfg_ALL_STACK_SIZE)
-    OsCfg_MAX_NUM_OF_ALARMS                  0x000018dc   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_ALARMS)
-    OsCfg_MAX_NUM_OF_RESOURCES               0x000018dd   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_RESOURCES)
-    OsCfg_MAX_NUM_OF_TASKS                   0x000018de   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_TASKS)
-    OsCfg_ResourceCeilPri                    0x000018df   Data           1  oscfg.o(.rodata.OsCfg_ResourceCeilPri)
-    OsCfg_ResourceTaskAuthorized             0x000018e0   Data           1  oscfg.o(.rodata.OsCfg_ResourceTaskAuthorized)
-    OsCfg_SYSTEM_TICK_IN_MS                  0x000018e4   Data           4  oscfg.o(.rodata.OsCfg_SYSTEM_TICK_IN_MS)
-    OsCfg_StackSize                          0x000018e8   Data           8  oscfg.o(.rodata.OsCfg_StackSize)
-    OsCfg_USE_ERROR_HOOK                     0x000018f0   Data           1  oscfg.o(.rodata.OsCfg_USE_ERROR_HOOK)
-    OsCfg_USE_POSTTASK_HOOK                  0x000018f1   Data           1  oscfg.o(.rodata.OsCfg_USE_POSTTASK_HOOK)
-    OsCfg_USE_PRETASK_HOOK                   0x000018f2   Data           1  oscfg.o(.rodata.OsCfg_USE_PRETASK_HOOK)
-    OsCfg_USE_STACK_OVER_FLOW_HOOK           0x000018f3   Data           1  oscfg.o(.rodata.OsCfg_USE_STACK_OVER_FLOW_HOOK)
-    OsCfg_USE_STARTUP_HOOK                   0x000018f4   Data           1  oscfg.o(.rodata.OsCfg_USE_STARTUP_HOOK)
-    Region$$Table$$Base                      0x000018f8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x00001918   Number         0  anon$$obj.o(Region$$Table)
+    OsCnt_IncrSystemCounter                  0x000003cd   Thumb Code    30  counter.o(.text)
+    OsCnt_GetSystemCounter                   0x000003ed   Thumb Code    12  counter.o(.text)
+    ErrorHook                                0x000003f9   Thumb Code     2  hook.o(.text)
+    StartupHook                              0x000003fd   Thumb Code     2  hook.o(.text)
+    PreTaskHook                              0x00000401   Thumb Code     2  hook.o(.text)
+    PostTaskHook                             0x00000405   Thumb Code     2  hook.o(.text)
+    StackOverFlowHook                        0x00000409   Thumb Code     2  hook.o(.text)
+    SystemInit                               0x0000040d   Thumb Code     2  schedule.o(.text)
+    main                                     0x00000411   Thumb Code     6  schedule.o(.text)
+    OsTask_DataHandle_Task                   0x00000419   Thumb Code    18  schedule.o(.text)
+    OsTask_ReadSensor_Task                   0x0000042d   Thumb Code    22  schedule.o(.text)
+    ReadSpeed_Runable                        0x00000445   Thumb Code    36  enginespeedswc.o(.text)
+    ReadTemperature_Runable                  0x00000469   Thumb Code    32  temperaturesensorswc.o(.text)
+    ReadPulse_Runable                        0x00000489   Thumb Code    16  iohwabspeedsensor.o(.text)
+    ReadVoltage_Runable                      0x00000499   Thumb Code    16  iohwabtemperaturesensor.o(.text)
+    CanIf_Transmit                           0x000004a9   Thumb Code    64  iohwabcan.o(.text)
+    Adc_ReadChannel                          0x000004e9   Thumb Code    14  adc.o(.text)
+    Can_Write                                0x000004f9   Thumb Code    24  can.o(.text)
+    Rte_EV_ReadSensor                        0x00000511   Thumb Code    14  rte.o(.text)
+    Rte_EV_DataHandle                        0x00000521   Thumb Code    58  rte.o(.text)
+    Rte_Read_RP_Pulse_EngineSpeedValue       0x0000055d   Thumb Code    24  rte.o(.text)
+    Rte_Write_PP_Pulse_EngineSpeedValue      0x00000575   Thumb Code    16  rte.o(.text)
+    Rte_Write_PP_Speed_SpeedValue            0x00000585   Thumb Code    16  rte.o(.text)
+    Rte_Read_RP_Speed_SpeedValue             0x00000595   Thumb Code    24  rte.o(.text)
+    Rte_Write_PP_Voltage_TemperatureValue    0x000005ad   Thumb Code    16  rte.o(.text)
+    Rte_Read_RP_Voltage_TemperatureValue     0x000005bd   Thumb Code    24  rte.o(.text)
+    Rte_Write_PP_Temperature_TempValue       0x000005d5   Thumb Code    16  rte.o(.text)
+    Rte_Read_RP_Temperature_TempValue        0x000005e5   Thumb Code    24  rte.o(.text)
+    Com_SendSignal                           0x000005fd   Thumb Code    40  com.o(.text)
+    Com_TxConfirmation                       0x00000625   Thumb Code     2  com.o(.text)
+    PduR_ComTransmit                         0x00000629   Thumb Code    14  pdur.o(.text)
+    PduR_LoIfTxConfirmation                  0x00000639   Thumb Code     4  pdur.o(.text)
+    DeclareAlarm                             0x0000063d   Thumb Code     2  alarm.o(.text)
+    GetAlarmBase                             0x0000063f   Thumb Code    74  alarm.o(.text)
+    GetAlarm                                 0x00000689   Thumb Code    80  alarm.o(.text)
+    SetAbsAlarm                              0x00000759   Thumb Code    76  alarm.o(.text)
+    SetRelAlarm                              0x000007a5   Thumb Code    94  alarm.o(.text)
+    CancelAlarm                              0x00000803   Thumb Code    40  alarm.o(.text)
+    SystemTimerHandler                       0x0000098f   Thumb Code    44  alarm.o(.text)
+    SetEvent                                 0x00000a1d   Thumb Code    34  event.o(.text)
+    ClearEvent                               0x00000a3f   Thumb Code    26  event.o(.text)
+    GetEvent                                 0x00000a59   Thumb Code    16  event.o(.text)
+    WaitEvent                                0x00000a69   Thumb Code    26  event.o(.text)
+    StartOS                                  0x00000a85   Thumb Code    48  task.o(.text)
+    ActivateTask                             0x00000ab5   Thumb Code    30  task.o(.text)
+    TerminateTask                            0x00000ad3   Thumb Code    22  task.o(.text)
+    ChainTask                                0x00000ae9   Thumb Code    30  task.o(.text)
+    Schedule                                 0x00000b07   Thumb Code    22  task.o(.text)
+    GetTaskID                                0x00000b1d   Thumb Code    16  task.o(.text)
+    GetTaskState                             0x00000b2d   Thumb Code    16  task.o(.text)
+    SVC_Dispatcher                           0x00000b3d   Thumb Code   160  task.o(.text)
+    OsTask_IdleMechanism                     0x00000bdd   Thumb Code     4  task.o(.text)
+    OsPort_JumpToApp                         0x00000bf1   Thumb Code     0  port.o(.text)
+    OsPort_PendSVHandler                     0x00000c13   Thumb Code     0  port.o(.text)
+    OsPort_PushUpperContext                  0x00000c25   Thumb Code     0  port.o(.text)
+    OsPort_PopUpperContext                   0x00000c33   Thumb Code     0  port.o(.text)
+    OsPort_ReturnWithAutopop                 0x00000c41   Thumb Code     0  port.o(.text)
+    OsErrMgr_SetServiceID                    0x00000c4d   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_GetServiceID                    0x00000c53   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_StoreTaskID                     0x00000c59   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_GetTaskID                       0x00000c5f   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_StoreEventID                    0x00000c65   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_GetEventID                      0x00000c6b   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_StoreResID                      0x00000c71   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_GetResID                        0x00000c77   Thumb Code     6  errmgr.o(.text)
+    OsErrMgr_SetOverFlowContext              0x00000c7d   Thumb Code     8  errmgr.o(.text)
+    OsErrMgr_GetOverFlowContext              0x00000c85   Thumb Code    14  errmgr.o(.text)
+    OsRes_GetResourceProcessor               0x00000ca9   Thumb Code   136  rcbprocessor.o(.text)
+    OsRcb_ReleaseResourceProcessor           0x00000d31   Thumb Code   128  rcbprocessor.o(.text)
+    SVCCnxt_SetErrCode                       0x00000dc5   Thumb Code     6  svccontext.o(.text)
+    SVCCnxt_GetErrCode                       0x00000dcb   Thumb Code     8  svccontext.o(.text)
+    SVCCnxt_TskMgrSetTskID                   0x00000dd3   Thumb Code     6  svccontext.o(.text)
+    SVCCnxt_TskMgrGetTskID                   0x00000dd9   Thumb Code     8  svccontext.o(.text)
+    SVCCnxt_EventMgrSetTskID                 0x00000de1   Thumb Code     6  svccontext.o(.text)
+    SVCCnxt_EventMgrGetTskID                 0x00000de7   Thumb Code     8  svccontext.o(.text)
+    SVCCnxt_EventMgrSetEventMsk              0x00000def   Thumb Code     6  svccontext.o(.text)
+    SVCCnxt_EventMgrGetEventMsk              0x00000df5   Thumb Code     8  svccontext.o(.text)
+    SVCCnxt_ResMgrSetResID                   0x00000dfd   Thumb Code     6  svccontext.o(.text)
+    SVCCnxt_ResMgrGetResID                   0x00000e03   Thumb Code     8  svccontext.o(.text)
+    OsTcb_TasksInit                          0x00000f87   Thumb Code    48  tcbprocessor.o(.text)
+    OsTcb_GetTaskState                       0x00000fcb   Thumb Code    16  tcbprocessor.o(.text)
+    OsTcb_GetTaskIDProcessor                 0x00000fdb   Thumb Code     6  tcbprocessor.o(.text)
+    OsTcb_ActivateTaskTCBProcesor            0x00000ffb   Thumb Code   124  tcbprocessor.o(.text)
+    OsTcb_GetResOccupied                     0x000010b9   Thumb Code    16  tcbprocessor.o(.text)
+    OsTcb_ChainTaskTCBProcessor              0x000010c9   Thumb Code   178  tcbprocessor.o(.text)
+    OsTcb_SetScheduleReq                     0x0000117b   Thumb Code    18  tcbprocessor.o(.text)
+    OsTcb_TerminateTaskTCBProcessor          0x0000118d   Thumb Code    82  tcbprocessor.o(.text)
+    OsTcb_JumpToNextTCB                      0x000011df   Thumb Code   254  tcbprocessor.o(.text)
+    OsTcb_SetEventProcessor                  0x00001325   Thumb Code   152  tcbprocessor.o(.text)
+    OsTcb_ClearEventProcessor                0x000013bd   Thumb Code   128  tcbprocessor.o(.text)
+    OsTcb_GetEventProcessor                  0x0000143d   Thumb Code    92  tcbprocessor.o(.text)
+    OsTcb_WaitEventProcessor                 0x00001499   Thumb Code   154  tcbprocessor.o(.text)
+    OsTcb_GetTaskStateProcessor              0x00001533   Thumb Code    60  tcbprocessor.o(.text)
+    OsTcb_TaskAlrmExpiredProcessor           0x0000156f   Thumb Code    32  tcbprocessor.o(.text)
+    OsTcb_EventAlrmExpiredProcessor          0x0000158f   Thumb Code    32  tcbprocessor.o(.text)
+    OsTcb_SetTaskPri                         0x000015af   Thumb Code    18  tcbprocessor.o(.text)
+    OsTcb_GetTaskPriorityEx                  0x000015c1   Thumb Code    12  tcbprocessor.o(.text)
+    OsTcb_SetResOccupied                     0x000015cd   Thumb Code    14  tcbprocessor.o(.text)
+    OsTcb_GetCurrentTCBRef                   0x000015db   Thumb Code     8  tcbprocessor.o(.text)
+    OsTcb_GetTcbSP                           0x000015e3   Thumb Code    14  tcbprocessor.o(.text)
+    OsTcb_UpdateTCBSP                        0x000015f1   Thumb Code    36  tcbprocessor.o(.text)
+    OsTcb_UpdatePSP                          0x00001615   Thumb Code    56  tcbprocessor.o(.text)
+    OsTcb_SilenceHook                        0x0000164d   Thumb Code     8  tcbprocessor.o(.text)
+    OsTcb_ScheduleProcessor                  0x00001655   Thumb Code    92  tcbprocessor.o(.text)
+    OsTcb_ThreadStackOverFlow                0x000016b1   Thumb Code    44  tcbprocessor.o(.text)
+    OsPort_SetInitialStack                   0x00001859   Thumb Code    90  portable.o(.text)
+    OsPort_GetSVCNumber                      0x000018b3   Thumb Code    14  portable.o(.text)
+    OsPort_GetPSP                            0x000018c1   Thumb Code     8  portable.o(.text)
+    OsPort_SetPSP                            0x000018c9   Thumb Code     6  portable.o(.text)
+    OsPort_SetThreadMode                     0x000018cf   Thumb Code    14  portable.o(.text)
+    OsPort_CoreInit                          0x000018dd   Thumb Code    14  portable.o(.text)
+    __scatterload                            0x000018f1   Thumb Code    38  init.o(.text)
+    __scatterload_rt2                        0x000018f1   Thumb Code     0  init.o(.text)
+    __scatterload_copy                       0x00001921   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x0000192f   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00001931   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    OsCfg_ALL_STACK_SIZE                     0x0000193e   Data           2  oscfg.o(.rodata.OsCfg_ALL_STACK_SIZE)
+    OsCfg_MAX_NUM_OF_ALARMS                  0x00001940   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_ALARMS)
+    OsCfg_MAX_NUM_OF_RESOURCES               0x00001941   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_RESOURCES)
+    OsCfg_MAX_NUM_OF_TASKS                   0x00001942   Data           1  oscfg.o(.rodata.OsCfg_MAX_NUM_OF_TASKS)
+    OsCfg_ResourceCeilPri                    0x00001943   Data           1  oscfg.o(.rodata.OsCfg_ResourceCeilPri)
+    OsCfg_ResourceTaskAuthorized             0x00001944   Data           1  oscfg.o(.rodata.OsCfg_ResourceTaskAuthorized)
+    OsCfg_SYSTEM_TICK_IN_MS                  0x00001948   Data           4  oscfg.o(.rodata.OsCfg_SYSTEM_TICK_IN_MS)
+    OsCfg_StackSize                          0x0000194c   Data           8  oscfg.o(.rodata.OsCfg_StackSize)
+    OsCfg_USE_ERROR_HOOK                     0x00001954   Data           1  oscfg.o(.rodata.OsCfg_USE_ERROR_HOOK)
+    OsCfg_USE_POSTTASK_HOOK                  0x00001955   Data           1  oscfg.o(.rodata.OsCfg_USE_POSTTASK_HOOK)
+    OsCfg_USE_PRETASK_HOOK                   0x00001956   Data           1  oscfg.o(.rodata.OsCfg_USE_PRETASK_HOOK)
+    OsCfg_USE_STACK_OVER_FLOW_HOOK           0x00001957   Data           1  oscfg.o(.rodata.OsCfg_USE_STACK_OVER_FLOW_HOOK)
+    OsCfg_USE_STARTUP_HOOK                   0x00001958   Data           1  oscfg.o(.rodata.OsCfg_USE_STARTUP_HOOK)
+    Region$$Table$$Base                      0x0000195c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000197c   Number         0  anon$$obj.o(Region$$Table)
     Current_TCB_Ref                          0x20000010   Data           4  tcbprocessor.o(.data)
     MainCounter                              0x20000018   Data          12  oscfg.o(.data.MainCounter)
     OsCfg_Alarms                             0x20000024   Data          24  oscfg.o(.data.OsCfg_Alarms)
@@ -573,102 +580,103 @@ Memory Map of the image
 
   Image Entry point : 0x00000281
 
-  Load Region LR_1 (Base: 0x00000000, Size: 0x000019a8, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x00000000, Size: 0x00001a0c, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x00001918, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000197c, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x00000000   0x00000000   0x0000026c   Data   RO            3    RESET               keiluvisoin_startup.o
-    0x0000026c   0x0000026c   0x00000000   Code   RO          314  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0000026c   0x0000026c   0x00000004   Code   RO          317    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000270   0x00000270   0x00000004   Code   RO          320    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000274   0x00000274   0x00000000   Code   RO          322    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000274   0x00000274   0x00000000   Code   RO          324    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000274   0x00000274   0x00000008   Code   RO          325    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0000027c   0x0000027c   0x00000000   Code   RO          327    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0000027c   0x0000027c   0x00000000   Code   RO          329    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0000027c   0x0000027c   0x00000004   Code   RO          318    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x0000026c   0x0000026c   0x00000000   Code   RO          316  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0000026c   0x0000026c   0x00000004   Code   RO          319    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000270   0x00000270   0x00000004   Code   RO          322    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000274   0x00000274   0x00000000   Code   RO          324    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000274   0x00000274   0x00000000   Code   RO          326    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000274   0x00000274   0x00000008   Code   RO          327    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0000027c   0x0000027c   0x00000000   Code   RO          329    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0000027c   0x0000027c   0x00000000   Code   RO          331    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0000027c   0x0000027c   0x00000004   Code   RO          320    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
     0x00000280   0x00000280   0x000000fc   Code   RO            4  * .text               keiluvisoin_startup.o
-    0x0000037c   0x0000037c   0x0000006c   Code   RO           10    .text               counter.o
-    0x000003e8   0x000003e8   0x00000012   Code   RO           18    .text               hook.o
-    0x000003fa   0x000003fa   0x00000002   PAD
-    0x000003fc   0x000003fc   0x00000036   Code   RO           53    .text               schedule.o
-    0x00000432   0x00000432   0x00000002   PAD
-    0x00000434   0x00000434   0x00000024   Code   RO           62    .text               enginespeedswc.o
-    0x00000458   0x00000458   0x00000020   Code   RO           69    .text               temperaturesensorswc.o
-    0x00000478   0x00000478   0x00000020   Code   RO           76    .text               iohwabcan.o
-    0x00000498   0x00000498   0x00000010   Code   RO           84    .text               iohwabspeedsensor.o
-    0x000004a8   0x000004a8   0x00000010   Code   RO           92    .text               iohwabtemperaturesensor.o
-    0x000004b8   0x000004b8   0x0000000e   Code   RO          100    .text               adc.o
-    0x000004c6   0x000004c6   0x00000002   PAD
-    0x000004c8   0x000004c8   0x00000004   Code   RO          108    .text               can.o
-    0x000004cc   0x000004cc   0x000000e8   Code   RO          116    .text               rte.o
-    0x000005b4   0x000005b4   0x00000020   Code   RO          128    .text               com.o
-    0x000005d4   0x000005d4   0x00000004   Code   RO          144    .text               pdur.o
-    0x000005d8   0x000005d8   0x000003e0   Code   RO          151    .text               OsekLib.lib(alarm.o)
-    0x000009b8   0x000009b8   0x00000066   Code   RO          196    .text               OsekLib.lib(event.o)
-    0x00000a1e   0x00000a1e   0x00000002   PAD
-    0x00000a20   0x00000a20   0x0000016c   Code   RO          214    .text               OsekLib.lib(task.o)
-    0x00000b8c   0x00000b8c   0x0000005a   Code   RO          241    .text               OsekLib.lib(port.o)
-    0x00000be6   0x00000be6   0x00000002   PAD
-    0x00000be8   0x00000be8   0x0000005c   Code   RO          244    .text               OsekLib.lib(errmgr.o)
-    0x00000c44   0x00000c44   0x0000011c   Code   RO          258    .text               OsekLib.lib(rcbprocessor.o)
-    0x00000d60   0x00000d60   0x00000058   Code   RO          270    .text               OsekLib.lib(svccontext.o)
-    0x00000db8   0x00000db8   0x00000a3c   Code   RO          284    .text               OsekLib.lib(tcbprocessor.o)
-    0x000017f4   0x000017f4   0x00000098   Code   RO          299    .text               OsekLib.lib(portable.o)
-    0x0000188c   0x0000188c   0x00000030   Code   RO          331    .text               mc_w.l(init.o)
-    0x000018bc   0x000018bc   0x0000000e   Code   RO          335    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x000018ca   0x000018ca   0x00000002   Code   RO          336    i.__scatterload_null  mc_w.l(handlers.o)
-    0x000018cc   0x000018cc   0x0000000e   Code   RO          337    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x000018da   0x000018da   0x00000002   Data   RO           29    .rodata.OsCfg_ALL_STACK_SIZE  oscfg.o
-    0x000018dc   0x000018dc   0x00000001   Data   RO           27    .rodata.OsCfg_MAX_NUM_OF_ALARMS  oscfg.o
-    0x000018dd   0x000018dd   0x00000001   Data   RO           28    .rodata.OsCfg_MAX_NUM_OF_RESOURCES  oscfg.o
-    0x000018de   0x000018de   0x00000001   Data   RO           26    .rodata.OsCfg_MAX_NUM_OF_TASKS  oscfg.o
-    0x000018df   0x000018df   0x00000001   Data   RO           46    .rodata.OsCfg_ResourceCeilPri  oscfg.o
-    0x000018e0   0x000018e0   0x00000001   Data   RO           45    .rodata.OsCfg_ResourceTaskAuthorized  oscfg.o
-    0x000018e1   0x000018e1   0x00000003   PAD
-    0x000018e4   0x000018e4   0x00000004   Data   RO           37    .rodata.OsCfg_SYSTEM_TICK_IN_MS  oscfg.o
-    0x000018e8   0x000018e8   0x00000008   Data   RO           40    .rodata.OsCfg_StackSize  oscfg.o
-    0x000018f0   0x000018f0   0x00000001   Data   RO           30    .rodata.OsCfg_USE_ERROR_HOOK  oscfg.o
-    0x000018f1   0x000018f1   0x00000001   Data   RO           32    .rodata.OsCfg_USE_POSTTASK_HOOK  oscfg.o
-    0x000018f2   0x000018f2   0x00000001   Data   RO           31    .rodata.OsCfg_USE_PRETASK_HOOK  oscfg.o
-    0x000018f3   0x000018f3   0x00000001   Data   RO           34    .rodata.OsCfg_USE_STACK_OVER_FLOW_HOOK  oscfg.o
-    0x000018f4   0x000018f4   0x00000001   Data   RO           33    .rodata.OsCfg_USE_STARTUP_HOOK  oscfg.o
-    0x000018f5   0x000018f5   0x00000003   PAD
-    0x000018f8   0x000018f8   0x00000020   Data   RO          334    Region$$Table       anon$$obj.o
+    0x0000037c   0x0000037c   0x0000007c   Code   RO           10    .text               counter.o
+    0x000003f8   0x000003f8   0x00000012   Code   RO           19    .text               hook.o
+    0x0000040a   0x0000040a   0x00000002   PAD
+    0x0000040c   0x0000040c   0x00000036   Code   RO           54    .text               schedule.o
+    0x00000442   0x00000442   0x00000002   PAD
+    0x00000444   0x00000444   0x00000024   Code   RO           63    .text               enginespeedswc.o
+    0x00000468   0x00000468   0x00000020   Code   RO           70    .text               temperaturesensorswc.o
+    0x00000488   0x00000488   0x00000010   Code   RO           77    .text               iohwabspeedsensor.o
+    0x00000498   0x00000498   0x00000010   Code   RO           85    .text               iohwabtemperaturesensor.o
+    0x000004a8   0x000004a8   0x00000040   Code   RO           93    .text               iohwabcan.o
+    0x000004e8   0x000004e8   0x0000000e   Code   RO          101    .text               adc.o
+    0x000004f6   0x000004f6   0x00000002   PAD
+    0x000004f8   0x000004f8   0x00000018   Code   RO          109    .text               can.o
+    0x00000510   0x00000510   0x000000ec   Code   RO          117    .text               rte.o
+    0x000005fc   0x000005fc   0x0000002a   Code   RO          137    .text               com.o
+    0x00000626   0x00000626   0x00000002   PAD
+    0x00000628   0x00000628   0x00000014   Code   RO          145    .text               pdur.o
+    0x0000063c   0x0000063c   0x000003e0   Code   RO          153    .text               OsekLib.lib(alarm.o)
+    0x00000a1c   0x00000a1c   0x00000066   Code   RO          198    .text               OsekLib.lib(event.o)
+    0x00000a82   0x00000a82   0x00000002   PAD
+    0x00000a84   0x00000a84   0x0000016c   Code   RO          216    .text               OsekLib.lib(task.o)
+    0x00000bf0   0x00000bf0   0x0000005a   Code   RO          243    .text               OsekLib.lib(port.o)
+    0x00000c4a   0x00000c4a   0x00000002   PAD
+    0x00000c4c   0x00000c4c   0x0000005c   Code   RO          246    .text               OsekLib.lib(errmgr.o)
+    0x00000ca8   0x00000ca8   0x0000011c   Code   RO          260    .text               OsekLib.lib(rcbprocessor.o)
+    0x00000dc4   0x00000dc4   0x00000058   Code   RO          272    .text               OsekLib.lib(svccontext.o)
+    0x00000e1c   0x00000e1c   0x00000a3c   Code   RO          286    .text               OsekLib.lib(tcbprocessor.o)
+    0x00001858   0x00001858   0x00000098   Code   RO          301    .text               OsekLib.lib(portable.o)
+    0x000018f0   0x000018f0   0x00000030   Code   RO          333    .text               mc_w.l(init.o)
+    0x00001920   0x00001920   0x0000000e   Code   RO          337    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x0000192e   0x0000192e   0x00000002   Code   RO          338    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00001930   0x00001930   0x0000000e   Code   RO          339    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x0000193e   0x0000193e   0x00000002   Data   RO           30    .rodata.OsCfg_ALL_STACK_SIZE  oscfg.o
+    0x00001940   0x00001940   0x00000001   Data   RO           28    .rodata.OsCfg_MAX_NUM_OF_ALARMS  oscfg.o
+    0x00001941   0x00001941   0x00000001   Data   RO           29    .rodata.OsCfg_MAX_NUM_OF_RESOURCES  oscfg.o
+    0x00001942   0x00001942   0x00000001   Data   RO           27    .rodata.OsCfg_MAX_NUM_OF_TASKS  oscfg.o
+    0x00001943   0x00001943   0x00000001   Data   RO           47    .rodata.OsCfg_ResourceCeilPri  oscfg.o
+    0x00001944   0x00001944   0x00000001   Data   RO           46    .rodata.OsCfg_ResourceTaskAuthorized  oscfg.o
+    0x00001945   0x00001945   0x00000003   PAD
+    0x00001948   0x00001948   0x00000004   Data   RO           38    .rodata.OsCfg_SYSTEM_TICK_IN_MS  oscfg.o
+    0x0000194c   0x0000194c   0x00000008   Data   RO           41    .rodata.OsCfg_StackSize  oscfg.o
+    0x00001954   0x00001954   0x00000001   Data   RO           31    .rodata.OsCfg_USE_ERROR_HOOK  oscfg.o
+    0x00001955   0x00001955   0x00000001   Data   RO           33    .rodata.OsCfg_USE_POSTTASK_HOOK  oscfg.o
+    0x00001956   0x00001956   0x00000001   Data   RO           32    .rodata.OsCfg_USE_PRETASK_HOOK  oscfg.o
+    0x00001957   0x00001957   0x00000001   Data   RO           35    .rodata.OsCfg_USE_STACK_OVER_FLOW_HOOK  oscfg.o
+    0x00001958   0x00001958   0x00000001   Data   RO           34    .rodata.OsCfg_USE_STARTUP_HOOK  oscfg.o
+    0x00001959   0x00001959   0x00000003   PAD
+    0x0000195c   0x0000195c   0x00000020   Data   RO          336    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x00001918, Size: 0x00000090, Max: 0xffffffff, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x00001918   0x0000000c   Data   RW          245    .data               OsekLib.lib(errmgr.o)
-    0x2000000c   0x00001924   0x00000003   Data   RW          271    .data               OsekLib.lib(svccontext.o)
-    0x2000000f   0x00001927   0x00000001   PAD
-    0x20000010   0x00001928   0x00000006   Data   RW          285    .data               OsekLib.lib(tcbprocessor.o)
-    0x20000016   0x0000192e   0x00000002   PAD
-    0x20000018   0x00001930   0x0000000c   Data   RW           42    .data.MainCounter   oscfg.o
-    0x20000024   0x0000193c   0x00000018   Data   RW           43    .data.OsCfg_Alarms  oscfg.o
-    0x2000003c   0x00001954   0x00000054   Data   RW           39    .data.OsCfg_TCBs    oscfg.o
-
-
-    Execution Region ER_ZI (Exec base: 0x20000090, Load base: 0x000019a8, Size: 0x000003e8, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x0000197c, Size: 0x00000090, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000090        -       0x00000002   Zero   RW          120    .bss.EngineSpeedValue  rte.o
-    0x20000092   0x000019a8   0x00000002   PAD
-    0x20000094        -       0x000001d0   Zero   RW           41    .bss.OsCfg_Stack    oscfg.o
+    0x20000000   0x0000197c   0x0000000c   Data   RW          247    .data               OsekLib.lib(errmgr.o)
+    0x2000000c   0x00001988   0x00000003   Data   RW          273    .data               OsekLib.lib(svccontext.o)
+    0x2000000f   0x0000198b   0x00000001   PAD
+    0x20000010   0x0000198c   0x00000006   Data   RW          287    .data               OsekLib.lib(tcbprocessor.o)
+    0x20000016   0x00001992   0x00000002   PAD
+    0x20000018   0x00001994   0x0000000c   Data   RW           43    .data.MainCounter   oscfg.o
+    0x20000024   0x000019a0   0x00000018   Data   RW           44    .data.OsCfg_Alarms  oscfg.o
+    0x2000003c   0x000019b8   0x00000054   Data   RW           40    .data.OsCfg_TCBs    oscfg.o
+
+
+    Execution Region ER_ZI (Exec base: 0x20000090, Load base: 0x00001a0c, Size: 0x000003e8, Max: 0xffffffff, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000090        -       0x00000002   Zero   RW          121    .bss.EngineSpeedValue  rte.o
+    0x20000092   0x00001a0c   0x00000002   PAD
+    0x20000094        -       0x000001d0   Zero   RW           42    .bss.OsCfg_Stack    oscfg.o
     0x20000264        -       0x00000004   Zero   RW           12    .bss.OsCnt_SystemCounter  counter.o
-    0x20000268        -       0x00000002   Zero   RW           48    .bss.RCB            oscfg.o
-    0x2000026a        -       0x00000002   Zero   RW           44    .bss.SVCCnxt_ErrCodes  oscfg.o
-    0x2000026c        -       0x00000001   Zero   RW           47    .bss.SVCCnxt_ResMgrCnxt  oscfg.o
-    0x2000026d   0x000019a8   0x00000001   PAD
-    0x2000026e        -       0x00000002   Zero   RW          119    .bss.SpeedValue     rte.o
-    0x20000270        -       0x00000002   Zero   RW          118    .bss.TempValue      rte.o
-    0x20000272        -       0x00000002   Zero   RW          121    .bss.TemperatureValue  rte.o
-    0x20000274   0x000019a8   0x00000004   PAD
+    0x20000268        -       0x00000002   Zero   RW           49    .bss.RCB            oscfg.o
+    0x2000026a        -       0x00000002   Zero   RW           45    .bss.SVCCnxt_ErrCodes  oscfg.o
+    0x2000026c        -       0x00000001   Zero   RW           48    .bss.SVCCnxt_ResMgrCnxt  oscfg.o
+    0x2000026d   0x00001a0c   0x00000001   PAD
+    0x2000026e        -       0x00000002   Zero   RW          120    .bss.SpeedValue     rte.o
+    0x20000270        -       0x00000004   Zero   RW           13    .bss.SysTickCount   counter.o
+    0x20000274        -       0x00000002   Zero   RW          119    .bss.TempValue      rte.o
+    0x20000276        -       0x00000002   Zero   RW          122    .bss.TemperatureValue  rte.o
     0x20000278        -       0x00000200   Zero   RW            1    STACK               keiluvisoin_startup.o
 
 
@@ -679,26 +687,26 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        14          0          0          0          0        615   adc.o
-         4          0          0          0          0        928   can.o
-        32          0          0          0          0       1129   com.o
-       108          0          0          0          4        800   counter.o
-        36          0          0          0          0        615   enginespeedswc.o
-        18          0          0          0          0        918   hook.o
-        32          0          0          0          0       1124   iohwabcan.o
-        16          0          0          0          0        823   iohwabspeedsensor.o
-        16          0          0          0          0        839   iohwabtemperaturesensor.o
-       252         10        620          0        512       5492   keiluvisoin_startup.o
-         0          0         24        120        469       3051   oscfg.o
-         4          0          0          0          0        968   pdur.o
-       232          0          0          0          8       2144   rte.o
-        54          0          0          0          0       1125   schedule.o
-        32          0          0          0          0        633   temperaturesensorswc.o
+        14          0          0          0          0        574   adc.o
+        24          0          0          0          0        936   can.o
+        42          0          0          0          0       1182   com.o
+       124          0          0          0          8        804   counter.o
+        36          0          0          0          0        574   enginespeedswc.o
+        18          0          0          0          0        877   hook.o
+        64          0          0          0          0       1192   iohwabcan.o
+        16          0          0          0          0        782   iohwabspeedsensor.o
+        16          0          0          0          0        798   iohwabtemperaturesensor.o
+       252         10        620          0        512       5448   keiluvisoin_startup.o
+         0          0         24        120        469       3010   oscfg.o
+        20          0          0          0          0       1174   pdur.o
+       236          0          0          0          8       2165   rte.o
+        54          0          0          0          0       1084   schedule.o
+        32          0          0          0          0        592   temperaturesensorswc.o
 
     ----------------------------------------------------------------------
-       856         10        682        120       1000      21204   Object Totals
+       956         10        682        120       1000      21192   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-         6          0          6          0          7          0   (incl. Padding)
+         8          0          6          0          3          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -745,15 +753,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5742        252        682        144       1000      57982   Grand Totals
-      5742        252        682        144       1000      57982   ELF Image Totals
-      5742        252        682        144          0          0   ROM Totals
+      5842        252        682        144       1000      57970   Grand Totals
+      5842        252        682        144       1000      57970   ELF Image Totals
+      5842        252        682        144          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 6424 (   6.27kB)
+    Total RO  Size (Code + RO Data)                 6524 (   6.37kB)
     Total RW  Size (RW Data + ZI Data)              1144 (   1.12kB)
-    Total ROM Size (Code + RO Data + RW Data)       6568 (   6.41kB)
+    Total ROM Size (Code + RO Data + RW Data)       6668 (   6.51kB)
 
 ==============================================================================
 

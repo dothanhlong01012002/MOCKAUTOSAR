@@ -485,16 +485,6 @@
           <GroupName>HWAL</GroupName>
           <Files>
             <File>
-              <FileName>IOHwAbCan.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU1\HWAL\IOHwAbCan.c</FilePath>
-            </File>
-            <File>
-              <FileName>IOHwAbCan.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU1\HWAL\IOHwAbCan.h</FilePath>
-            </File>
-            <File>
               <FileName>IOHwAbSpeedSensor.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\driver_ECU1\HWAL\IOHwAbSpeedSensor.c</FilePath>
@@ -513,6 +503,16 @@
               <FileName>IOHwAbTemperatureSensor.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU1\HWAL\IOHwAbTemperatureSensor.h</FilePath>
+            </File>
+            <File>
+              <FileName>IOHwAbCan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU1\HWAL\IOHwAbCan.c</FilePath>
+            </File>
+            <File>
+              <FileName>IOHwAbCan.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU1\HWAL\IOHwAbCan.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -560,16 +560,6 @@
           <GroupName>SERVICE</GroupName>
           <Files>
             <File>
-              <FileName>Com.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU1\SERVICE\Com.c</FilePath>
-            </File>
-            <File>
-              <FileName>Com.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU1\SERVICE\Com.h</FilePath>
-            </File>
-            <File>
               <FileName>ComM.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\driver_ECU1\SERVICE\ComM.c</FilePath>
@@ -578,6 +568,16 @@
               <FileName>ComM.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU1\SERVICE\ComM.h</FilePath>
+            </File>
+            <File>
+              <FileName>Com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU1\SERVICE\Com.c</FilePath>
+            </File>
+            <File>
+              <FileName>Com.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU1\SERVICE\Com.h</FilePath>
             </File>
             <File>
               <FileName>PduR.c</FileName>

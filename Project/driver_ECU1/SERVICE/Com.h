@@ -7,8 +7,8 @@
 /* Note        :                                                              */  
 /******************************************************************************/ 
 
-#ifndef  COM_H
-#define COM_H
+#ifndef  COMTX_H
+#define COMTX_H
 
 /*----------------------------------------------------------------------------*/
 /* include headers                                                            */
@@ -42,5 +42,7 @@ typedef uint16 Com_SignalIdType;
 /******************************************************************************/  
 FUNC(uint8,AUTOMATIC) Com_SendSignal(VAR(Com_SignalIdType,AUTOMATIC) SignalId, P2CONST(void,AUTOMATIC,AUTOMATIC) SignalDataPtr);
 
+FUNC(void,AUTOMATIC) Com_TxConfirmation(VAR(PduIdType,AUTOMATIC) TxPduId, VAR(Std_ReturnType,AUTOMATIC) result);
+    
 #endif /* COM_H */
 /* End of Com.h */
