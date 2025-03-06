@@ -7,7 +7,7 @@
 #include "CompressorControlSWC.h"
 #include "IOHwAbCompressor.h"
 #include "IOHwAbFan.h"
-#include "CommunicationManager.h"
+#include "Com.h"
 #include "DiagnosticManager.h"
 #include "NVMManager.h"
 #include "WdgManager.h"
@@ -26,8 +26,8 @@ typedef struct {
 } NvM_DataBuffer;
 
 extern VAR(NvM_DataBuffer,AUTOMATIC) Data;
-extern VAR(uint16,AUTOMATIC) ExpectedTemp;
-extern VAR(uint16,AUTOMATIC) TemperatureValue;
+extern VAR(uint8,AUTOMATIC) ExpectedTemp;
+extern VAR(uint8,AUTOMATIC) TemperatureValue;
 extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
 extern VAR(uint16,AUTOMATIC) FanRatio;
 extern VAR(uint16,AUTOMATIC) CompressorRatio;

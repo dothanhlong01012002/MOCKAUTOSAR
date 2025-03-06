@@ -11,12 +11,15 @@
 /* include headers                                                            */
 /*----------------------------------------------------------------------------*/
 
-#ifndef IOHWABCAN_H
-#define IOHWABCAN_H
+#ifndef IOHWABCANTX_H
+#define IOHWABCANTX_H
 #include "Can.h"
 #include "Std_Types.h"
 #include "Compiler.h"
 
+#define CAN_ID 0x100
+#define CANIF_MAX_PDU_ID 30
+#define HW_TYPE          0
 /*----------------------------------------------------------------------------*/
 /* struct prototype declarations                                              */
 /*----------------------------------------------------------------------------*/

@@ -10,7 +10,7 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
+      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -186,6 +186,7 @@
             <RvdsVP>2</RvdsVP>
             <RvdsMve>0</RvdsMve>
             <RvdsCdeCp>0</RvdsCdeCp>
+            <nBranchProt>0</nBranchProt>
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
@@ -543,6 +544,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\HWAL\WdgIf.h</FilePath>
             </File>
+            <File>
+              <FileName>IOHwAbCan.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\HWAL\IOHwAbCan.c</FilePath>
+            </File>
+            <File>
+              <FileName>IOHwAbCan.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\HWAL\IOHwAbCan.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -578,6 +589,16 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\MCAL\Wdg.h</FilePath>
             </File>
+            <File>
+              <FileName>Can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\MCAL\Can.c</FilePath>
+            </File>
+            <File>
+              <FileName>Can.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\MCAL\Can.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -598,16 +619,6 @@
         <Group>
           <GroupName>SERVICE</GroupName>
           <Files>
-            <File>
-              <FileName>CommunicationManager.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU2\SERVICE\CommunicationManager.c</FilePath>
-            </File>
-            <File>
-              <FileName>CommunicationManager.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU2\SERVICE\CommunicationManager.h</FilePath>
-            </File>
             <File>
               <FileName>DiagnosticManager.c</FileName>
               <FileType>1</FileType>
@@ -638,6 +649,26 @@
               <FileType>5</FileType>
               <FilePath>..\..\driver_ECU2\SERVICE\WdgManager.h</FilePath>
             </File>
+            <File>
+              <FileName>Com.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\Com.c</FilePath>
+            </File>
+            <File>
+              <FileName>Com.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\Com.h</FilePath>
+            </File>
+            <File>
+              <FileName>PduR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\PduR.c</FilePath>
+            </File>
+            <File>
+              <FileName>PduR.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\SERVICE\PduR.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -664,11 +695,6 @@
     <Layers>
       <Layer>
         <LayName>OsekIntroII_Example6</LayName>
-        <LayDesc></LayDesc>
-        <LayUrl></LayUrl>
-        <LayKeys></LayKeys>
-        <LayCat></LayCat>
-        <LayLic></LayLic>
         <LayTarg>0</LayTarg>
         <LayPrjMark>1</LayPrjMark>
       </Layer>

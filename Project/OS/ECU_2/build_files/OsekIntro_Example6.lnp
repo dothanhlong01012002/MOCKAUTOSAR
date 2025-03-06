@@ -13,14 +13,17 @@
 ".\build_files\iohwabfan.o"
 ".\build_files\hwabmem.o"
 ".\build_files\wdgif.o"
+".\build_files\iohwabcan.o"
 ".\build_files\pwm.o"
 ".\build_files\fls.o"
 ".\build_files\wdg.o"
+".\build_files\can.o"
 ".\build_files\rte.o"
-".\build_files\communicationmanager.o"
 ".\build_files\diagnosticmanager.o"
 ".\build_files\nvmmanager.o"
 ".\build_files\wdgmanager.o"
+".\build_files\com.o"
+".\build_files\pdur.o"
 --library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list ".\OsekIntro_Example6.map" -o .\build_files\OsekIntro_Example6.axf

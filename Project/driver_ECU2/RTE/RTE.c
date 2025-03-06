@@ -1,7 +1,9 @@
 #include "RTE.h"
 
-VAR(uint16,AUTOMATIC) ExpectedTemp;
-VAR(uint16,AUTOMATIC) TemperatureValue;
+#define TEMP_SPEED_SIGNAL_ID    10
+
+VAR(uint8,AUTOMATIC) ExpectedTemp;
+VAR(uint8,AUTOMATIC) TemperatureValue;
 VAR(uint16,AUTOMATIC) EngineSpeedValue;
 VAR(uint16,AUTOMATIC) FanRatio;
 VAR(uint16,AUTOMATIC) CompressorRatio;
@@ -10,7 +12,10 @@ VAR(NvM_DataBuffer,AUTOMATIC) Data;
 
 
 FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
-    ReceiveData_Runable();
+    P2VAR(uint8,AUTOMATIC,AUTOMATIC) DataPtr;
+    Com_ReceiveSignal(TEMP_SPEED_SIGNAL_ID,DataPtr);
+    TemperatureValue = DataPtr[0];
+    EngineSpeedValue = ((uint16)DataPtr[1] << 8) + DataPtr[2];
 }
 FUNC(Std_ReturnType,AUTOMATIC) Rte_EV_Main(VAR(void,AUTOMATIC)){
     return CoolingControl_Runable();
