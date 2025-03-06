@@ -2,6 +2,9 @@
 #define WDG_MANAGER_H
 #include "WdgIf.h"
 
+#define SEID_SENSOR 1
+#define CHECKPOINT_SENSOR_READ 1
+
 typedef struct {
     WdgIf_ModeType WdgMode;  // Chế độ Watchdog (OFF, SLOW, FAST)
     uint16 Timeout;          // Thời gian timeout cho Watchdog (trong mili giây)

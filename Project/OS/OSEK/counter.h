@@ -15,4 +15,5 @@
 extern void SysTick_Init(void);
 extern void OsCnt_IncrSystemCounter(void);
 extern uint32_t OsCnt_GetSystemCounter(void);
+static uint32_t SystickCounter = 0;
 #endif

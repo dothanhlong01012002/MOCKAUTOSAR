@@ -26,7 +26,7 @@ void SysTick_Init(void)
 void OsCnt_IncrSystemCounter(void)
 {
   OsCnt_SystemCounter++;
-	SysTickCount++;
+	SystickCounter++;
 }
 
 uint32_t OsCnt_GetSystemCounter(void)

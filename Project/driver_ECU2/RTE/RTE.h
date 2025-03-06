@@ -11,6 +11,7 @@
 #include "DiagnosticManager.h"
 #include "NVMManager.h"
 #include "WdgManager.h"
+#include "counter.h"
 
 #define MAX_DATA_PARAMETER  10
 #define MAX_ERROR_CODES     5
@@ -45,8 +46,8 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_CompressorData_CompressorValue(P2VAR(
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_AdjustFan_ControlFan(VAR(uint16,AUTOMATIC) FanR);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_AdjustCompressor_ControlCompressor(VAR(uint16,AUTOMATIC) CompressorR);
 
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_ReportDiagnosticResult(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_ReportDiagnosticResult(VAR(uint16,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(uint16,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status);
 
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_PARAM_ExpectedTemperature(P2VAR(uint16,AUTOMATIC,AUTOMATIC) ExTemp);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_PARAM_ExpectedTemperature(VAR(uint16,AUTOMATIC) ExTemp);

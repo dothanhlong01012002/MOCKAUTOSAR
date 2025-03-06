@@ -99,12 +99,12 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8,AUTOMA
     return HandleNVM_Runable(requestID);
 }
 
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_ReportDiagnosticResult(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status){
-    SetEventStatus(eventID, status);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_ReportDiagnosticResult(VAR(Dem_EventIdType,AUTOMATIC) eventID, VAR(Dem_EventStatus,AUTOMATIC) status){
+    Dem_SetEventStatus(eventID, status);
     return E_OK;
 }
 
-FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(uint32,AUTOMATIC) eventID, VAR(uint8,AUTOMATIC) status){
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_ERROR_SetEvent(VAR(Dem_EventIdType,AUTOMATIC) eventID, VAR(Dem_EventStatus,AUTOMATIC) status){
     return E_OK;
 }
 
@@ -130,7 +130,8 @@ FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_GetMode(VAR(WdgIf_ModeType, AUT
 }
 
 FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_PerformReset(void){
-    WdgM_PerformReset(); 
+    //WdgM_PerformReset(); 
+    SystickCounter =0;
 }
 
 FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID,VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID){

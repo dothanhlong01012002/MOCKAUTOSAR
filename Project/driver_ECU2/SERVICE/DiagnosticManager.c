@@ -37,3 +37,13 @@ void SetEventStatus(uint32 eventID, uint8 status)
         }
     }
 }
+
+Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEventStatus){
+    int i = 0;
+    for (; i < eventCount; i++) {
+        if (diagnosticEvents[i].eventID == EventId) {
+            diagnosticEvents[i].status = TypeEventStatus;
+            return E_OK;
+        }
+    }
+}
