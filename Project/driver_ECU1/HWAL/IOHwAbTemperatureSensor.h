@@ -23,16 +23,6 @@
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : ReadVoltage_Runable                                          */  
-/* Param       : void                                                         */  
-/* Return      : void                                                         */  
-/* Contents    : Reads ADC value from channel 0 and writes it to RTE          */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        : Function interacts with the ADC driver and RTE               */  
-/******************************************************************************/  
 FUNC(void,AUTOMATIC) ReadVoltage_Runable(VAR(void,AUTOMATIC));
 
 #endif /* IOHWABTEMPERATURESENSOR_H */

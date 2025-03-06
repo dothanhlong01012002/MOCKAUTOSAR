@@ -21,16 +21,6 @@
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : ReadTemperature_Runable                                      */  
-/* Param       : void                                                         */  
-/* Return      : void                                                         */  
-/* Contents    : Reads temperature voltage, adjusts value, and writes output  */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        :                                                              */  
-/******************************************************************************/  
 FUNC(void,AUTOMATIC) ReadTemperature_Runable(VAR(void,AUTOMATIC));
 
 #endif /* TEMPERATURESENSOR_H */

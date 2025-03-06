@@ -141,6 +141,7 @@
     "temperaturesensorswc.h": "c",
     "std_types.h": "c",
     "adc.h": "c",
-    "fls.h": "c"
+    "fls.h": "c",
+    "rte_appreadsensor.h": "c"
   }
 }
