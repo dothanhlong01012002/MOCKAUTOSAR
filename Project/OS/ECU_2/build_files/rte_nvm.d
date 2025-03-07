@@ -1,6 +1,5 @@
-./build_files/nvblockswc.o: ..\..\driver_ECU2\ASW\NVBlockSWC.c \
-  ..\..\driver_ECU2\ASW\NVBlockSWC.h ..\..\driver_ECU2\RTE\RTE_NVM.h \
-  ..\..\driver_ECU2\common\Compiler.h \
+./build_files/rte_nvm.o: ..\..\driver_ECU2\RTE\RTE_NVM.c \
+  ..\..\driver_ECU2\RTE\RTE_NVM.h ..\..\driver_ECU2\common\Compiler.h \
   ..\..\driver_ECU2\common\Compiler_Cfg.h \
   ..\..\driver_ECU2\common\Std_Types.h \
   ..\..\driver_ECU2\SERVICE\NVMManager.h \
