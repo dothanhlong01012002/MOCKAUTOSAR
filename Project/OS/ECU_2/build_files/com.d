@@ -13,5 +13,6 @@
   ..\..\driver_ECU2\HWAL\IOHwAbCompressor.h ..\..\driver_ECU2\MCAL\Pwm.h \
   ..\..\driver_ECU2\HWAL\IOHwAbFan.h \
   ..\..\driver_ECU2\SERVICE\WdgManager.h ..\..\driver_ECU2\HWAL\WdgIf.h \
-  ..\..\driver_ECU2\MCAL\Wdg.h ..\..\driver_ECU2\SERVICE\PduR.h \
-  ..\..\driver_ECU2\HWAL\IOHwAbCan.h ..\..\driver_ECU2\MCAL\Can.h
+  ..\..\driver_ECU2\MCAL\Wdg.h ..\OSEK\counter.h \
+  ..\..\driver_ECU2\SERVICE\PduR.h ..\..\driver_ECU2\HWAL\IOHwAbCan.h \
+  ..\..\driver_ECU2\MCAL\Can.h

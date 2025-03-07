@@ -32,21 +32,6 @@ typedef uint8_t ComM_ModeType;
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : ComM_RequestComMode                                          */  
-/* Param       : User - Handle for the user requesting the communication mode */  
-/*               ComMode - Desired communication mode                         */  
-/* Return      : Std_ReturnType                                               */  
-/*               - E_OK     : Request for communication mode successful       */  
-/*               - E_NOT_OK : Request for communication mode failed           */  
-/* Contents    : Handles the request to set the communication mode for the    */  
-/*               specified user.                                              */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        : Function currently returns a successful status without       */  
-/*               implementing actual mode change logic.                       */  
-/******************************************************************************/  
 FUNC(Std_ReturnType,AUTOMATIC) ComM_RequestComMode(VAR(ComM_UserHandleType,AUTOMATIC) User,VAR(ComM_ModeType,AUTOMATIC) ComMode);
 
 #endif /* COMM_H */

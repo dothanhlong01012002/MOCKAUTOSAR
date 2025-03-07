@@ -22,16 +22,6 @@
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : ReadPulse_Runable                                            */  
-/* Param       : void                                                         */  
-/* Return      : void                                                         */  
-/* Contents    : Reads ADC value from channel 0 and writes it to RTE          */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        : Function interacts with the ADC driver and RTE               */  
-/******************************************************************************/  
 FUNC(void,AUTOMATIC) ReadPulse_Runable(VAR(void,AUTOMATIC));
 
 #endif /* IOHWABSPEEDSENSOR_H */

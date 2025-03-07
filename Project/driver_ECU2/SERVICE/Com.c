@@ -16,9 +16,8 @@ FUNC(uint8,AUTOMATIC) Com_ReceiveSignal(VAR(Com_SignalIdType,AUTOMATIC) SignalId
     if (signalBuffer == NULL) {
         return E_NOT_OK;
     }
-
     memcpy(SignalDataPtr, signalBuffer, Com_SignalLength);
-
+    
     return E_OK;    
 }
 

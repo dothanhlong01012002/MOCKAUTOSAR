@@ -15,4 +15,4 @@
   ..\..\driver_ECU2\MCAL\Can.h \
   ..\..\driver_ECU2\SERVICE\DiagnosticManager.h \
   ..\..\driver_ECU2\SERVICE\WdgManager.h ..\..\driver_ECU2\HWAL\WdgIf.h \
-  ..\..\driver_ECU2\MCAL\Wdg.h
+  ..\..\driver_ECU2\MCAL\Wdg.h ..\OSEK\counter.h
