@@ -7,8 +7,9 @@ DeclareTask(Main_Task);
 DeclareTask(Component_Task);
 DeclareTask(Actuator_Task);
 DeclareTask(GetError_Task);
-bool ErrorFlag = true;
+bool ErrorFlag = TRUE;
 int GetError_Runable = 0;
+
 void SystemInit(void)
 {
 }
@@ -38,10 +39,11 @@ TASK(Main_Task)
 				SetEvent(Component_Task, BE_Signal);
 				SystickCounter = 0;
 			}else {
-				ErrorFlag = 0;
-				if(SystickCounter > 100){
+				ErrorFlag = FALSE;
+				if(SystickCounter > 99){
+					WdgM_CheckpointReached(1,1);
 					Rte_Call_RP_WdgM_PerformReset();
-					ErrorFlag = 1;
+					ErrorFlag = TRUE;
 				}
 			}
       ClearEvent(BE_Receive); 
@@ -51,7 +53,7 @@ TASK(Main_Task)
 TASK(ComReceive_Task)
 {		
 		SetEvent(Main_Task, BE_Receive);
-		if(ErrorFlag == 1)
+		if(ErrorFlag == TRUE)
 		{
 			Rte_EV_ComReceive(); 
 		}
