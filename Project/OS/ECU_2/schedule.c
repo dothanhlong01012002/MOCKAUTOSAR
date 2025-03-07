@@ -5,8 +5,6 @@
 DeclareTask(ComReceive_Task);
 DeclareTask(Main_Task);
 DeclareTask(Component_Task);
-DeclareTask(Actuator_Task);
-DeclareTask(GetError_Task);
 bool ErrorFlag = TRUE;
 int GetError_Runable = 0;
 

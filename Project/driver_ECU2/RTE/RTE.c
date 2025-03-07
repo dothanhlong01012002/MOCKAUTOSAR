@@ -23,4 +23,3 @@ FUNC(void,AUTOMATIC) Rte_EV_Component(VAR(void,AUTOMATIC)){
     FanControl_Runable();
     CompressorControl_Runable();
 }
-FUNC(void,AUTOMATIC) Rte_EV_GetError(VAR(void,AUTOMATIC)){}
