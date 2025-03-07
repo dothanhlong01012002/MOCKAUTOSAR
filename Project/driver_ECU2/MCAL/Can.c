@@ -1,8 +1,37 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : Can.c                                                        */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
+
 #include "Can.h"
 #include "IOHwAbCan.h"
 
 VAR(uint8,AUTOMATIC) frameData[3];
 
+/*----------------------------------------------------------------------------*/
+/* functions and function style macros                                        */
+/*----------------------------------------------------------------------------*/
+
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : Handle_Can_Interrupt                                          */  
+/* Param       : void                                                         */  
+/* Return      : void                                                         */  
+/* Contents    : Handles the CAN interrupt by populating a frame with data    */  
+/*               and forwarding it to the `CanIf_RxIndication` function.       */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        : Function processes the CAN interrupt and forwards the data   */  
+/*               to the appropriate function for further handling.            */  
+/******************************************************************************/ 
 FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC)) {
     VAR(Can_HwType,AUTOMATIC) Mailbox; 
 
@@ -15,3 +44,5 @@ FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC)) {
 
     CanIf_RxIndication(&Mailbox,&PduInfo);
 }
+
+/* End of Can.c */

@@ -1,5 +1,34 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : Wdg.c                                                        */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
+
 #include "Wdg.h" 
-// Cấu hình chế độ cho Watchdog Timer
+
+/*----------------------------------------------------------------------------*/
+/* functions and function style macros                                        */
+/*----------------------------------------------------------------------------*/
+
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : Wdg_SetMode                                                  */  
+/* Param       : DeviceIndex - Index of the watchdog device                   */  
+/*               WdgMode - Mode to be set for the watchdog                    */  
+/* Return      : void                                                         */  
+/* Contents    : Sets the mode of the watchdog device based on the provided   */  
+/*               mode.                                                        */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        : Function configures the watchdog mode                        */  
+/******************************************************************************/  
 void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode) {
     // Kiểm tra chế độ và cấu hình Watchdog tương ứng
     // switch (WdgMode) {
@@ -18,7 +47,19 @@ void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode) {
     // }
 }
 
-// Cấu hình thời gian timeout cho Watchdog Timer
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : Wdg_SetTriggerCondition                                      */  
+/* Param       : DeviceIndex - Index of the watchdog device                   */  
+/*               Timeout - Timeout value to be set for the watchdog timer     */  
+/* Return      : void                                                         */  
+/* Contents    : Validates the timeout value and sets the trigger condition   */  
+/*               for the watchdog timer.                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        : Function ensures the timeout does not exceed the maximum     */  
+/*               allowed value and configures the watchdog timer accordingly. */  
+/******************************************************************************/  
 void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout) {
     // // Kiểm tra timeout có hợp lệ không, giới hạn tối đa là MAX_TIMEOUT
     // if (Timeout > MAX_TIMEOUT) {
@@ -30,6 +71,19 @@ void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout) {
     // WDG_VALUE = Timeout; // Khởi động lại giá trị đếm
     // WDG_ICR = 0x01;      // Xóa cờ ngắt của Watchdog (nếu có)
 }
+
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : Wdg_Init                                                     */  
+/* Param       : void                                                         */  
+/* Return      : void                                                         */  
+/* Contents    :                                                              */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
 void Wdg_Init(void){
     
 }
+
+/* End of Wdg.c */

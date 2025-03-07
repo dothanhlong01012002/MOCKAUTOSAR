@@ -1,6 +1,35 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : CoolingControlSWC.c                                          */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
+
 #include "CoolingControlSWC.h"
 
+/*----------------------------------------------------------------------------*/
+/* functions and function style macros                                        */
+/*----------------------------------------------------------------------------*/
 
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : CoolingControl_Runnable                                      */  
+/* Param       : void                                                         */  
+/* Return      : Std_ReturnType                                               */  
+/*               - E_OK     : Cooling control executed successfully           */  
+/*               - E_NOT_OK : Error occurred in sensor data or control logic  */  
+/* Contents    : Reads temperature and engine speed values, checks for errors,*/  
+/*               and adjusts compressor and fan ratios based on temperature.  */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
 FUNC(Std_ReturnType,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC)){
     VAR(uint16,AUTOMATIC) Temp, Speed, ExTemperature;
     VAR(uint16,AUTOMATIC) compressorRatio,fanRatio;
@@ -40,3 +69,5 @@ FUNC(Std_ReturnType,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC)){
     Rte_Write_PP_FanData_FanValue(fanRatio);
     return E_OK;
 }
+
+/* End of CoolingControlSWC.c */

@@ -1,72 +1,143 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : WdgManager.c                                                 */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
+
 #include "WdgManager.h"
 
-// Cấu hình Watchdog với chế độ chậm (Slow Mode) và timeout là 1 giây (1000ms)
+/*----------------------------------------------------------------------------*/
+/* variables                                                                  */
+/*----------------------------------------------------------------------------*/
+
 WdgM_ConfigType wdgConfig = {
-    .WdgMode = WDGIF_SLOW_MODE,  // Chế độ Watchdog: Slow Mode
-    .Timeout = 200              // Timeout 1 giây
+    .WdgMode = WDGIF_SLOW_MODE,  
+    .Timeout = 200              
 };
 
-// Hàm khởi tạo Watchdog Manager
+/*----------------------------------------------------------------------------*/
+/* functions and function style macros                                        */
+/*----------------------------------------------------------------------------*/
+
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_Init                                                    */  
+/* Param       : ConfigPtr - Pointer to the watchdog manager configuration    */  
+/* Return      : void                                                         */  
+/* Contents    : Initializes the watchdog manager with the provided config.   */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
 void WdgM_Init(const WdgM_ConfigType* ConfigPtr) {
-    // Kiểm tra nếu cấu hình là NULL
     if (ConfigPtr == NULL) {
-        return;  // Không thực hiện gì nếu cấu hình không hợp lệ
+        return;  
     }
     WdgIf_Init();
-    // Lưu cấu hình hiện tại
     currentConfig = (WdgM_ConfigType*)ConfigPtr;
 
-    // Cấu hình chế độ của Watchdog thông qua WdgIf_SetMode
-    Std_ReturnType result = WdgIf_SetMode(0, currentConfig->WdgMode);  // DeviceIndex là 0 nếu chỉ có 1 thiết bị Watchdog
+    Std_ReturnType result = WdgIf_SetMode(0, currentConfig->WdgMode);  
     if (result != E_OK) {
-        // Nếu không thể thiết lập chế độ, thực hiện reset MCU nếu cần thiết
         WdgM_PerformReset();
     }
 
-    // Cấu hình thời gian timeout cho Watchdog
-    WdgIf_SetTriggerCondition(0, currentConfig->Timeout);  // DeviceIndex là 0
+    WdgIf_SetTriggerCondition(0, currentConfig->Timeout); 
 }
 
-// Hàm dừng Watchdog Manager
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_DeInit                                                  */  
+/* Param       : void                                                         */  
+/* Return      : void                                                         */  
+/* Contents    : Deinitializes the watchdog manager by setting the mode to    */  
+/*               OFF and clearing the trigger condition.                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
 void WdgM_DeInit(void) {
-    // Đặt lại tất cả Watchdog về trạng thái khởi tạo ban đầu
-    WdgIf_SetMode(0, WDGIF_OFF_MODE);  // Tắt Watchdog
-    WdgIf_SetTriggerCondition(0, 0);   // Thiết lập timeout bằng 0 để ngừng Watchdog
+    WdgIf_SetMode(0, WDGIF_OFF_MODE);  
+    WdgIf_SetTriggerCondition(0, 0);   
 }
 
-// Hàm thay đổi chế độ của Watchdog
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_SetMode                                                 */  
+/* Param       : Mode - The mode to set for the watchdog                      */  
+/* Return      : Std_ReturnType                                               */  
+/*               - E_OK     : Mode set successfully                           */  
+/*               - E_NOT_OK : Invalid mode passed                             */  
+/* Contents    : Validates the provided mode and sets it for the watchdog.    */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
 Std_ReturnType WdgM_SetMode(WdgIf_ModeType Mode) {
-    // Kiểm tra xem chế độ có hợp lệ không
     if (Mode < WDGIF_OFF_MODE || Mode > WDGIF_FAST_MODE) {
-        return E_NOT_OK;  // Trả về lỗi nếu chế độ không hợp lệ
+        return E_NOT_OK;  
     }
-
-    // Gọi WdgIf_SetMode để thay đổi chế độ
-    return WdgIf_SetMode(0, Mode);  // DeviceIndex là 0 nếu chỉ có 1 thiết bị Watchdog
+    return WdgIf_SetMode(0, Mode);  
 }
 
-// Hàm lấy chế độ hiện tại của Watchdog Manager
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_GetMode                                                 */  
+/* Param       : Mode - Pointer to store the current mode of the watchdog     */  
+/* Return      : Std_ReturnType                                               */  
+/*               - E_OK     : Mode retrieved successfully                     */  
+/*               - E_NOT_OK : Invalid pointer passed                          */  
+/* Contents    : Retrieves the current mode of the watchdog and stores it in  */  
+/*               the provided pointer.                                        */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
 Std_ReturnType WdgM_GetMode(WdgIf_ModeType* Mode) {
-    // Kiểm tra nếu con trỏ là NULL
     if (Mode == NULL) {
-        return E_NOT_OK;  // Trả về lỗi nếu con trỏ là NULL
+        return E_NOT_OK;  
     }
-
-    // Lấy chế độ từ cấu hình hiện tại và trả về
     *Mode = currentConfig->WdgMode;
     return E_OK;
 }
 
-// Hàm thực hiện reset hệ thống khi hết thời gian
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_PerformReset                                            */  
+/* Param       : void                                                         */  
+/* Return      : void                                                         */  
+/* Contents    : Performs the reset for the watchdog manager. Clears the      */  
+/*               trigger condition for the watchdog.                          */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
 void WdgM_PerformReset(void) {
-    // Thiết lập trigger condition của tất cả các thiết bị Watchdog về 0
-    WdgIf_SetTriggerCondition(0, 0);  // DeviceIndex là 0
+    WdgIf_SetTriggerCondition(0, 0);  
     
     // Tại đây có thể thêm lệnh reset hệ thống, ví dụ:
     // NVIC_SystemReset();  // Lệnh reset hệ thống cho STM32 (hoặc MCU của bạn)
 }
 
-// Hàm báo khi một checkpoint được đạt tới
+/******************************************************************************/  
+/* ModuleID    :                                                              */  
+/* ServiceID   :                                                              */  
+/* Name        : WdgM_CheckpointReached                                       */  
+/* Param       : SEID - ID of the supervised entity                           */  
+/*               CheckpointID - ID of the checkpoint that was reached         */  
+/* Return      : Std_ReturnType                                               */  
+/*               - E_OK     : Checkpoint reached successfully                 */  
+/*               - E_NOT_OK : Checkpoint ID is invalid or update failed       */  
+/* Contents    : Validates the checkpoint and updates the Alive Counter.      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/  
 Std_ReturnType WdgM_CheckpointReached(WdgM_SupervisedEntityIdType SEID, WdgM_CheckpointIdType CheckpointID) {
     // Kiểm tra nếu Checkpoint hợp lệ, và thực hiện cập nhật Alive Counter
     // Cập nhật Alive Counter của Checkpoint, ví dụ:
@@ -75,3 +146,5 @@ Std_ReturnType WdgM_CheckpointReached(WdgM_SupervisedEntityIdType SEID, WdgM_Che
     // Trả về E_OK nếu thành công
     return E_OK;
 }
+
+/* End of WdgManager.c */
