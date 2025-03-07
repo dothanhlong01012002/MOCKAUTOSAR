@@ -18,15 +18,9 @@
 #include "Std_Types.h"
 #include "NVMManager.h"
 
-/*----------------------------------------------------------------------------*/
-/* function prototype declarations                                            */
-/*----------------------------------------------------------------------------*/
 
-extern FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8, AUTOMATIC) requestID);
-#define Rte_Call_RP_NVData_CallServerFunction Rte_Call_RP_NVData_CallServerFunction
-
-extern FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8, AUTOMATIC) requestID);
-#define Rte_Call_RP_NVHandle_SeverHandle Rte_Call_RP_NVHandle_SeverHandle
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8,AUTOMATIC) requestID);
+FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8,AUTOMATIC) requestID);
 
 #endif /* RTE_NVM_H */
 /* End of RTE_NVM.h */

@@ -12,6 +12,7 @@
 /*----------------------------------------------------------------------------*/
 
 #include "Adc.h"
+#include <stdlib.h>
 
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
@@ -30,10 +31,10 @@
 /******************************************************************************/ 
 FUNC(uint16,AUTOMATIC) Adc_ReadChannel(VAR(char,AUTOMATIC) channel) {
     if(channel == 1){
-        return 512;
+        return rand()%1023;
     }
     else{
-        return 32;
+        return rand()%1023;;
     }
 }
 

@@ -9,4 +9,5 @@
   ..\..\driver_ECU1\SERVICE\Com.h ..\..\driver_ECU1\ASW\EngineSpeedSWC.h \
   ..\..\driver_ECU1\ASW\TemperatureSensorSWC.h \
   ..\..\driver_ECU1\RTE\Rte_AppComTX.h \
-  ..\..\driver_ECU1\RTE\Rte_AppReadSensor.h
+  ..\..\driver_ECU1\RTE\Rte_AppReadSensor.h \
+  ..\..\driver_ECU1\RTE\Rte_MemMap.h

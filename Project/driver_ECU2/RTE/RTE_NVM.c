@@ -35,6 +35,11 @@
 #include "Rte_MemMap.h"
 FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8, AUTOMATIC) requestID){
     Rte_Call_RP_NVHandle_SeverHandle(requestID);
+    int i = 0;
+    Data.parameterData[0] = EngineSpeedValue;
+    Data.parameterData[1] = TemperatureValue;
+    Data.parameterData[2] = FanRatio;
+    Data.parameterData[3] = CompressorRatio;
     return E_OK;
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0
@@ -61,5 +66,3 @@ FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_NVHandle_SeverHandle(
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0
 #include "Rte_MemMap.h"
-
-/* End of RTE_NVM.c */

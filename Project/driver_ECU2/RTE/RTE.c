@@ -14,27 +14,9 @@
 #include "RTE.h"
 #include "Can.h"
 
-#define TEMP_SPEED_SIGNAL_ID    10
+ #define TEMP_SPEED_SIGNAL_ID    10
 
-/*----------------------------------------------------------------------------*/
-/* functions and function style macros                                        */
-/*----------------------------------------------------------------------------*/
-
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : Rte_EV_ComReceive                                            */  
-/* Param       : void                                                         */  
-/* Return      : void                                                         */  
-/* Contents    : Handles the reception of communication signals by calling    */  
-/*               `Handle_Can_Interrupt` and `Com_ReceiveSignal`. Stores the   */  
-/*               received temperature and engine speed values.                */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        :                                                              */  
-/******************************************************************************/ 
-#define RTE_START_SEC_CODE_EcucPartition_0
-#include "Rte_MemMap.h"
-FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_ComReceive(VAR(void, AUTOMATIC)){
+FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
     P2VAR(uint8,AUTOMATIC,AUTOMATIC) DataPtr;
     uint8 DataBuffer[3];  // Cấp phát bộ nhớ cho 3 byte dữ liệu
     DataPtr = DataBuffer; // Gán con trỏ đến vùng bộ nhớ đã cấp phát
@@ -42,6 +24,8 @@ FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_ComReceive(VAR(void, AUTOMATIC)){
     Com_ReceiveSignal(TEMP_SPEED_SIGNAL_ID,DataPtr);
     TemperatureValue = DataPtr[0];
     EngineSpeedValue = ((uint16)DataPtr[1] << 8) + DataPtr[2];
+		ReceivedTemp = TemperatureValue;
+		ReceivedSpeed = EngineSpeedValue;
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0
 #include "Rte_MemMap.h"
@@ -84,23 +68,4 @@ FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_Component(VAR(void, AUTOMATIC)){
     FanControl_Runable();
     CompressorControl_Runable();
 }
-#define RTE_STOP_SEC_CODE_EcucPartition_0
-#include "Rte_MemMap.h"
-
-/******************************************************************************/  
-/* ModuleID    :                                                              */  
-/* ServiceID   :                                                              */  
-/* Name        : Rte_EV_GetError                                              */  
-/* Param       : void                                                         */  
-/* Return      : void                                                         */  
-/* Contents    : Handles error retrieval.                                     */  
-/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        :                                                              */  
-/******************************************************************************/  
-#define RTE_START_SEC_CODE_EcucPartition_0
-#include "Rte_MemMap.h"
-FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_GetError(VAR(void, AUTOMATIC)){}
-#define RTE_STOP_SEC_CODE_EcucPartition_0
-#include "Rte_MemMap.h"
-
-/* End of RTE.c */
+FUNC(void,AUTOMATIC) Rte_EV_GetError(VAR(void,AUTOMATIC)){}

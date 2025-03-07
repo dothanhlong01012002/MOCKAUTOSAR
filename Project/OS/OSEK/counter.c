@@ -10,7 +10,7 @@
 #define INIT_TO_ZERO 0U
 
 static uint32_t OsCnt_SystemCounter = INIT_TO_ZERO;
-static uint32_t SysTickCount= INIT_TO_ZERO;
+uint32_t volatile SystickCounter= INIT_TO_ZERO;
 void SysTick_Init(void)
 {
 

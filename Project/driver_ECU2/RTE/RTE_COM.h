@@ -21,11 +21,11 @@
 /* variables                                                                  */
 /*----------------------------------------------------------------------------*/
 
-extern VAR(uint16,AUTOMATIC) TemperatureValue;
-extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
-extern VAR(uint16,AUTOMATIC) FanRatio;
-extern VAR(uint16,AUTOMATIC) CompressorRatio;
-extern VAR(uint8,AUTOMATIC) ExpectedTemp;
+extern  VAR(uint16,AUTOMATIC) TemperatureValue;
+extern  VAR(uint16,AUTOMATIC) EngineSpeedValue;
+extern  VAR(uint16,AUTOMATIC) FanRatio;
+extern  VAR(uint16,AUTOMATIC) CompressorRatio;
+extern  VAR(uint8,AUTOMATIC) ExpectedTemp;
 
 /*----------------------------------------------------------------------------*/
 /* function prototype declarations                                            */

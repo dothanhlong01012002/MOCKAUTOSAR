@@ -1,3 +1,4 @@
+
 /******************************************************************************/  
 /* Copyright   : FPT Software Corporation                                     */  
 /* System Name : AUTOSAR Application Layer                                    */  
@@ -6,6 +7,22 @@
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
+
+#include "DiagnosticManager.h"
+int eventCount = 10;
+DiagnosticEvent diagnosticEvents[MAX_DIAGNOSTIC_EVENTS] = {
+    {0, EVENT_STATUS_RESOLVED},
+    {1, EVENT_STATUS_RESOLVED},
+    {2, EVENT_STATUS_RESOLVED},
+    {3, EVENT_STATUS_RESOLVED},
+    {4, EVENT_STATUS_RESOLVED},
+    {5, EVENT_STATUS_RESOLVED},
+    {6, EVENT_STATUS_RESOLVED},
+    {7, EVENT_STATUS_RESOLVED},
+    {8, EVENT_STATUS_RESOLVED},
+    {9, EVENT_STATUS_RESOLVED}
+};
+
 
 /*----------------------------------------------------------------------------*/
 /* include headers                                                            */
@@ -111,8 +128,9 @@ FUNC(void, AUTOMATIC) SetEventStatus(VAR(uint32, AUTOMATIC) eventID, VAR(uint8, 
 /* Note        :                                                              */  
 /******************************************************************************/  
 Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEventStatus){
-    uint8 i = 0;
-    for (; i < eventCount; i++) {
+
+    int i = 0;
+    for (i; i < eventCount; i++) {
         if (diagnosticEvents[i].eventID == EventId) {
             diagnosticEvents[i].status = TypeEventStatus;
             return E_OK;
@@ -120,4 +138,3 @@ Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEv
     }
 }
 
-/* End of DiagnosticManager.c */

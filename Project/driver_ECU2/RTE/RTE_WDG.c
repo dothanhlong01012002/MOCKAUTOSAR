@@ -117,7 +117,7 @@ FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_WdgM_GetMode(VAR(WdgI
 #include "Rte_MemMap.h"
 FUNC(void, RTE_CODE_EcucPartition_0) Rte_Call_RP_WdgM_PerformReset(void){
     //WdgM_PerformReset(); 
-    //SystickCounter =0;
+    SystickCounter =0;
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0
 #include "Rte_MemMap.h"

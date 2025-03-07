@@ -615,34 +615,44 @@
               <FilePath>..\..\driver_ECU2\RTE\RTE.h</FilePath>
             </File>
             <File>
-              <FileName>Rte_AppCoolingControl.c</FileName>
+              <FileName>RTE_COM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_AppCoolingControl.c</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_COM.c</FilePath>
             </File>
             <File>
-              <FileName>Rte_AppCoolingControl.h</FileName>
+              <FileName>RTE_COM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_AppCoolingControl.h</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_COM.h</FilePath>
             </File>
             <File>
-              <FileName>Rte_AppNVBlock.c</FileName>
+              <FileName>RTE_DEM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_AppNVBlock.c</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_DEM.c</FilePath>
             </File>
             <File>
-              <FileName>Rte_AppNVBlock.h</FileName>
+              <FileName>RTE_DEM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_AppNVBlock.h</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_DEM.h</FilePath>
             </File>
             <File>
-              <FileName>Rte_Diagnosis.c</FileName>
+              <FileName>RTE_NVM.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_Diagnosis.c</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_NVM.c</FilePath>
             </File>
             <File>
-              <FileName>Rte_Diagnosis.h</FileName>
+              <FileName>RTE_NVM.h</FileName>
               <FileType>5</FileType>
-              <FilePath>..\..\driver_ECU2\RTE\Rte_Diagnosis.h</FilePath>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_NVM.h</FilePath>
+            </File>
+            <File>
+              <FileName>RTE_WDG.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_WDG.c</FilePath>
+            </File>
+            <File>
+              <FileName>RTE_WDG.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\driver_ECU2\RTE\RTE_WDG.h</FilePath>
             </File>
           </Files>
         </Group>

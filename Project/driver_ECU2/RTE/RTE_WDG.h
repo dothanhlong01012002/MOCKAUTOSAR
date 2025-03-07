@@ -17,6 +17,7 @@
 #include "Compiler.h"
 #include "Std_Types.h"
 #include "WdgManager.h"
+#include "counter.h"
 
 extern FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Call_RP_WdgM_Init(VAR(const WdgM_ConfigType*, AUTOMATIC) ConfigPtr);
 #define Rte_Call_RP_WdgM_Init Rte_Call_RP_WdgM_Init

@@ -13,9 +13,9 @@
 
 #include "Can.h"
 #include "IOHwAbCan.h"
+#include "stdlib.h"
 
 VAR(uint8,AUTOMATIC) frameData[3];
-
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -23,22 +23,23 @@ VAR(uint8,AUTOMATIC) frameData[3];
 /******************************************************************************/  
 /* ModuleID    :                                                              */  
 /* ServiceID   :                                                              */  
-/* Name        : Handle_Can_Interrupt                                          */  
+/* Name        : Handle_Can_Interrupt                                         */  
 /* Param       : void                                                         */  
 /* Return      : void                                                         */  
 /* Contents    : Handles the CAN interrupt by populating a frame with data    */  
-/*               and forwarding it to the `CanIf_RxIndication` function.       */  
+/*               and forwarding it to the `CanIf_RxIndication` function.      */  
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        : Function processes the CAN interrupt and forwards the data   */  
 /*               to the appropriate function for further handling.            */  
 /******************************************************************************/ 
+
 FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC)) {
     VAR(Can_HwType,AUTOMATIC) Mailbox; 
 
     VAR(PduInfoType,AUTOMATIC) PduInfo;
-    frameData[0] = 0x25;
-    frameData[1] = 0x10;
-    frameData[2] = 0x20;
+    frameData[0] = rand()%100;
+    frameData[1] = rand()%40;
+    frameData[2] = rand()%255;
     PduInfo.SduDataPtr = (P2VAR(uint8,AUTOMATIC,AUTOMATIC))frameData;
     PduInfo.SduLength = 3;
 

@@ -32,15 +32,14 @@
 /******************************************************************************/ 
 FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID){
     if(requestID == 0){
-        return NvM_WriteBlock(1,Data.parameterData);
+        return Rte_Call_RP_NVHandle_SeverHandleWriteData(NV_WRITE_DATA);
     }else if(requestID == 1){
-        return NvM_ReadBlock(1,Data.parameterData);
+        return Rte_Call_RP_NVHandle_SeverHandleReadData(NV_READ_DATA);
     }else if(requestID == 2){
-        return NvM_WriteBlock(2,Data.errorCodes);
+        return Rte_Call_RP_NVHandle_SeverHandleWriteError(NV_WRITE_ERROR);
     }else if(requestID == 3){
-        return NvM_ReadBlock(2,Data.errorCodes);
+        return Rte_Call_RP_NVHandle_SeverHandleReadError(NV_READ_ERROR);
     }
-
     return E_NOT_OK;
 }
 
