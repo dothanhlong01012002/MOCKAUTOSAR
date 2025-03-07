@@ -1,7 +1,7 @@
 #ifndef  COM_H
 #define COM_H
 
-#include "RTE.h"
+#include "RTE_COM.h"
 #include "string.h"
 #include "PduR.h"
 #include "Compiler.h"

@@ -1,7 +1,7 @@
 #ifndef  IOHWABFAN_H
 #define  IOHWABFAN_H
 #include "Pwm.h"
-#include "RTE.h"
+#include "RTE_COM.h"
 #include "Compiler.h"
 
 #define PWM_CHANNEL0 0

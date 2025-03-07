@@ -8,7 +8,6 @@ void ReportDiagnosticEvent(uint32 eventID, uint8 status)
         diagnosticEvents[eventCount].eventID = eventID;
         diagnosticEvents[eventCount].status = status;
         eventCount++;  
-        Data.numErrorCodes++;
     }
     else {
         

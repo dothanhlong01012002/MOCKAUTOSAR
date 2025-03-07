@@ -2,8 +2,7 @@
 
 #define FANCONTROLSWC_H
 
-#include "RTE.h"
-#include "Compiler.h"
+#include "RTE_COM.h"
 
 FUNC(void,AUTOMATIC) FanControl_Runable(VAR(void,AUTOMATIC));
 

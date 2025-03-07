@@ -1,7 +1,7 @@
 #ifndef  IOHWABCOMPRESSOR_H
 #define  IOHWABCOMPRESSOR_H
 #include "Pwm.h"
-#include "RTE.h"
+#include "RTE_COM.h"
 #include "Compiler.h"
 
 #define PWM_CHANNEL1 1

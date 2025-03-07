@@ -3,7 +3,8 @@
 #define DIAGNOSTIC_EVENT_H
 
 #include "Std_Types.h"
-#include "RTE.h"
+#include "RTE_DEM.h"
+
 #define EVENT_ID_TEMPERATURE_SENSOR_ERROR 0x01
 #define EVENT_ID_ENGINESPEED_SENSOR_FAILURE 0x02
 #define MAX_DIAGNOSTIC_EVENTS 50

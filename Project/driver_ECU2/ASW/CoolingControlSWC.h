@@ -2,9 +2,11 @@
 
 #define COOLINGCONTROLSWC_H
 
-#include "RTE.h"
+#include "RTE_COM.h"
+#include "RTE_DEM.h"
+#include "RTE_NVM.h"
+#include "RTE_WDG.h"
 #include "Compiler.h"
-#include "DiagnosticManager.h"
 
 FUNC(Std_ReturnType,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC));
 

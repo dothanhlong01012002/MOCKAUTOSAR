@@ -2,6 +2,7 @@
 #include "NVMManager.h"
 #include <string.h>
 
+NvM_DataBuffer Data;
 
 Std_ReturnType NvM_WriteBlock(uint16 BlockId, const uint8 *DataBufferPtr)
 {

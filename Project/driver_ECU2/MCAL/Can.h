@@ -4,6 +4,7 @@
 #include "Std_Types.h"
 #include "Compiler.h"
 
+
 typedef uint8 Can_HwHandleType;
 typedef uint32 Can_IdType;
 typedef uint32 PduIdType;
