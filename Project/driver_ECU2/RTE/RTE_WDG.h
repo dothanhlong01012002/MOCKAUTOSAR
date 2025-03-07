@@ -4,6 +4,7 @@
 #include "Compiler.h"
 #include "Std_Types.h"
 #include "WdgManager.h"
+#include "counter.h"
 
 FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_Init(VAR(const WdgM_ConfigType*, AUTOMATIC) ConfigPtr);
 FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_DeInit(void);

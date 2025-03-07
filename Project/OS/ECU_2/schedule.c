@@ -1,6 +1,6 @@
 #include "os.h"
 #include "RTE.h"
-
+#include "counter.h"
 
 DeclareTask(ComReceive_Task);
 DeclareTask(Main_Task);
@@ -29,21 +29,20 @@ TASK(Component_Task){
    }
 }
 
-TASK(GetError_Task){
-	Rte_EV_GetError();
-	TerminateTask();
-}
-
 TASK(Main_Task)
 { 
    while(true)
    {
       WaitEvent(BE_Receive);
-			if(Rte_EV_Main()!=E_NOT_OK){
+			if(Rte_EV_Main()!= E_NOT_OK){
 				SetEvent(Component_Task, BE_Signal);
+				SystickCounter = 0;
 			}else {
-				ErrorFlag = false;
-				Rte_Call_RP_WdgM_PerformReset();
+				ErrorFlag = 0;
+				if(SystickCounter > 100){
+					Rte_Call_RP_WdgM_PerformReset();
+					ErrorFlag = 1;
+				}
 			}
       ClearEvent(BE_Receive); 
    }
@@ -51,10 +50,10 @@ TASK(Main_Task)
 
 TASK(ComReceive_Task)
 {		
-		if(ErrorFlag ==true)
+		SetEvent(Main_Task, BE_Receive);
+		if(ErrorFlag == 1)
 		{
-			Rte_EV_ComReceive();
-			SetEvent(Main_Task, BE_Receive); 
+			Rte_EV_ComReceive(); 
 		}
     TerminateTask(); 
 }

@@ -12,6 +12,7 @@
         "wdgif.h": "c",
         "wdg.h": "c",
         "nvblockswc.h": "c",
-        "std_types.h": "c"
+        "std_types.h": "c",
+        "rte_com.h": "c"
     }
 }

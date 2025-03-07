@@ -21,7 +21,7 @@ FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_GetMode(VAR(WdgIf_ModeType, AUT
 
 FUNC(void, AUTOMATIC) Rte_Call_RP_WdgM_PerformReset(void){
     //WdgM_PerformReset(); 
-    //SystickCounter =0;
+    SystickCounter =0;
 }
 
 FUNC(Std_ReturnType, AUTOMATIC) Rte_Call_RP_WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID,VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID){

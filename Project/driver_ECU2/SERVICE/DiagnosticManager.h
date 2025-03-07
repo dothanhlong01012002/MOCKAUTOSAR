@@ -1,4 +1,3 @@
-
 #ifndef DIAGNOSTIC_EVENT_H
 #define DIAGNOSTIC_EVENT_H
 

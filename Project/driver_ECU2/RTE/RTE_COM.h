@@ -3,11 +3,11 @@
 #include "Compiler.h"
 #include "Std_Types.h"
 
-extern VAR(uint16,AUTOMATIC) TemperatureValue;
-extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
-extern VAR(uint16,AUTOMATIC) FanRatio;
-extern VAR(uint16,AUTOMATIC) CompressorRatio;
-extern VAR(uint8,AUTOMATIC) ExpectedTemp;
+extern  VAR(uint16,AUTOMATIC) TemperatureValue;
+extern  VAR(uint16,AUTOMATIC) EngineSpeedValue;
+extern  VAR(uint16,AUTOMATIC) FanRatio;
+extern  VAR(uint16,AUTOMATIC) CompressorRatio;
+extern  VAR(uint8,AUTOMATIC) ExpectedTemp;
 
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Read_RP_ComData_TempSpeedValue(P2VAR(uint16,AUTOMATIC,AUTOMATIC) Tempvalue, P2VAR(uint16,AUTOMATIC,AUTOMATIC) SpeedValue);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_ComData_TempSpeedValue(VAR(uint16,AUTOMATIC) Tempvalue, VAR(uint16,AUTOMATIC) SpeedValue);

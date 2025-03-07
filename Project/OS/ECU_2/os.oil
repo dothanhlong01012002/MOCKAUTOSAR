@@ -12,13 +12,6 @@ CPU CORTEX-M4 {
       USERESSCHEDULER = FALSE;
       SYSTEMTICKMS = 10 ; 
    };
-   TASK GetError_Task {
-	  PRIORITY = 60;
-      SCHEDULE = FULL;
-      ACTIVATION = 1;
-      AUTOSTART = FALSE; 
-      STACKSIZE = 50;
-	}
    TASK Component_Task {
       PRIORITY = 30;
       SCHEDULE = FULL;
@@ -50,16 +43,6 @@ CPU CORTEX-M4 {
       AUTOSTART = TRUE {
          ALARMTIME = 20; 
          CYCLETIME = 20; 
-      };
-   }
-    ALARM Alrm_Periodic2 {
-      COUNTER = MainCounter;
-      ACTION = ACTIVATETASK  {
-         TASK = GetError_Task;
-      };
-      AUTOSTART = TRUE {
-         ALARMTIME = 500; 
-         CYCLETIME = 500; 
       };
    }
    COUNTER MainCounter {
