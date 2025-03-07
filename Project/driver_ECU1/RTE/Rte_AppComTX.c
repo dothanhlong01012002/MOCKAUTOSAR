@@ -80,7 +80,7 @@ FUNC(Std_ReturnType,AUTOMATIC) Rte_Write_PP_Temperature_TempValue(VAR(uint16,AUT
 /* Note        : Function ensures NULL pointer check before accessing data.   */  
 /******************************************************************************/  
 #define RTE_START_SEC_CODE_EcucPartition_0
-#include "RTE_MemMap.h"
+#include "Rte_MemMap.h"
 FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Read_RP_Temperature_TempValue(P2VAR(uint16,AUTOMATIC,AUTOMATIC) temp){
     if (temp != NULL) {
         *temp = TempValue;
