@@ -21,6 +21,7 @@ typedef struct {
     uint8 errorCodes[MAX_ERROR_CODES];  
     uint8 numErrorCodes;         
 } NvM_DataBuffer;
+
 extern NvM_DataBuffer Data;
 
 Std_ReturnType NvM_WriteBlock(uint16 BlockId, const uint8* DataBufferPtr);

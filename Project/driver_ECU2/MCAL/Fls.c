@@ -1,12 +1,22 @@
 #include "Fls.h"
 #include <stdio.h>
 #include <string.h>
+#define MEMORY_SIZE 100
+
+VAR(uint8,AUTOMATIC) Memory[20];
 
 Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, uint32 Length) {
     if (SourceAddressPtr == NULL || Length == 0) {
-        return E_NOT_OK;
+        return E_NOT_OK; 
     }
-    return E_OK;
+
+    if (TargetAddress + Length > MEMORY_SIZE) {
+        return E_NOT_OK;  
+    }
+
+    memcpy(&Memory[TargetAddress], SourceAddressPtr, Length);  
+
+    return E_OK;  
 }
 
 Std_ReturnType Fls_Read(uint32 TargetAddress, uint8* DestinationPtr, uint32 Length) {
