@@ -34,7 +34,8 @@ VAR(uint8,AUTOMATIC) frameData[3];
 /******************************************************************************/ 
 
 FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC)) {
-    VAR(Can_HwType,AUTOMATIC) Mailbox; 
+    VAR(Can_HwType,AUTOMATIC) Mailbox;
+    Mailbox.Hoh = 10;
 
     VAR(PduInfoType,AUTOMATIC) PduInfo;
     frameData[0] = rand()%100;
