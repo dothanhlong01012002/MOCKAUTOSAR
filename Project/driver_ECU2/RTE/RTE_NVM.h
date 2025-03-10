@@ -19,6 +19,9 @@
 #include "NVMManager.h"
 #include "NVBlockSWC.h"
 #include "RTE.h"
+
+#define DATA_BLOCK 1
+#define ERROR_BLOCK 2
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVData_CallServerFunction(VAR(uint8,AUTOMATIC) requestID, P2VAR(uint8,AUTOMATIC,AUTOMATIC) ErrorCodes);
 FUNC(Std_ReturnType,AUTOMATIC) Rte_Call_RP_NVHandle_SeverHandle(VAR(uint8,AUTOMATIC) requestID,P2VAR(uint8,AUTOMATIC,AUTOMATIC) ErrorCodes);
 

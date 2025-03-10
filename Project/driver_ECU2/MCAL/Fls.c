@@ -37,15 +37,7 @@ VAR(uint8,AUTOMATIC) Memory[20];
 /*               the write operation                                          */  
 /******************************************************************************/  
 FUNC(Std_ReturnType,AUTOMATIC) Fls_Write(VAR(Fls_AddressType, AUTOMATIC) TargetAddress, P2CONST(uint8, AUTOMATIC, AUTOMATIC) SourceAddressPtr, VAR(Fls_LengthType, AUTOMATIC) Length){
-    if (SourceAddressPtr == NULL || Length == 0) {
-        return E_NOT_OK; 
-    }
-
-    if (TargetAddress + Length > MEMORY_SIZE) {
-        return E_NOT_OK;  
-    }
-
-    memcpy(&Memory[TargetAddress], SourceAddressPtr, Length);  
+    memcpy(Memory, SourceAddressPtr, Length);  
 
     return E_OK;  
 }

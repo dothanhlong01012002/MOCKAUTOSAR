@@ -3,98 +3,114 @@
 <pre>
 <h1>�Vision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: �Vision V5.41.0.0
-Copyright (C) 2024 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: long long, long, LIC=----
+IDE-Version: �Vision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ngo trung, fpt, LIC=----
  
 Tool Versions:
-Toolchain:       MDK-Lite  Version: 5.41.0.0
-Toolchain Path:  C:\Users\Admin\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.22
-Assembler:       Armasm.exe V6.22
-Linker/Locator:  ArmLink.exe V6.22
-Library Manager: ArmAr.exe V6.22
-Hex Converter:   FromElf.exe V6.22
-CPU DLL:         SARMCM3.DLL V5.41.0.0
-Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      UL2CM3.DLL V1.164.14.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+Toolchain:       MDK-Lite  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.4.0
+Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
-C:\Users\Admin\Desktop\MOCKAUTOSAR\Project\OS\ECU_2\OSEK_ECU2.uvprojx
-Project File Date:  03/07/2025
+C:\git_weizy\Airconditioner\MOCKAUTOSAR\Project\OS\ECU_2\OSEK_ECU2.uvprojx
+Project File Date:  03/10/2025
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.22', folder: 'C:\Users\Admin\AppData\Local\Keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.14', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
+compiling hook.c...
+compiling CompressorControlSWC.c...
+assembling keilUvisoin_startup.s...
 compiling counter.c...
+compiling OsCfg.c...
 compiling IOHwAbCompressor.c...
+compiling NVBlockSWC.c...
 compiling IOHwAbFan.c...
 compiling FanControlSWC.c...
-compiling CompressorControlSWC.c...
-compiling hook.c...
-compiling OsCfg.c...
-compiling NVBlockSWC.c...
-compiling CoolingControlSWC.c...
 compiling schedule.c...
-assembling keilUvisoin_startup.s...
-compiling HwAbMem.c...
-../../driver_ECU2/HWAL/WdgIf.c(3): warning: 'MAX_TIMEOUT' macro redefined [-Wmacro-redefined]
-    3 | #define MAX_TIMEOUT 1000
-      |         ^
-../../driver_ECU2/MCAL\Wdg.h(7): note: previous definition is here
-    7 | #define MAX_TIMEOUT 60000  // Giới hạn timeout (có thể thay đổi tùy theo yêu cầu)
-      |         ^
+../../driver_ECU2/ASW/CoolingControlSWC.c(49): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+    for (uint8 i = 0; i < 20; i++) {
+         ^
+../../driver_ECU2/ASW/CoolingControlSWC.c(83): warning: implicitly declaring library function 'abs' with type 'int (int)' [-Wimplicit-function-declaration]
+    tempDiff = abs(ExTemperature - Temp);
+               ^
+../../driver_ECU2/ASW/CoolingControlSWC.c(83): note: include the header <stdlib.h> or explicitly provide a declaration for 'abs'
+2 warnings generated.
+compiling CoolingControlSWC.c...
+../../driver_ECU2/HWAL/WdgIf.c(16): warning: 'MAX_TIMEOUT' macro redefined [-Wmacro-redefined]
+#define MAX_TIMEOUT 1000
+        ^
+../../driver_ECU2/MCAL\Wdg.h(20): note: previous definition is here
+#define MAX_TIMEOUT 60000  
+        ^
 1 warning generated.
 compiling WdgIf.c...
 compiling Pwm.c...
-compiling IOHwAbCan.c...
-compiling Wdg.c...
 compiling Fls.c...
-compiling RTE.c...
-compiling Can.c...
-compiling RTE_COM.c...
+compiling IOHwAbCan.c...
+compiling HwAbMem.c...
+compiling Wdg.c...
 compiling RTE_DEM.c...
+compiling Can.c...
+compiling RTE.c...
+compiling RTE_COM.c...
+../../driver_ECU2/RTE/RTE_NVM.c(31): warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned int)' [-Wimplicit-function-declaration]
+    memcpy(Data.errorCodes, ErrorCodes, sizeof(uint8) * 8);
+    ^
+../../driver_ECU2/RTE/RTE_NVM.c(31): note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+1 warning generated.
 compiling RTE_NVM.c...
 compiling RTE_WDG.c...
-../../driver_ECU2/SERVICE/DiagnosticManager.c(53): warning: expression result unused [-Wunused-value]
-   53 |     for (i; i < eventCount; i++) {
-      |          ^
-../../driver_ECU2/SERVICE/DiagnosticManager.c(59): warning: non-void function does not return a value in all control paths [-Wreturn-type]
-   59 | }
-      | ^
-2 warnings generated.
-compiling DiagnosticManager.c...
 compiling NVMManager.c...
-compiling PduR.c...
+../../driver_ECU2/SERVICE/DiagnosticManager.c(65): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+../../driver_ECU2/SERVICE/DiagnosticManager.c(131): warning: expression result unused [-Wunused-value]
+    for (i; i < eventCount; i++) {
+         ^
+../../driver_ECU2/SERVICE/DiagnosticManager.c(137): warning: non-void function does not return a value in all control paths [-Wreturn-type]
+}
+^
+3 warnings generated.
+compiling DiagnosticManager.c...
 compiling WdgManager.c...
+compiling PduR.c...
 compiling Com.c...
 linking...
-Program Size: Code=7220 RO-data=684 RW-data=388 ZI-data=1248  
-".\build_files\OsekIntro_Example6.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=7344 RO-data=684 RW-data=388 ZI-data=1904  
+".\build_files\OsekIntro_Example6.axf" - 0 Error(s), 7 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
-                https://www.keil.com/pack/ARM.CMSIS.6.1.0.pack
-                ARM::CMSIS@6.1.0
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM.CMSIS.6.0.0
                 CMSIS (Common Microcontroller Software Interface Standard)
-   * Component: CORE Version: 6.1.0
+   * Component: CORE Version: 6.0.0
 
 Package Vendor: Keil
                 http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
-                Keil::TM4C_DFP@1.1.0
+                Keil.TM4C_DFP.1.1.0
                 Texas Instruments Tiva C Series Device Support and Examples
 
 <h2>Collection of Component include folders:</h2>
-  ./RTE/_Target_1
-  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include
-  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123
+  .\RTE\_Target_1
+  C:\Users\ADMIN\AppData\Local\Arm\Packs\ARM\CMSIS\6.0.0\CMSIS\Core\Include
+  C:\Users\ADMIN\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ARM::CMSIS:CORE@6.1.0
-Build Time Elapsed:  00:00:01
+   * Component: ARM::CMSIS:CORE:6.0.0
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

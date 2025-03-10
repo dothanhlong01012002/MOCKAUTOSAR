@@ -23,7 +23,7 @@
 #define MEMIF_FLASH_DEVICE_INDEX  0
 
 #define MAX_DATA_PARAMETER  10
-#define MAX_ERROR_CODES     5
+#define MAX_ERROR_CODES     8
 #define NV_WRITE_DATA       0
 #define NV_READ_DATA        1
 #define NV_WRITE_ERROR      2
