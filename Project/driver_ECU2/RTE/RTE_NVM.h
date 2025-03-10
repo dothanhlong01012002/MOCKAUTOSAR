@@ -19,6 +19,7 @@
 #include "NVMManager.h"
 #include "NVBlockSWC.h"
 #include "RTE.h"
+#include <string.h>
 
 #define DATA_BLOCK 1
 #define ERROR_BLOCK 2

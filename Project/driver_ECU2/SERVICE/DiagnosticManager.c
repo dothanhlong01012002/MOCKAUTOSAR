@@ -59,9 +59,7 @@ FUNC(Std_ReturnType, AUTOMATIC) ReportDiagnosticEvent(VAR(uint32, AUTOMATIC) eve
         diagnosticEvents[eventCount].status = status;
         eventCount++;  
     }
-    else {
-        
-    }
+    return E_OK;
 }
 
 /******************************************************************************/  
@@ -134,5 +132,6 @@ FUNC(Std_ReturnType, AUTOMATIC) Dem_SetEventStatus(VAR(Dem_EventIdType,AUTOMATIC
             return E_OK;
         }
     }
+    return E_NOT_OK;
 }
 

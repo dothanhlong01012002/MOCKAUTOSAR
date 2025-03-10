@@ -17,7 +17,7 @@
 #define ERROR_CODE_SPEED_SENSOR_FAIL   0x02 
 #define ERROR_CODE_NO_ERROR            0x00 
 VAR(uint8,AUTOMATIC) ErrorCodes[20];
-
+VAR(uint8,AUTOMATIC) i;
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -46,7 +46,7 @@ FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
     Rte_Read_RP_ComData_TempSpeedValue(&Temp, &Speed);
     Rte_Read_RP_PARAM_ExpectedTemperature(&ExTemperature);
 
-    for (uint8 i = 0; i < 20; i++) {
+    for (i = 0; i < 20; i++) {
         ErrorCodes[i] = ERROR_CODE_NO_ERROR;
     }
 
@@ -80,7 +80,7 @@ FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
         Rte_Call_RP_NVData_CallServerFunction(NV_WRITE_ERROR,ErrorCodes);
     }
 
-    tempDiff = abs(ExTemperature - Temp);
+    tempDiff = (ExTemperature > Temp) ? (ExTemperature - Temp) : (Temp - ExTemperature);
     if (tempDiff >= 5) {
         compressorRatio = 100;
         fanRatio = 100;

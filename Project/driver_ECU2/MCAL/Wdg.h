@@ -18,7 +18,6 @@
 #include <stdint.h>
 #include "Compiler.h"
 
-#define MAX_TIMEOUT 60000  
 #define WDG_BASE_ADDR 0x40000000  
 #define WDG_CTL    (*(volatile uint32_t*)(WDG_BASE_ADDR + 0x00))  // Control register
 #define WDG_LOAD   (*(volatile uint32_t*)(WDG_BASE_ADDR + 0x04))  // Load register

@@ -56,7 +56,9 @@ FUNC(Std_ReturnType, AUTOMATIC) NvM_WriteBlock(VAR(NvM_BlockIdType, AUTOMATIC) B
 /******************************************************************************/  
 FUNC(Std_ReturnType, AUTOMATIC) NvM_ReadBlock(VAR(NvM_BlockIdType, AUTOMATIC) BlockId, P2VAR(uint8, AUTOMATIC, AUTOMATIC) NvM_DstPtr)
 {
-    MemIf_Read(MEMIF_FLASH_DEVICE_INDEX, BlockId, NvM_DstPtr);
+    VAR(uint16, AUTOMATIC) BlockOffset =  0;
+    VAR(uint16, AUTOMATIC) Length =  256;
+    MemIf_Read(MEMIF_FLASH_DEVICE_INDEX, BlockId, NvM_DstPtr, BlockOffset, Length);
     return E_OK;
 }
 
