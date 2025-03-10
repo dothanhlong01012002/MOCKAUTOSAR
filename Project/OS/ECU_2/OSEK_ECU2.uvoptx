@@ -142,9 +142,41 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
+          <LineNumber>42</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>1810</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OsekIntro_Example6\../../driver_ECU2/MCAL/Fls.c\42</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
           <LineNumber>39</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>2726</Address>
+          <Address>1796</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\OsekIntro_Example6\../../driver_ECU2/MCAL/Fls.c\39</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>39</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>2698</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -156,7 +188,7 @@
           <Expression>\\OsekIntro_Example6\../../driver_ECU2/SERVICE/NVMManager.c\39</Expression>
         </Bp>
         <Bp>
-          <Number>1</Number>
+          <Number>3</Number>
           <Type>0</Type>
           <LineNumber>37</LineNumber>
           <EnabledFlag>1</EnabledFlag>
@@ -172,7 +204,7 @@
           <Expression>\\OsekIntro_Example6\../../driver_ECU2/HWAL/HwAbMem.c\37</Expression>
         </Bp>
         <Bp>
-          <Number>2</Number>
+          <Number>4</Number>
           <Type>0</Type>
           <LineNumber>80</LineNumber>
           <EnabledFlag>0</EnabledFlag>
@@ -188,11 +220,11 @@
           <Expression>\\OsekIntro_Example6\../../driver_ECU2/ASW/CoolingControlSWC.c\80</Expression>
         </Bp>
         <Bp>
-          <Number>3</Number>
+          <Number>5</Number>
           <Type>0</Type>
           <LineNumber>32</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>2354</Address>
+          <Address>2326</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -204,11 +236,11 @@
           <Expression>\\OsekIntro_Example6\../../driver_ECU2/RTE/RTE_NVM.c\32</Expression>
         </Bp>
         <Bp>
-          <Number>4</Number>
+          <Number>6</Number>
           <Type>0</Type>
           <LineNumber>26</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>2018</Address>
+          <Address>1990</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -218,38 +250,6 @@
           <Filename>..\..\driver_ECU2\RTE\RTE.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\OsekIntro_Example6\../../driver_ECU2/RTE/RTE.c\26</Expression>
-        </Bp>
-        <Bp>
-          <Number>5</Number>
-          <Type>0</Type>
-          <LineNumber>40</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1798</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/MCAL/Fls.c\40</Expression>
-        </Bp>
-        <Bp>
-          <Number>6</Number>
-          <Type>0</Type>
-          <LineNumber>42</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

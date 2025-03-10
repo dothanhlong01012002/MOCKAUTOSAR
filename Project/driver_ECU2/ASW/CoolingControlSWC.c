@@ -41,7 +41,7 @@ FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
     VAR(uint16, AUTOMATIC) compressorRatio, fanRatio;
     VAR(uint16, AUTOMATIC) tempDiff= 0 ;
     VAR(uint8, AUTOMATIC) errorOccurred = FALSE;
-    VAR(uint8, AUTOMATIC) errorIndex = 0; // Chỉ số để ghi lỗi vào ErrorCodes
+    VAR(uint8, AUTOMATIC) errorIndex = 0; 
 
     Rte_Read_RP_ComData_TempSpeedValue(&Temp, &Speed);
     Rte_Read_RP_PARAM_ExpectedTemperature(&ExTemperature);
@@ -73,8 +73,11 @@ FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
     }
 
     if (errorOccurred) {
-        Rte_Call_RP_NVData_CallServerFunction(NV_WRITE_ERROR,ErrorCodes); // Ghi lỗi vào NVRAM
+        Rte_Call_RP_NVData_CallServerFunction(NV_WRITE_ERROR,ErrorCodes); 
         return E_NOT_OK;
+    }
+    else{
+        Rte_Call_RP_NVData_CallServerFunction(NV_WRITE_ERROR,ErrorCodes);
     }
 
     tempDiff = abs(ExTemperature - Temp);
