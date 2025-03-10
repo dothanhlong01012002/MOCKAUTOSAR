@@ -21,7 +21,7 @@ VAR(uint16,AUTOMATIC) TemperatureValue;
 VAR(uint16,AUTOMATIC) EngineSpeedValue;
 VAR(uint16,AUTOMATIC) FanRatio;
 VAR(uint16,AUTOMATIC) CompressorRatio;
-VAR(uint8,AUTOMATIC) ExpectedTemp;
+VAR(uint8,AUTOMATIC) ExpectedTemp=32;
 
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */

@@ -1,6 +1,6 @@
 /*******************************************************************************
 	Module Name:		OsCfg.c
-	Generation Date:	2025-March-Friday	09:55:41
+	Generation Date:	2025-March-Monday	10:22:52
 	Tool Version: 		V.0
 	Description: 		Os configuration src file
 
@@ -33,7 +33,7 @@ const uint8_t OsCfg_MAX_NUM_OF_RESOURCES = 0U;
 /*******************************************************************************
 	App task externs
 *******************************************************************************/
-const uint16_t OsCfg_ALL_STACK_SIZE = 150;
+const uint16_t OsCfg_ALL_STACK_SIZE = 300;
 /*******************************************************************************
 	Hook routines configurations
 *******************************************************************************/
@@ -78,14 +78,14 @@ tcb_t OsCfg_TCBs[3/*num of app tasks*/+1/*for Idle mechanism */] =
 const uint32_t OsCfg_StackSize[3] = 
 {
 	50,		/*Component_Task*/
-	50,		/*Main_Task*/
+	200,		/*Main_Task*/
 	50		/*ComReceive_Task*/
 };
 
 /*******************************************************************************
 	Stack Buffer Allocation For All Threads
 *******************************************************************************/
-uint32_t OsCfg_Stack[150+16/* 16 for Idle mechanism */] = {0u};
+uint32_t OsCfg_Stack[300+16/* 16 for Idle mechanism */] = {0u};
 
 /*******************************************************************************
 	Alarms base records to be referenced in alarm configs

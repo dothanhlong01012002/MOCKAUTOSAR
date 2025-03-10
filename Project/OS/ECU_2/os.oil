@@ -25,7 +25,7 @@ CPU CORTEX-M4 {
       SCHEDULE = FULL;
       ACTIVATION = 1;
       AUTOSTART = TRUE; 
-      STACKSIZE = 50;
+      STACKSIZE = 200;
 	  EVENT = BE_Receive;
    };    
    TASK ComReceive_Task {

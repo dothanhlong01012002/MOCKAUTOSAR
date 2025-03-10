@@ -36,16 +36,8 @@ VAR(uint8,AUTOMATIC) Memory[20];
 /* Note        : Function checks for valid parameters before proceeding with  */
 /*               the write operation                                          */  
 /******************************************************************************/  
-Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, uint32 Length) {
-    if (SourceAddressPtr == NULL || Length == 0) {
-        return E_NOT_OK; 
-    }
-
-    if (TargetAddress + Length > MEMORY_SIZE) {
-        return E_NOT_OK;  
-    }
-
-    memcpy(&Memory[TargetAddress], SourceAddressPtr, Length);  
+Std_ReturnType Fls_Write(uint32 TargetAddress,const uint8* SourceAddressPtr, uint32 Length) {
+    memcpy(Memory, SourceAddressPtr, Length);  
 
     return E_OK;  
 }

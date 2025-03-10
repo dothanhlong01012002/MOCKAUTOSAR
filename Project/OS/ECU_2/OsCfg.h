@@ -1,6 +1,6 @@
 /*******************************************************************************
 	Module Name:		OsCfg.h
-	Generation Date:	2025-March-Friday	09:55:41
+	Generation Date:	2025-March-Monday	10:22:52
 	Tool Version: 		V.0
 	Description: 		Os configuration header file
 
@@ -90,7 +90,7 @@ extern const uint32_t OsCfg_StackSize[3];
 /*******************************************************************************
 	Stack Buffer For All Threads
 *******************************************************************************/
-extern uint32_t OsCfg_Stack[150+16/* 16 for Idle mechanism */]; 
+extern uint32_t OsCfg_Stack[300+16/* 16 for Idle mechanism */]; 
 
 /*******************************************************************************
 	Rosource task authorization
