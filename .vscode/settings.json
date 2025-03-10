@@ -142,6 +142,7 @@
     "std_types.h": "c",
     "adc.h": "c",
     "fls.h": "c",
-    "rte_appreadsensor.h": "c"
+    "rte_appreadsensor.h": "c",
+    "string.h": "c"
   }
 }

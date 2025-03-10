@@ -36,7 +36,7 @@ VAR(uint8,AUTOMATIC) Memory[20];
 /* Note        : Function checks for valid parameters before proceeding with  */
 /*               the write operation                                          */  
 /******************************************************************************/  
-Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, uint32 Length) {
+FUNC(Std_ReturnType,AUTOMATIC) Fls_Write(VAR(Fls_AddressType, AUTOMATIC) TargetAddress, P2CONST(uint8, AUTOMATIC, AUTOMATIC) SourceAddressPtr, VAR(Fls_LengthType, AUTOMATIC) Length){
     if (SourceAddressPtr == NULL || Length == 0) {
         return E_NOT_OK; 
     }
@@ -64,8 +64,8 @@ Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, ui
 /* Note        : Function checks for valid parameters before proceeding with  */  
 /*               the read operation                                           */  
 /******************************************************************************/ 
-Std_ReturnType Fls_Read(uint32 TargetAddress, uint8* DestinationPtr, uint32 Length) {
-    if (DestinationPtr == NULL || Length == 0) {
+FUNC(Std_ReturnType,AUTOMATIC) Fls_Read(VAR(Fls_AddressType, AUTOMATIC) SourceAddress, P2VAR(uint8, AUTOMATIC, AUTOMATIC) TargetAddressPtr, VAR(Fls_LengthType, AUTOMATIC) Length){
+    if (TargetAddressPtr == NULL || Length == 0) {
         return E_NOT_OK;
     }
     return E_OK;

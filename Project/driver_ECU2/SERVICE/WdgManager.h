@@ -37,12 +37,12 @@ static WdgM_ConfigType* currentConfig = NULL;
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
 
-void WdgM_Init(const WdgM_ConfigType* ConfigPtr);
-void WdgM_DeInit(void);
-Std_ReturnType WdgM_SetMode(WdgIf_ModeType Mode);
-Std_ReturnType WdgM_GetMode(WdgIf_ModeType* Mode);
-void WdgM_PerformReset(void);
-Std_ReturnType WdgM_CheckpointReached(WdgM_SupervisedEntityIdType SEID, WdgM_CheckpointIdType CheckpointID);
+FUNC(void, AUTOMATIC) WdgM_Init(P2CONST(WdgM_ConfigType, AUTOMATIC, AUTOMATIC) ConfigPtr);
+FUNC(void, AUTOMATIC) WdgM_DeInit(void);
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode);
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_GetMode(P2VAR(WdgIf_ModeType, AUTOMATIC, AUTOMATIC) Mode);
+FUNC(void, AUTOMATIC) WdgM_PerformReset(void);
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID, VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID);
 
 #endif /* WDG_MANAGER_H */
 /* End of WdgIf.h */

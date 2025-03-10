@@ -36,7 +36,7 @@ WdgM_ConfigType wdgConfig = {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
-void WdgM_Init(const WdgM_ConfigType* ConfigPtr) {
+FUNC(void, AUTOMATIC) WdgM_Init(P2CONST(WdgM_ConfigType, AUTOMATIC, AUTOMATIC) ConfigPtr) {
     if (ConfigPtr == NULL) {
         return;  
     }
@@ -62,7 +62,7 @@ void WdgM_Init(const WdgM_ConfigType* ConfigPtr) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
-void WdgM_DeInit(void) {
+FUNC(void, AUTOMATIC) WdgM_DeInit(void) {
     WdgIf_SetMode(0, WDGIF_OFF_MODE);  
     WdgIf_SetTriggerCondition(0, 0);   
 }
@@ -79,7 +79,7 @@ void WdgM_DeInit(void) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-Std_ReturnType WdgM_SetMode(WdgIf_ModeType Mode) {
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) Mode) {
     if (Mode < WDGIF_OFF_MODE || Mode > WDGIF_FAST_MODE) {
         return E_NOT_OK;  
     }
@@ -99,7 +99,7 @@ Std_ReturnType WdgM_SetMode(WdgIf_ModeType Mode) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-Std_ReturnType WdgM_GetMode(WdgIf_ModeType* Mode) {
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_GetMode(P2VAR(WdgIf_ModeType, AUTOMATIC, AUTOMATIC) Mode){
     if (Mode == NULL) {
         return E_NOT_OK;  
     }
@@ -118,7 +118,7 @@ Std_ReturnType WdgM_GetMode(WdgIf_ModeType* Mode) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-void WdgM_PerformReset(void) {
+FUNC(void, AUTOMATIC) WdgM_PerformReset(void) {
     WdgIf_SetTriggerCondition(0, 0);  
     
     // Tại đây có thể thêm lệnh reset hệ thống, ví dụ:
@@ -138,7 +138,7 @@ void WdgM_PerformReset(void) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
-Std_ReturnType WdgM_CheckpointReached(WdgM_SupervisedEntityIdType SEID, WdgM_CheckpointIdType CheckpointID) {
+FUNC(Std_ReturnType, AUTOMATIC) WdgM_CheckpointReached(VAR(WdgM_SupervisedEntityIdType, AUTOMATIC) SEID, VAR(WdgM_CheckpointIdType, AUTOMATIC) CheckpointID) {
     // Kiểm tra nếu Checkpoint hợp lệ, và thực hiện cập nhật Alive Counter
     // Cập nhật Alive Counter của Checkpoint, ví dụ:
     // AliveCounters[SEID][CheckpointID]++;

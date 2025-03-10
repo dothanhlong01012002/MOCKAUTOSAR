@@ -16,6 +16,7 @@
 
 #include "Std_Types.h"
 #include <stdint.h>
+#include "Compiler.h"
 
 #define MAX_TIMEOUT 60000  
 #define WDG_BASE_ADDR 0x40000000  
@@ -34,9 +35,9 @@ typedef enum {
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode);
-void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout);
-void Wdg_Init(void);
+FUNC(void, AUTOMATIC) Wdg_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) WdgMode);
+FUNC(void, AUTOMATIC) Wdg_SetTriggerCondition(VAR(uint16, AUTOMATIC) Timeout);
+FUNC(void, AUTOMATIC) Wdg_Init(void);
 
 #endif /* WDG_H */
 /* End of Wdg.h */

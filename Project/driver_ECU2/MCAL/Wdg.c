@@ -29,7 +29,7 @@
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        : Function configures the watchdog mode                        */  
 /******************************************************************************/  
-void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode) {
+FUNC(void, AUTOMATIC) Wdg_SetMode(VAR(WdgIf_ModeType, AUTOMATIC) WdgMode){
     // Kiểm tra chế độ và cấu hình Watchdog tương ứng
     // switch (WdgMode) {
     //     case WDGIF_OFF_MODE:
@@ -60,7 +60,7 @@ void Wdg_SetMode(uint8_t DeviceIndex, WdgIf_ModeType WdgMode) {
 /* Note        : Function ensures the timeout does not exceed the maximum     */  
 /*               allowed value and configures the watchdog timer accordingly. */  
 /******************************************************************************/  
-void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout) {
+FUNC(void, AUTOMATIC) Wdg_SetTriggerCondition(VAR(uint16, AUTOMATIC) Timeout) {
     // // Kiểm tra timeout có hợp lệ không, giới hạn tối đa là MAX_TIMEOUT
     // if (Timeout > MAX_TIMEOUT) {
     //     Timeout = MAX_TIMEOUT;  // Giới hạn timeout
@@ -82,7 +82,7 @@ void Wdg_SetTriggerCondition(uint8_t DeviceIndex, uint16_t Timeout) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-void Wdg_Init(void){
+FUNC(void, AUTOMATIC) Wdg_Init(void){
     
 }
 

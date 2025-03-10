@@ -16,6 +16,7 @@
 
 #include "Std_Types.h"
 #include "HwAbMem.h"
+#include "Compiler.h"
 
 #define NVM_DTC_ERROR_BLOCK_ID  0x2000
 #define ERROR_CODE_SIZE         sizeof(uint32)
@@ -34,14 +35,16 @@ typedef struct {
     uint8 numErrorCodes;         
 } NvM_DataBuffer;
 
+typedef uint16 NvM_BlockIdType;
+
 extern NvM_DataBuffer Data;
 
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
 
-Std_ReturnType NvM_WriteBlock(uint16 BlockId, const uint8* DataBufferPtr);
-Std_ReturnType NvM_ReadBlock(uint16 BlockId, uint8 *DataBufferPtr);
+FUNC(Std_ReturnType, AUTOMATIC) NvM_WriteBlock(VAR(NvM_BlockIdType, AUTOMATIC) BlockId, P2CONST(uint8, AUTOMATIC, AUTOMATIC) NvM_SrcPtr);
+FUNC(Std_ReturnType, AUTOMATIC) NvM_ReadBlock(VAR(NvM_BlockIdType, AUTOMATIC) BlockId, P2VAR(uint8, AUTOMATIC, AUTOMATIC) NvM_DstPtr);
 
 #endif /* MEMORY_MANAGER_H */
 /* End of NVMManager.h */

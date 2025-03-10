@@ -23,8 +23,8 @@
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-Std_ReturnType MemIf_Write(uint16 DeviceIndex, uint16 BlockNumber, const uint8* DataBufferPtr);
-Std_ReturnType MemIf_Read(uint16 DeviceIndex, uint16 BlockNumber, uint8* DataBufferPtr);
+FUNC(Std_ReturnType, AUTOMATIC) MemIf_Write(VAR(uint16, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) BlockNumber, P2CONST(uint8, AUTOMATIC, AUTOMATIC) DataBufferPtr);
+FUNC(Std_ReturnType, AUTOMATIC) MemIf_Read(VAR(uint16, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) BlockNumber, P2VAR(uint8, AUTOMATIC, AUTOMATIC) DataBufferPtr, VAR(uint16, AUTOMATIC) BlockOffset, VAR(uint16, AUTOMATIC) Length );
 
 #endif /* IOHwMenIf_H */
 /* End of HwAbMem.h */

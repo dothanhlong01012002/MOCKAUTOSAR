@@ -32,7 +32,7 @@
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        : Function uses `Fls_Write` to write data to flash memory.     */  
 /******************************************************************************/  
-Std_ReturnType MemIf_Write(uint16 DeviceIndex, uint16 BlockNumber, const uint8* DataBufferPtr) {
+FUNC(Std_ReturnType, AUTOMATIC) MemIf_Write(VAR(uint16, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) BlockNumber, P2CONST(uint8, AUTOMATIC, AUTOMATIC) DataBufferPtr) {
     Fls_Write(FLASH_ERROR_STORAGE_ADDRESS, DataBufferPtr, 8);
     return E_OK;
 }
@@ -41,9 +41,9 @@ Std_ReturnType MemIf_Write(uint16 DeviceIndex, uint16 BlockNumber, const uint8* 
 /* ModuleID    :                                                              */  
 /* ServiceID   :                                                              */  
 /* Name        : MemIf_Read                                                   */  
-/* Param       : DeviceIndex - Index of the device to be read                */  
+/* Param       : DeviceIndex - Index of the device to be read                 */  
 /*               BlockNumber - Block number to be read                        */  
-/*               DataBufferPtr - Pointer to the buffer where the data will   */  
+/*               DataBufferPtr - Pointer to the buffer where the data will    */  
 /*                               be stored                                    */  
 /* Return      : Std_ReturnType                                               */  
 /*               - E_OK     : Read operation successful                       */  
@@ -51,16 +51,22 @@ Std_ReturnType MemIf_Write(uint16 DeviceIndex, uint16 BlockNumber, const uint8* 
 /* Contents    : Reads data from flash memory at the specified block number   */  
 /*               and stores it in the provided buffer.                        */  
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
-/* Note        : Function checks for a NULL pointer and reads data from the  */  
+/* Note        : Function checks for a NULL pointer and reads data from the   */  
 /*               flash storage address.                                       */  
-/******************************************************************************/  
-Std_ReturnType MemIf_Read(uint16 DeviceIndex, uint16 BlockNumber, uint8* DataBufferPtr) {
-
+/******************************************************************************/ 
+ FUNC(Std_ReturnType, AUTOMATIC) MemIf_Read(VAR(uint16, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) BlockNumber, P2VAR(uint8, AUTOMATIC, AUTOMATIC) DataBufferPtr, VAR(uint16, AUTOMATIC) BlockOffset, VAR(uint16, AUTOMATIC) Length )
+ {
     if (DataBufferPtr == NULL) {
         return E_NOT_OK;
     }
 
-    Fls_Read(FLASH_ERROR_STORAGE_ADDRESS + (BlockNumber * sizeof(uint32)), DataBufferPtr, sizeof(uint32));
+    VAR(Fls_AddressType, AUTOMATIC) ReadAddress = 
+        FLASH_ERROR_STORAGE_ADDRESS + (BlockNumber * sizeof(uint32)) + BlockOffset;
+
+    /* Gọi hàm Fls_Read để đọc dữ liệu từ bộ nhớ Flash */
+    if (Fls_Read(ReadAddress, DataBufferPtr, Length) != E_OK) {
+        return E_NOT_OK;
+    }
     return E_OK;
 }
 

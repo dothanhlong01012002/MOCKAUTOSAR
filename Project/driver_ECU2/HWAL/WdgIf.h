@@ -16,14 +16,15 @@
 
 #include "Std_Types.h"
 #include "Wdg.h"
+#include "Compiler.h"
 
 /*----------------------------------------------------------------------------*/
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex, WdgIf_ModeType WdgMode);
-void WdgIf_SetTriggerCondition(uint8 DeviceIndex, uint16 Timeout);
-void WdgIf_Init(void);
+FUNC(Std_ReturnType, AUTOMATIC) WdgIf_SetMode(VAR(uint8, AUTOMATIC) DeviceIndex, VAR(WdgIf_ModeType, AUTOMATIC) WdgMode);
+FUNC(void, AUTOMATIC) WdgIf_SetTriggerCondition(VAR(uint8, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) Timeout);
+FUNC(void, AUTOMATIC) WdgIf_Init(void);
 
 #endif /* WDGIF_H */
 /* End of WdgIf.h */

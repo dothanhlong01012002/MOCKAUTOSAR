@@ -45,7 +45,7 @@ extern DiagnosticEvent diagnosticEvents[MAX_DIAGNOSTIC_EVENTS];
 FUNC(Std_ReturnType, AUTOMATIC) ReportDiagnosticEvent(VAR(uint32, AUTOMATIC) eventID, VAR(uint8, AUTOMATIC) status);
 FUNC(Std_ReturnType, AUTOMATIC) GetDiagnosticEventStatus(VAR(uint32, AUTOMATIC) eventID);
 FUNC(void, AUTOMATIC) SetEventStatus(VAR(uint32, AUTOMATIC) eventID, VAR(uint8, AUTOMATIC) status);
-Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEventStatus);
+FUNC(Std_ReturnType, AUTOMATIC) Dem_SetEventStatus(VAR(Dem_EventIdType,AUTOMATIC) EventId, VAR(Dem_EventStatus,AUTOMATIC) TypeEventStatus);
 
 #endif /* DIAGNOSTIC_EVENT_H */
 /* End of DiagnosticManager.h */

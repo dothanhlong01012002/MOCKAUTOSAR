@@ -17,12 +17,15 @@
 #include "Std_Types.h"
 #include "Compiler.h"
 
+typedef uint32 Fls_AddressType;
+typedef uint32 Fls_LengthType; 
+
 /*----------------------------------------------------------------------------*/
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-Std_ReturnType Fls_Write(uint32 TargetAddress, const uint8* SourceAddressPtr, uint32 Length);
-Std_ReturnType Fls_Read(uint32 TargetAddress, uint8* DestinationPtr, uint32 Length);
+FUNC(Std_ReturnType,AUTOMATIC) Fls_Write(VAR(Fls_AddressType, AUTOMATIC) TargetAddress, P2CONST(uint8, AUTOMATIC, AUTOMATIC) SourceAddressPtr, VAR(Fls_LengthType, AUTOMATIC) Length);
+FUNC(Std_ReturnType,AUTOMATIC) Fls_Read(VAR(Fls_AddressType, AUTOMATIC) SourceAddress, P2VAR(uint8, AUTOMATIC, AUTOMATIC) TargetAddressPtr, VAR(Fls_LengthType, AUTOMATIC) Length);
 
 extern VAR(uint8,AUTOMATIC) Memory[20];
 

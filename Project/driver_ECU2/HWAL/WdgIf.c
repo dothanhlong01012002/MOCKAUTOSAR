@@ -34,13 +34,13 @@
 /* Note        : Function ensures that the provided mode is valid before      */  
 /*               calling the `Wdg_SetMode` function to configure the device.  */  
 /******************************************************************************/ 
-Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex, WdgIf_ModeType WdgMode) {
-
+FUNC(Std_ReturnType, AUTOMATIC) WdgIf_SetMode(VAR(uint8, AUTOMATIC) DeviceIndex, VAR(WdgIf_ModeType, AUTOMATIC) WdgMode)
+{
     if (WdgMode < WDGIF_OFF_MODE || WdgMode > WDGIF_FAST_MODE) {
         return E_NOT_OK;  
     }
 
-    Wdg_SetMode(DeviceIndex, WdgMode);
+    Wdg_SetMode(WdgMode);
     return E_OK;
 }
 
@@ -57,12 +57,12 @@ Std_ReturnType WdgIf_SetMode(uint8 DeviceIndex, WdgIf_ModeType WdgMode) {
 /* Note        : Function ensures that the timeout value does not exceed the  */  
 /*               maximum allowed timeout.                                     */  
 /******************************************************************************/  
-void WdgIf_SetTriggerCondition(uint8 DeviceIndex, uint16 Timeout) {
+FUNC(void, AUTOMATIC) WdgIf_SetTriggerCondition(VAR(uint8, AUTOMATIC) DeviceIndex, VAR(uint16, AUTOMATIC) Timeout)
+{
     if (Timeout > MAX_TIMEOUT) {
         Timeout = MAX_TIMEOUT;  // Giới hạn timeout
     }
-
-    Wdg_SetTriggerCondition(DeviceIndex, Timeout);
+    Wdg_SetTriggerCondition(Timeout);
 }
 
 /******************************************************************************/  
@@ -75,7 +75,7 @@ void WdgIf_SetTriggerCondition(uint8 DeviceIndex, uint16 Timeout) {
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-void WdgIf_Init(void){
+FUNC(void, AUTOMATIC) WdgIf_Init(void){
     Wdg_Init();
 }
 

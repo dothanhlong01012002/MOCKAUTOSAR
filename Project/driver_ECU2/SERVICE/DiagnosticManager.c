@@ -125,10 +125,10 @@ FUNC(void, AUTOMATIC) SetEventStatus(VAR(uint32, AUTOMATIC) eventID, VAR(uint8, 
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
-Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEventStatus){
-
-    uint8 i = 0;
-    for (i; i < eventCount; i++) {
+FUNC(Std_ReturnType, AUTOMATIC) Dem_SetEventStatus(VAR(Dem_EventIdType,AUTOMATIC) EventId, VAR(Dem_EventStatus,AUTOMATIC) TypeEventStatus)
+{
+    VAR(uint8, AUTOMATIC) i;
+    for (i = 0; i < eventCount; i++) {
         if (diagnosticEvents[i].eventID == EventId) {
             diagnosticEvents[i].status = TypeEventStatus;
             return E_OK;
