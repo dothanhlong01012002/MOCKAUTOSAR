@@ -34,8 +34,6 @@ DiagnosticEvent diagnosticEvents[MAX_DIAGNOSTIC_EVENTS] = {
 /* variables                                                                  */
 /*----------------------------------------------------------------------------*/
 
-uint8 eventCount = 0;
-DiagnosticEvent diagnosticEvents[MAX_DIAGNOSTIC_EVENTS] = {{0, EVENT_STATUS_RESOLVED}};  
 
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
@@ -129,7 +127,7 @@ FUNC(void, AUTOMATIC) SetEventStatus(VAR(uint32, AUTOMATIC) eventID, VAR(uint8, 
 /******************************************************************************/  
 Std_ReturnType Dem_SetEventStatus(Dem_EventIdType EventId,Dem_EventStatus TypeEventStatus){
 
-    int i = 0;
+    uint8 i = 0;
     for (i; i < eventCount; i++) {
         if (diagnosticEvents[i].eventID == EventId) {
             diagnosticEvents[i].status = TypeEventStatus;

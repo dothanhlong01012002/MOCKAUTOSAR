@@ -13,6 +13,11 @@
 
 #include "CoolingControlSWC.h"
 
+#define ERROR_CODE_TEMP_SENSOR_FAIL    0x01 
+#define ERROR_CODE_SPEED_SENSOR_FAIL   0x02 
+#define ERROR_CODE_NO_ERROR            0x00 
+VAR(uint8,AUTOMATIC) ErrorCodes[20];
+
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -30,16 +35,6 @@
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/  
-FUNC(Std_ReturnType,AUTOMATIC) CoolingControl_Runable(VAR(void,AUTOMATIC)){
-    VAR(uint16,AUTOMATIC) Temp, Speed, ExTemperature;
-    VAR(uint16,AUTOMATIC) compressorRatio,fanRatio;
-    VAR(uint16,AUTOMATIC) tempDiff;
-
-    Rte_Read_RP_ComData_TempSpeedValue(&Temp,&Speed);
-#define ERROR_CODE_TEMP_SENSOR_FAIL    0x01 
-#define ERROR_CODE_SPEED_SENSOR_FAIL   0x02 
-#define ERROR_CODE_NO_ERROR            0x00 
-VAR(uint8,AUTOMATIC) ErrorCodes[20];
 
 FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
     VAR(uint16, AUTOMATIC) Temp, Speed, ExTemperature;
@@ -106,5 +101,3 @@ FUNC(Std_ReturnType, AUTOMATIC) CoolingControl_Runable(VAR(void, AUTOMATIC)) {
 
     return E_OK;
 }
-
-/* End of CoolingControlSWC.c */

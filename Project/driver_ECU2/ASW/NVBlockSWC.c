@@ -13,7 +13,6 @@
 
 #include "NVBlockSWC.h"
 
-FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID, P2VAR(uint8,AUTOMATIC,AUTOMATIC) ErrorCodes){
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -31,7 +30,7 @@ FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID,
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        :                                                              */  
 /******************************************************************************/ 
-FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID){
+FUNC(Std_ReturnType,AUTOMATIC) HandleNVM_Runable(VAR(uint8,AUTOMATIC) requestID, P2VAR(uint8,AUTOMATIC,AUTOMATIC) ErrorCodes){
     if(requestID == 0){
         return Rte_Call_RP_NVHandle_SeverHandleWriteData(NV_WRITE_DATA);
     }else if(requestID == 1){

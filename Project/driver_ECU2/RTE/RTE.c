@@ -24,8 +24,6 @@ FUNC(void,AUTOMATIC) Rte_EV_ComReceive(VAR(void,AUTOMATIC)){
     Com_ReceiveSignal(TEMP_SPEED_SIGNAL_ID,DataPtr);
     TemperatureValue = DataPtr[0];
     EngineSpeedValue = ((uint16)DataPtr[1] << 8) + DataPtr[2];
-		ReceivedTemp = TemperatureValue;
-		ReceivedSpeed = EngineSpeedValue;
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0
 #include "Rte_MemMap.h"
