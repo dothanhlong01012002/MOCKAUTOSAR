@@ -1,5 +1,18 @@
+/******************************************************************************/  
+/* Copyright   : FPT Software Corporation                                     */  
+/* System Name : AUTOSAR Application Layer                                    */  
+/* File Name   : RTE_NVM.h                                               */  
+/* Contents    : Ecu Configuration(Ecuc)                                      */  
+/* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
+/* Note        :                                                              */  
+/******************************************************************************/ 
+
 #ifndef RTE_NVM_H
 #define RTE_NVM_H
+
+/*----------------------------------------------------------------------------*/
+/* include headers                                                            */
+/*----------------------------------------------------------------------------*/
 
 #include "Compiler.h"
 #include "Std_Types.h"
