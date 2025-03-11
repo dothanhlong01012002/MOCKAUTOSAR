@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build_files\OsekIntro_Example6.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build_files\OsekIntro_Example6.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Mon Mar 10 10:48:54 2025
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Tue Mar 11 09:00:43 2025
 <BR><P>
 <H3>Maximum Stack Usage =         88 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1216,7 +1216,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_EV_Component
 </UL>
 
-<P><STRONG><a name="[90]"></a>CoolingControl_Runable</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, coolingcontrolswc.o(.text))
+<P><STRONG><a name="[90]"></a>CoolingControl_Runable</STRONG> (Thumb, 210 bytes, Stack size 24 bytes, coolingcontrolswc.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = CoolingControl_Runable &rArr; Rte_Call_RP_NVData_CallServerFunction &rArr; Rte_Call_RP_NVHandle_SeverHandle &rArr; HandleNVM_Runable &rArr; Rte_Call_RP_NVHandle_SeverHandleWriteError &rArr; NvM_WriteBlock &rArr; MemIf_Write &rArr; Fls_Write
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Write_PP_FanData_FanValue
@@ -1273,7 +1273,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_WriteBlock
 </UL>
 
-<P><STRONG><a name="[a4]"></a>MemIf_Read</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, hwabmem.o(.text))
+<P><STRONG><a name="[a4]"></a>MemIf_Read</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, hwabmem.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Fls_Read
@@ -1281,7 +1281,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
 </UL>
 
-<P><STRONG><a name="[a6]"></a>WdgIf_SetMode</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, wdgif.o(.text))
+<P><STRONG><a name="[a6]"></a>WdgIf_SetMode</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, wdgif.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WdgIf_SetMode
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetMode
@@ -1291,7 +1291,7 @@ Global Symbols
 <LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgM_DeInit
 </UL>
 
-<P><STRONG><a name="[a8]"></a>WdgIf_SetTriggerCondition</STRONG> (Thumb, 18 bytes, Stack size 8 bytes, wdgif.o(.text))
+<P><STRONG><a name="[a8]"></a>WdgIf_SetTriggerCondition</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, wdgif.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = WdgIf_SetTriggerCondition
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Wdg_SetTriggerCondition
@@ -1350,7 +1350,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WdgIf_Init
 </UL>
 
-<P><STRONG><a name="[af]"></a>Handle_Can_Interrupt</STRONG> (Thumb, 120 bytes, Stack size 24 bytes, can.o(.text))
+<P><STRONG><a name="[af]"></a>Handle_Can_Interrupt</STRONG> (Thumb, 126 bytes, Stack size 24 bytes, can.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = Handle_Can_Interrupt &rArr; CanIf_RxIndication &rArr; PduR_LoIfRxIndication
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CanIf_RxIndication
@@ -1472,7 +1472,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9c]"></a>Rte_Call_RP_NVHandle_SeverHandleReadData</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rte_nvm.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_NVHandle_SeverHandleReadData &rArr; NvM_ReadBlock &rArr; MemIf_Read
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_Call_RP_NVHandle_SeverHandleReadData &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
 </UL>
@@ -1480,7 +1480,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[9e]"></a>Rte_Call_RP_NVHandle_SeverHandleReadError</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, rte_nvm.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = Rte_Call_RP_NVHandle_SeverHandleReadError &rArr; NvM_ReadBlock &rArr; MemIf_Read
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = Rte_Call_RP_NVHandle_SeverHandleReadError &rArr; NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NvM_ReadBlock
 </UL>
@@ -1536,8 +1536,8 @@ Global Symbols
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Rte_Call_RP_NVHandle_SeverHandleWriteData
 </UL>
 
-<P><STRONG><a name="[b5]"></a>NvM_ReadBlock</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, nvmmanager.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = NvM_ReadBlock &rArr; MemIf_Read
+<P><STRONG><a name="[b5]"></a>NvM_ReadBlock</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, nvmmanager.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = NvM_ReadBlock &rArr; MemIf_Read
 </UL>
 <BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MemIf_Read
 </UL>
@@ -1598,7 +1598,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PduR_LoIfRxIndication
 </UL>
 
-<P><STRONG><a name="[ad]"></a>PduR_LoIfRxIndication</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, pdur.o(.text))
+<P><STRONG><a name="[ad]"></a>PduR_LoIfRxIndication</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, pdur.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = PduR_LoIfRxIndication
 </UL>
 <BR>[Calls]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Com_RxIndication
@@ -1613,27 +1613,27 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[c2]"></a>GetAlarm</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<BR><BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
 <LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetFirePoint
 <LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
 </UL>
 
 <P><STRONG><a name="[c6]"></a>SetAbsAlarm</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
+<BR><BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
 </UL>
 
 <P><STRONG><a name="[ca]"></a>SetRelAlarm</STRONG> (Thumb, 94 bytes, Stack size 24 bytes, alarm.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
+<BR><BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateCycle
 <LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateStartValue
 <LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AssignAlarmEntry
 <LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsCnt_GetSystemCounter
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_ValidateID
 </UL>
 
 <P><STRONG><a name="[cb]"></a>CancelAlarm</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, alarm.o(.text), UNUSED)
@@ -2306,13 +2306,13 @@ Local Symbols
 <P><STRONG><a name="[cd]"></a>OsAlrm_AlarmActionExecute</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetAlrmTaskID
-<LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
+<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ErrorHook
 <LI><a href="#[d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_TaskAlrmExpiredProcessor
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_GetTaskStateProcessor
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_EventAlrmExpiredProcessor
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsErrMgr_SetServiceID
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_GetAlrmTaskID
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemAlarmsProcessor
 </UL>
@@ -2329,10 +2329,10 @@ Local Symbols
 <P><STRONG><a name="[d6]"></a>SystemAlarmsProcessor</STRONG> (Thumb, 74 bytes, Stack size 16 bytes, alarm.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SystemAlarmsProcessor &rArr; OsAlrm_AlarmActionExecute &rArr; OsTcb_EventAlrmExpiredProcessor &rArr; OsTcb_SetTaskEvent
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
-<LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
+<BR>[Calls]<UL><LI><a href="#[d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmFireProcessor
 <LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmActionExecute
 <LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsTcb_SilenceHook
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;OsAlrm_AlarmIsEnabled
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemTimerHandler
 </UL>

@@ -1,6 +1,6 @@
 /*******************************************************************************
 	Module Name:		OsCfg.c
-	Generation Date:	2025-March-Monday	15:35:43
+	Generation Date:	2025-March-Tuesday	08:23:38
 	Tool Version: 		V.0
 	Description: 		Os configuration src file
 
@@ -91,7 +91,7 @@ AlarmBaseType MainCounter = { 0xFFFFFFFF, 1, 1};
 *******************************************************************************/
 acb_t OsCfg_Alarms[1/*OsCfg_MAX_NUM_OF_ALARMS*/] =
 {
-	{/*fire time*/200, /*cyclic time*/200, /*call back*/NULL,
+	{/*fire time*/20, /*cyclic time*/20, /*call back*/NULL,
 	/*action*/ALARM_ACTION_TASK,
 	/*base type*/&MainCounter, /*task id*/ReadSensor_Task, /*event id*/INVALID_ID,
 	/*enable status*/true}		/*Alarm ID: Alrm_Periodic*/

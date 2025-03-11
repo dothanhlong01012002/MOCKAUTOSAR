@@ -14,4 +14,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\OSEK\counter.h \
   ..\..\driver_ECU2\ASW\FanControlSWC.h \
   ..\..\driver_ECU2\ASW\CompressorControlSWC.h \
-  ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h
+  ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

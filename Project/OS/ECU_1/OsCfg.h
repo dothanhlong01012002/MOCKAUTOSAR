@@ -1,6 +1,6 @@
 /*******************************************************************************
 	Module Name:		OsCfg.h
-	Generation Date:	2025-March-Monday	15:35:43
+	Generation Date:	2025-March-Tuesday	08:23:38
 	Tool Version: 		V.0
 	Description: 		Os configuration header file
 
