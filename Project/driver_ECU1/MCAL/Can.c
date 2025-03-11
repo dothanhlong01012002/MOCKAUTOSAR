@@ -11,7 +11,7 @@
 /* include headers                                                            */
 /*----------------------------------------------------------------------------*/
 #include "Can.h"
-
+VAR(uint8,AUTOMATIC) dataFrame[3];
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -32,6 +32,9 @@
 /* Note        : This is a stub function, actual transmission is not handled. */  
 /******************************************************************************/  
 FUNC(Std_ReturnType,AUTOMATIC) Can_Write(VAR(Can_HwHandleType,AUTOMATIC) Hth,P2CONST(Can_PduType,AUTOMATIC,AUTOMATIC) PduInfo) {
+  dataFrame[0] = *(PduInfo->sdu);
+  dataFrame[1] = *(PduInfo->sdu + 1);
+  dataFrame[2] = *(PduInfo->sdu + 2);
       if (PduInfo == NULL || PduInfo->sdu == NULL) {
         return E_NOT_OK;
     }

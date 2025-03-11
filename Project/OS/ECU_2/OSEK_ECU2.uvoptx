@@ -138,120 +138,7 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0TM4C123_256 -FS00 -FL040000 -FP0($$Device:TM4C123GH6PM$Flash\TM4C123_256.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>42</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1810</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/MCAL/Fls.c\42</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>39</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1796</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\MCAL\Fls.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/MCAL/Fls.c\39</Expression>
-        </Bp>
-        <Bp>
-          <Number>2</Number>
-          <Type>0</Type>
-          <LineNumber>39</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>2698</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\SERVICE\NVMManager.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/SERVICE/NVMManager.c\39</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
-          <LineNumber>37</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1594</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\HWAL\HwAbMem.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/HWAL/HwAbMem.c\37</Expression>
-        </Bp>
-        <Bp>
-          <Number>4</Number>
-          <Type>0</Type>
-          <LineNumber>80</LineNumber>
-          <EnabledFlag>0</EnabledFlag>
-          <Address>1412</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\ASW\CoolingControlSWC.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/ASW/CoolingControlSWC.c\80</Expression>
-        </Bp>
-        <Bp>
-          <Number>5</Number>
-          <Type>0</Type>
-          <LineNumber>32</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>2326</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\RTE\RTE_NVM.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/RTE/RTE_NVM.c\32</Expression>
-        </Bp>
-        <Bp>
-          <Number>6</Number>
-          <Type>0</Type>
-          <LineNumber>26</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>1990</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\..\driver_ECU2\RTE\RTE.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\OsekIntro_Example6\../../driver_ECU2/RTE/RTE.c\26</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -281,57 +168,42 @@
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
-          <ItemText>compressorR</ItemText>
+          <ItemText>Temp</ItemText>
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Data</ItemText>
+          <ItemText>SourceAddressPtr</ItemText>
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
-          <ItemText>tempDiff</ItemText>
+          <ItemText>ComReceive_Task</ItemText>
         </Ww>
         <Ww>
           <count>8</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ExTemperature</ItemText>
+          <ItemText>frameData</ItemText>
         </Ww>
         <Ww>
           <count>9</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Temp</ItemText>
+          <ItemText>PduInfo</ItemText>
         </Ww>
         <Ww>
           <count>10</count>
           <WinNumber>1</WinNumber>
-          <ItemText>CompressorRatio</ItemText>
+          <ItemText>CanRxBuffer</ItemText>
         </Ww>
         <Ww>
           <count>11</count>
           <WinNumber>1</WinNumber>
-          <ItemText>SourceAddressPtr</ItemText>
+          <ItemText>Com_SignalBuffer</ItemText>
         </Ww>
         <Ww>
           <count>12</count>
           <WinNumber>1</WinNumber>
-          <ItemText>ComReceive_Task</ItemText>
-        </Ww>
-        <Ww>
-          <count>13</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>DataBufferPtr</ItemText>
-        </Ww>
-        <Ww>
-          <count>14</count>
-          <WinNumber>1</WinNumber>
           <ItemText>Memory</ItemText>
-        </Ww>
-        <Ww>
-          <count>15</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>SourceAddressPtr</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -347,7 +219,7 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -361,7 +233,7 @@
         <AscS3>0</AscS3>
         <aSer3>0</aSer3>
         <eProf>0</eProf>
-        <aLa>1</aLa>
+        <aLa>0</aLa>
         <aPa1>0</aPa1>
         <AscS4>0</AscS4>
         <aSer4>0</aSer4>
@@ -387,17 +259,17 @@
         <Wi>
           <IntNumber>0</IntNumber>
           <FirstString>`toggle_Component_Task</FirstString>
-          <SecondString>FF0000000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F436F6D706F6E656E745F5461736B00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000001000000555555555555D53F21000000000000000000000000000000000000006A110000</SecondString>
+          <SecondString>FF0000000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F436F6D706F6E656E745F5461736B00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000001000000555555555555D53F22000000000000000000000000000000000000006A110000</SecondString>
         </Wi>
         <Wi>
           <IntNumber>1</IntNumber>
           <FirstString>`toggle_Main_Task</FirstString>
-          <SecondString>008000000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F4D61696E5F5461736B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000002000000555555555555D53F21000000000000000000000000000000000000006A110000</SecondString>
+          <SecondString>008000000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F4D61696E5F5461736B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000002000000555555555555D53F22000000000000000000000000000000000000006A110000</SecondString>
         </Wi>
         <Wi>
           <IntNumber>2</IntNumber>
           <FirstString>`toggle_ComReceive_Task</FirstString>
-          <SecondString>000080000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F436F6D526563656976655F5461736B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000003000000555555555555D53F21000000000000000000000000000000000000006A110000</SecondString>
+          <SecondString>000080000000000000000000000000000000F03F00000000000000000000000000000000746F67676C655F436F6D526563656976655F5461736B000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000004100000003000000555555555555D53F22000000000000000000000000000000000000006A110000</SecondString>
         </Wi>
       </LogicAnalyzers>
     </TargetOption>

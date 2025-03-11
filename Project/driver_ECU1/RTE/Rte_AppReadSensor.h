@@ -21,8 +21,8 @@
 /* variables                                                                  */
 /*----------------------------------------------------------------------------*/
 
-static VAR(uint16,AUTOMATIC) TemperatureValue = 0;
-static VAR(uint16,AUTOMATIC) EngineSpeedValue = 0;
+extern VAR(uint16,AUTOMATIC) TemperatureValue;
+extern VAR(uint16,AUTOMATIC) EngineSpeedValue;
 
 
 extern FUNC(Std_ReturnType, RTE_CODE_EcucPartition_0) Rte_Write_PP_Voltage_TemperatureValue(VAR(uint16,AUTOMATIC) temp);

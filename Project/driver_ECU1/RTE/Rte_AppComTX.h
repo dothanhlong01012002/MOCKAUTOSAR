@@ -21,8 +21,8 @@
 /* variables                                                                  */
 /*----------------------------------------------------------------------------*/
 
-static VAR(uint16,AUTOMATIC) SpeedValue = 0;
-static VAR(uint16,AUTOMATIC) TempValue = 0;
+extern VAR(uint16,AUTOMATIC) SpeedValue;
+extern VAR(uint16,AUTOMATIC) TempValue;
 
 /*----------------------------------------------------------------------------*/
 /* function prototype declarations                                            */
