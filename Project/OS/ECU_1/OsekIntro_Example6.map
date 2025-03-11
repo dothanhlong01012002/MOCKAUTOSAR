@@ -42,11 +42,15 @@ Section Cross References
     iohwabcan.o(.ARM.exidx) refers to iohwabcan.o(.text) for [Anonymous Symbol]
     adc.o(.text) refers to rand.o(.text) for rand
     adc.o(.ARM.exidx) refers to adc.o(.text) for [Anonymous Symbol]
+    can.o(.text) refers to can.o(.bss.dataFrame) for dataFrame
     can.o(.ARM.exidx) refers to can.o(.text) for [Anonymous Symbol]
     rte.o(.text) refers to iohwabspeedsensor.o(.text) for ReadPulse_Runable
     rte.o(.text) refers to iohwabtemperaturesensor.o(.text) for ReadVoltage_Runable
     rte.o(.text) refers to temperaturesensorswc.o(.text) for ReadTemperature_Runable
     rte.o(.text) refers to enginespeedswc.o(.text) for ReadSpeed_Runable
+    rte.o(.text) refers to rte_appcomtx.o(.bss.TempValue) for TempValue
+    rte.o(.text) refers to rte_appcomtx.o(.bss.SpeedValue) for SpeedValue
+    rte.o(.text) refers to rte.o(.bss.frameData) for frameData
     rte.o(.text) refers to com.o(.text) for Com_SendSignal
     rte.o(.ARM.exidx) refers to rte.o(.text) for [Anonymous Symbol]
     rte_appcomtx.o(.text) refers to rte_appcomtx.o(.bss.SpeedValue) for SpeedValue
@@ -294,8 +298,6 @@ Image Symbol Table
     TaskHookIsSilent                         0x20000015   Data           1  tcbprocessor.o(.data)
     _rand_state                              0x20000018   Data           4  rand.o(.data)
     .data                                    0x20000018   Section        4  rand.o(.data)
-    EngineSpeedValue                         0x20000098   Data           2  rte_appreadsensor.o(.bss.EngineSpeedValue)
-    [Anonymous Symbol]                       0x20000098   Section        0  rte_appreadsensor.o(.bss.EngineSpeedValue)
     OsCnt_SystemCounter                      0x2000026c   Data           4  counter.o(.bss.OsCnt_SystemCounter)
     [Anonymous Symbol]                       0x2000026c   Section        0  counter.o(.bss.OsCnt_SystemCounter)
     SpeedValue                               0x20000276   Data           2  rte_appcomtx.o(.bss.SpeedValue)
@@ -584,10 +586,12 @@ Image Symbol Table
     MainCounter                              0x2000001c   Data          12  oscfg.o(.data.MainCounter)
     OsCfg_Alarms                             0x20000028   Data          24  oscfg.o(.data.OsCfg_Alarms)
     OsCfg_TCBs                               0x20000040   Data          84  oscfg.o(.data.OsCfg_TCBs)
+    EngineSpeedValue                         0x20000098   Data           2  rte_appreadsensor.o(.bss.EngineSpeedValue)
     OsCfg_Stack                              0x2000009c   Data         464  oscfg.o(.bss.OsCfg_Stack)
     RCB                                      0x20000270   Data           2  oscfg.o(.bss.RCB)
     SVCCnxt_ErrCodes                         0x20000272   Data           2  oscfg.o(.bss.SVCCnxt_ErrCodes)
     SVCCnxt_ResMgrCnxt                       0x20000274   Data           1  oscfg.o(.bss.SVCCnxt_ResMgrCnxt)
+    SpeedValue                               0x20000276   Data           2  rte_appcomtx.o(.bss.SpeedValue)
     SystickCounter                           0x20000278   Data           4  counter.o(.bss.SystickCounter)
     toggle_DataHandle_Task                   0x20000280   Data           4  schedule.o(.bss.toggle_DataHandle_Task)
     toggle_ReadSensor_Task                   0x20000284   Data           4  schedule.o(.bss.toggle_ReadSensor_Task)

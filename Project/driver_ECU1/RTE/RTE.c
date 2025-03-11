@@ -52,13 +52,13 @@ FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_ReadSensor(VAR(void,AUTOMATIC)){
 /******************************************************************************/  
 #define RTE_START_SEC_CODE_EcucPartition_0
 #include "Rte_MemMap.h"
+VAR(uint8,AUTOMATIC) frameData[3];
 FUNC(void, RTE_CODE_EcucPartition_0) Rte_EV_DataHandle(VAR(void,AUTOMATIC)){
     ReadTemperature_Runable();
     ReadSpeed_Runable();
-    VAR(uint8,AUTOMATIC) frameData[3];
-    frameData[0] = (uint8)TempValue;
-    frameData[1] = (uint8)(SpeedValue >> 8);
-    frameData[2] = (uint8)(SpeedValue & 0xFF);
+    frameData[0] =(uint8)TempValue;
+    frameData[1] =(uint8)(SpeedValue >> 8);
+    frameData[2] =(uint8)(SpeedValue & 0xFF);
     Com_SendSignal(TEMP_SPEED_SIGNAL_ID,&frameData);
 }
 #define RTE_STOP_SEC_CODE_EcucPartition_0

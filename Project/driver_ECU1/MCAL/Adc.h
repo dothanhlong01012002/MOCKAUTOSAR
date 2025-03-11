@@ -21,7 +21,7 @@
 /* function prototype declarations                                            */
 /*----------------------------------------------------------------------------*/
 
-FUNC(uint16,AUTOMATIC) Adc_ReadChannel(VAR(char,AUTOMATIC) channel);  // Đọc giá trị ADC từ cảm biến nhiệt độ
+FUNC(uint16,AUTOMATIC) Adc_ReadChannel(VAR(uint8,AUTOMATIC) channel);  // Đọc giá trị ADC từ cảm biến nhiệt độ
 
 #endif /* ADC_H */
 /* End of Adc.h */

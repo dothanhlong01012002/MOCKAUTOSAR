@@ -29,13 +29,8 @@
 /* Author      : DN24_FR_AUTOSAR_02_TRUNG_LONG_NINH                           */  
 /* Note        : This is a mock implementation for ADC reading.               */  
 /******************************************************************************/ 
-FUNC(uint16,AUTOMATIC) Adc_ReadChannel(VAR(char,AUTOMATIC) channel) {
-    if(channel == 1){
-        return rand()%1023;
-    }
-    else{
-        return rand()%1023;;
-    }
+FUNC(uint16,AUTOMATIC) Adc_ReadChannel(VAR(uint8,AUTOMATIC) channel) {
+    return rand()%1023;;
 }
 
 /* End of Adc.h */

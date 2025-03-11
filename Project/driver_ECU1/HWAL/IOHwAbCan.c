@@ -48,7 +48,7 @@ FUNC(Std_ReturnType,AUTOMATIC) CanIf_Transmit(VAR(PduIdType,AUTOMATIC) TxPduId,P
     CanPdu.length = PduInfoPtr->SduLength;
     CanPdu.sdu = PduInfoPtr->SduDataPtr;
 
-    Std_ReturnType status = Can_Write(HW_TYPE,&CanPdu);
+    VAR(Std_ReturnType,AUTOMATIC) status = Can_Write(HW_TYPE,&CanPdu);
     PduR_LoIfTxConfirmation(TxPduId,status);
     return status;
 }
