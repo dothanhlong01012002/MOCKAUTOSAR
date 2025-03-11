@@ -38,7 +38,7 @@ FUNC(void,AUTOMATIC) Handle_Can_Interrupt(VAR(void,AUTOMATIC)) {
     Mailbox.Hoh = 10;
 
     VAR(PduInfoType,AUTOMATIC) PduInfo;
-    frameData[0] = rand()%100;
+    frameData[0] = rand()%120;
     frameData[1] = rand()%40;
     frameData[2] = rand()%255;
     PduInfo.SduDataPtr = (P2VAR(uint8,AUTOMATIC,AUTOMATIC))frameData;
