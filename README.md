@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f6c28b38-cc38-45b6-8bc7-9005e527f780)![image](https://github.com/user-attachments/assets/634e7145-5e9a-4456-958c-fc0cfb7c481e)## Table of Contents
+## Table of Contents
 1. [Overview](#Overview)
 2. [Features](#features)
 3. [Software Components](#SoftwareComponents)
