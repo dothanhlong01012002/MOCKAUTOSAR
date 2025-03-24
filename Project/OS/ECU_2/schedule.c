@@ -44,8 +44,8 @@ TASK(Main_Task)
 				SystickCounter = 0;
 			}else {
 				ErrorFlag = FALSE;
+				Rte_Call_RP_WdgM_CheckpointReached(SEID_SENSOR_ERROR,CHECKPOINT_SENSOR_READ);
 				if(SystickCounter > 99){
-					WdgM_CheckpointReached(1,1);
 					Rte_Call_RP_WdgM_PerformReset();
 					ErrorFlag = TRUE;
 				}

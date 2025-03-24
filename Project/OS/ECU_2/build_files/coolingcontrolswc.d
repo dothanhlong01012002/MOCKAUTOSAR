@@ -14,8 +14,9 @@
   ..\..\driver_ECU2\ASW\FanControlSWC.h \
   ..\..\driver_ECU2\ASW\CompressorControlSWC.h \
   ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\..\driver_ECU2\RTE\RTE_WDG.h ..\..\driver_ECU2\SERVICE\WdgManager.h \
   ..\..\driver_ECU2\HWAL\WdgIf.h ..\..\driver_ECU2\MCAL\Wdg.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\OSEK\counter.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\..\driver_ECU2\RTE\RTE_WDG.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h

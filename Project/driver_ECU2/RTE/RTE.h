@@ -20,6 +20,7 @@
 #include "CompressorControlSWC.h"
 #include "RTE_COM.h"
 #include "RTE_DEM.h"
+#include "RTE_WDG.h"
 
 /*----------------------------------------------------------------------------*/
 /* function prototype declarations                                            */

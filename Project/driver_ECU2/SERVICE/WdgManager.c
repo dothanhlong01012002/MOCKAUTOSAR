@@ -22,6 +22,7 @@ WdgM_ConfigType wdgConfig = {
     .Timeout = 200              
 };
 
+VAR(uint16,AUTOMATIC) AliveCounter = 0;
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */
 /*----------------------------------------------------------------------------*/
@@ -142,7 +143,7 @@ FUNC(Std_ReturnType, AUTOMATIC) WdgM_CheckpointReached(VAR(WdgM_SupervisedEntity
     // Kiểm tra nếu Checkpoint hợp lệ, và thực hiện cập nhật Alive Counter
     // Cập nhật Alive Counter của Checkpoint, ví dụ:
     // AliveCounters[SEID][CheckpointID]++;
-
+    AliveCounter ++;
     // Trả về E_OK nếu thành công
     return E_OK;
 }

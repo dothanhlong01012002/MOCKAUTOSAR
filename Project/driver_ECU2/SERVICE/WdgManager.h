@@ -16,7 +16,7 @@
 
 #include "WdgIf.h"
 
-#define SEID_SENSOR 1
+#define SEID_SENSOR_ERROR 1
 #define CHECKPOINT_SENSOR_READ 1
 
 /*----------------------------------------------------------------------------*/
@@ -32,6 +32,7 @@ extern WdgM_ConfigType wdgConfig ;
 typedef uint8 WdgM_SupervisedEntityIdType; 
 typedef uint16 WdgM_CheckpointIdType;
 static WdgM_ConfigType* currentConfig = NULL;
+extern VAR(uint16,AUTOMATIC) AliveCounter ;
 
 /*----------------------------------------------------------------------------*/
 /* functions and function style macros                                        */

@@ -16,4 +16,5 @@
   ..\..\driver_ECU2\ASW\FanControlSWC.h \
   ..\..\driver_ECU2\ASW\CompressorControlSWC.h \
   ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h \
-  ..\..\driver_ECU2\MCAL\Can.h ..\..\driver_ECU2\RTE\Rte_MemMap.h
+  ..\..\driver_ECU2\RTE\RTE_WDG.h ..\..\driver_ECU2\MCAL\Can.h \
+  ..\..\driver_ECU2\RTE\Rte_MemMap.h

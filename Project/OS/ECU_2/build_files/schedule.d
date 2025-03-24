@@ -16,4 +16,5 @@
   ..\..\driver_ECU2\HWAL\WdgIf.h ..\..\driver_ECU2\MCAL\Wdg.h \
   ..\OSEK\counter.h ..\..\driver_ECU2\ASW\FanControlSWC.h \
   ..\..\driver_ECU2\ASW\CompressorControlSWC.h \
-  ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h
+  ..\..\driver_ECU2\RTE\RTE_COM.h ..\..\driver_ECU2\RTE\RTE_DEM.h \
+  ..\..\driver_ECU2\RTE\RTE_WDG.h
